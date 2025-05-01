@@ -1,13 +1,34 @@
+import { Header } from './components/Header/header';
+import { LanguageProvider } from './context/LanguageContext';
 import './App.css';
 
 function App() {
   return (
-    <>
-      <h1>Vite + React</h1>
-      <p className="tw:text-orange-800">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <LanguageProvider>
+      <div className="flex h-full w-full items-center justify-center">
+        <div className="flex h-full flex-col items-center bg-gray-600 p-4 pt-30 sm:w-full md:w-3/5 lg:w-3/5">
+          <Header />
+          <p className="mt-1 text-black">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis,
+            at, atque eligendi, maxime velit magni minus perferendis accusamus
+            pariatur repudiandae iure rerum ipsum voluptatem dolore quae.
+            Consectetur sint vitae nihil?
+          </p>
+          <p className="mt-1 text-black">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis,
+            at, atque eligendi, maxime velit magni minus perferendis accusamus
+            pariatur repudiandae iure rerum ipsum voluptatem dolore quae.
+            Consectetur sint vitae nihil?
+          </p>
+          <p className="mt-1 text-black">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis,
+            at, atque eligendi, maxime velit magni minus perferendis accusamus
+            pariatur repudiandae iure rerum ipsum voluptatem dolore quae.
+            Consectetur sint vitae nihil?
+          </p>
+        </div>
+      </div>
+    </LanguageProvider>
   );
 }
 
