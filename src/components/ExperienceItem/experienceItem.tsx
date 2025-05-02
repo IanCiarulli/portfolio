@@ -29,25 +29,23 @@ export function Experience() {
 const experiences: ExperienceItem[] = [
   {
     id: 1,
-    company: 'QPlay.cz',
-    role: 'Full-Stack Web Developer',
-    period: 'October, 2023 - March, 2024',
-    description:
-      'Adding features to an already built page. Minor website modifications. The project was ended in March 2024.',
+    company: '',
+    role: '',
+    period: '',
+    description: '',
   },
   {
     id: 2,
-    company: 'Pixelnite',
-    role: 'Full-Stack Web Developer',
-    period: 'July, 2024',
-    description:
-      'Website for minecraft server called Pixelnite. It contains the current number of players on a server, news, admin team and other informations.',
+    company: '',
+    role: '',
+    period: '',
+    description: '',
   },
   {
     id: 3,
-    company: 'OpenSource',
-    role: 'Contributor',
-    period: 'May 2023 - Present',
-    description: 'I actively try to contribute to Open Source on my GitHub.',
+    company: '',
+    role: '',
+    period: '',
+    description: '',
   },
 ];
