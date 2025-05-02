@@ -2,6 +2,7 @@
 
 @theme {
   --color-primary: #ffb412;
+  --color-secondary: #9ca3af;
 }
 
 :root {
@@ -16,11 +17,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
   margin: 0;
-  display: flex;
   min-width: 320px;
   min-height: 100vh;
   background-color: #111111;
