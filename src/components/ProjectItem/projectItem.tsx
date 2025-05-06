@@ -1,6 +1,6 @@
-import { ProjectItem } from '../../models';
+import { Project } from '../../models';
 
-const projects: ProjectItem[] = [
+const projects: Project[] = [
   {
     id: 1,
     title: 'Modern Web Application',
