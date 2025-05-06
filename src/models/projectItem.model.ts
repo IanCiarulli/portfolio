@@ -1,7 +1,10 @@
 export interface ProjectItem {
   id: number;
-  name: string;
+  title: string;
   description: string;
-  image: string;
-  technologies: string[];
+  thumbnail: string;
+  technologies: {
+    icon: string;
+    name: string;
+  }[];
 }
