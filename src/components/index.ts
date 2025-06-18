@@ -1,4 +1,4 @@
-export * from './Header/header';
+export * from './Hero/hero';
 export * from './AboutMe/aboutMe';
 export * from './ProjectItem/projectItem';
 export * from './Link/link';

@@ -3,7 +3,6 @@ import { Project } from '../../models';
 
 const projects: Project[] = [
   {
-    id: 1,
     title: 'Modern Web Application',
     description:
       'A full-stack application built with modern technologies. Features include real-time updates, responsive design, and seamless user experience across all devices.',
@@ -19,7 +18,6 @@ const projects: Project[] = [
     ],
   },
   {
-    id: 2,
     title: 'Data Analytics Dashboard',
     description:
       'Interactive dashboard that visualizes complex data sets in an intuitive way. Includes customizable charts, filters, and export capabilities.',
@@ -34,7 +32,6 @@ const projects: Project[] = [
     ],
   },
   {
-    id: 3,
     title: 'E-commerce Platform',
     description:
       'Scalable e-commerce solution with advanced features like real-time inventory management, secure payments, and customer analytics dashboard.',
@@ -64,25 +61,25 @@ export const ProjectItem = () => {
   };
 
   return (
-    <div className="h-screen w-full overflow-y-auto p-6">
+    <div className="w-full overflow-y-auto border p-4">
       <div className="relative mx-auto max-w-6xl">
         <div className="overflow-hidden">
           <div
             className="transition-transform duration-300 ease-in-out"
             style={{
-              transform: `translateX(-${currentSlide * 100}%)`,
+              transform: `translateX(-${currentSlide * 33.35}%)`,
               width: `${projects.length * 100}%`,
               display: 'flex',
             }}
           >
             {projects.map((project, index) => (
               <div
-                key={project.id}
+                key={index}
                 className="w-full px-4"
                 style={{ flex: `0 0 ${100 / projects.length}%` }}
               >
                 <div
-                  className={`mb-8 overflow-hidden rounded-lg shadow-lg ${index % 2 === 0 ? 'flex' : 'flex flex-row-reverse'} md:flex-row`}
+                  className={`flex overflow-hidden rounded-lg shadow-lg md:flex-row`}
                 >
                   <div className="w-full md:w-1/3">
                     <img
@@ -135,16 +132,15 @@ export const ProjectItem = () => {
           </div>
         </div>
 
-        {/* L-R buttons, dont work properly */}
         <button
           onClick={prevSlide}
-          className="absolute top-1/2 left-0 -translate-x-4 -translate-y-1/2 rounded-full bg-white p-2 shadow-lg transition-colors hover:bg-gray-100"
+          className="absolute top-1/2 left-0 -translate-x-4 -translate-y-1/2 rounded-full p-2 shadow-lg transition-colors"
         >
           ←
         </button>
         <button
           onClick={nextSlide}
-          className="absolute top-1/2 right-0 translate-x-4 -translate-y-1/2 rounded-full bg-white p-2 shadow-lg transition-colors hover:bg-gray-100"
+          className="absolute top-1/2 right-0 translate-x-4 -translate-y-1/2 rounded-full p-2 shadow-lg transition-colors"
         >
           →
         </button>

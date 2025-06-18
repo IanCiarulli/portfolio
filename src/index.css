@@ -1,8 +1,13 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-primary: #ffb412;
-  --color-secondary: #9ca3af;
+  --color-cta: #8c3b00;
+  --color-element: #a68c6d;
+  --color-link: #497c78;
+  --color-link-hover: #4ba3a2;
+  --color-text-secondary: #766c65;
+  --color-highlight-rn: #06bcee;
+  --color-highlight-bg: #e4f6f9;
 }
 
 :root {
@@ -10,8 +15,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: #442000;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -25,5 +29,13 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #111111;
+  background-color: #f8f5f0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
