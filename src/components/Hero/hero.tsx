@@ -9,19 +9,15 @@ export function Hero() {
         />
         <p className="text-center text-lg lg:text-left">Ian Ciarulli</p>
         <div className="text-text-secondary flex flex-col items-start text-sm">
-          <>
-            <div className="text-secondary mb-1 flex justify-start pt-2">
-              <svg width="16" height="16" viewBox="0 0 16 16">
-                <path
-                  fill="#8c3b00"
-                  d="M4 9.9A5.002 5.002.0 015 0a5 5 0 011 9.9V19a1 1 0 01-2 0V9.9zM5 8a3 3 0 100-6 3 3 0 000 6z"
-                ></path>
-              </svg>
-              <span> Merlo, Argentina</span>
-            </div>
-          </>
-          <br className="mx-2" />
           <span>ian.ciarulli@gmail.com</span>
+          <div className="text-secondary mb-1 flex justify-start">
+            <img
+              src="/location.svg"
+              alt="location Icon"
+              className="mr-2 h-5 w-5"
+            />
+            <span> Merlo, Argentina</span>
+          </div>
         </div>
       </div>
 

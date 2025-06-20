@@ -1,13 +1,15 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-cta: #8c3b00;
+  --color-cta: #704326;
   --color-element: #a68c6d;
   --color-link: #497c78;
   --color-link-hover: #4ba3a2;
   --color-text-secondary: #766c65;
   --color-highlight-rn: #06bcee;
   --color-highlight-bg: #e4f6f9;
+  --color-spring-wood: #f8f5f0;
+  --color-morocco-brown: #442000;
 }
 
 :root {
