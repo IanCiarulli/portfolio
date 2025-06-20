@@ -9,8 +9,8 @@ export function TechStack({
 }) {
   return (
     <div className="flex w-full flex-col items-center pt-8">
-      <h2 className="mb-4 text-center text-xl font-bold">{title}</h2>
-      <div className="flex justify-center space-x-8">
+      <h2 className="mb-6 text-center text-xl font-bold">{title}</h2>
+      <div className="flex justify-center space-x-10">
         {Object.entries(data).map(([key, data], index) => {
           const { iconPath, iconAltText, iconLink, shadowColor } = data;
 
@@ -21,14 +21,14 @@ export function TechStack({
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center"
-              style={
-                { '--hover-shadow-color': shadowColor } as React.CSSProperties
-              }
             >
               <img
                 src={iconPath}
                 aria-label={iconAltText}
-                className="block h-16 w-16 bg-transparent object-contain transition-transform duration-300 ease-in-out hover:scale-110 hover:shadow-[0_4px_10px_var(--hover-shadow-color)]"
+                className={`logo ${key}`}
+                style={
+                  { '--hover-shadow-color': shadowColor } as React.CSSProperties
+                }
               />
             </a>
           );

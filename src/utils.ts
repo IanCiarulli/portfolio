@@ -20,22 +20,10 @@ export const TECHNOLOGIES_DATA: TECHNOLOGIES_DATA_TYPE = {
     iconLink: 'https://www.typescriptlang.org/',
     shadowColor: '#000000',
   },
-  javascript: {
-    iconPath: '/javascript.svg',
-    iconAltText: 'JavaScript Icon',
-    iconLink: 'https://www.javascript.com/',
-    shadowColor: '#000000',
-  },
   expo: {
     iconPath: '/expo.svg',
     iconAltText: 'Expo Icon',
     iconLink: 'https://expo.dev/',
-    shadowColor: '#000000',
-  },
-  redux: {
-    iconPath: '/redux.svg',
-    iconAltText: 'Redux Icon',
-    iconLink: 'https://redux.js.org/',
     shadowColor: '#000000',
   },
 };
