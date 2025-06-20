@@ -3,36 +3,21 @@ export function Hero() {
     <div className="flex w-full flex-col items-center lg:flex-row lg:items-start">
       <div className="flex w-full flex-col items-center lg:w-1/2">
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png?20200919003010"
+          src="https://asinfos.in/_next/static/media/portfolio-hero.7c167252.webp"
           alt="Hero Profile Image"
-          className="mb-4 h-36 w-36 rounded-full object-cover lg:mb-0 lg:h-60 lg:w-60"
+          className="h-48 w-48 rounded-full border border-cyan-50 object-cover lg:mb-0 lg:h-72 lg:w-72"
         />
-        <p className="text-center text-lg lg:text-left">Ian Ciarulli</p>
-        <div className="text-text-secondary flex flex-col items-start text-sm">
-          <span>ian.ciarulli@gmail.com</span>
-          <div className="text-secondary mb-1 flex justify-start">
+
+        <div className="text-text-secondary mb-2 flex flex-col items-start text-sm">
+          <div className="text-secondary flex justify-start pt-1">
             <img
               src="/location.svg"
-              alt="location Icon"
+              alt="Location Icon"
               className="mr-2 h-5 w-5"
             />
-            <span> Merlo, Argentina</span>
+            <span>Merlo, Argentina</span>
           </div>
         </div>
-      </div>
-
-      <div className="flex w-full flex-col items-center px-6 lg:w-1/2 lg:px-0">
-        <h1 className="mb-4 pt-8 text-center text-2xl font-bold lg:pt-24 lg:text-left">
-          Frontend developer, specialized in{' '}
-          <span className="text-highlight-rn bg-highlight-bg whitespace-nowrap">
-            React Native
-          </span>
-          .
-        </h1>
-        <p className="mb-4 text-center text-base lg:text-left">
-          5 years of experience as a developer. Also led teams, mentored peers,
-          and worked across the full development lifecycle.
-        </p>
         <div className="flex">
           <a
             href="mailto:ian.ciarulli@gmail.com"
@@ -50,12 +35,27 @@ export function Hero() {
             >
               <img
                 src="/linkedin.svg"
-                alt={`LinkedIn Icon`}
+                alt="LinkedIn Icon"
                 className="h-4.5 w-4.5"
               />
             </a>
           </div>
         </div>
+      </div>
+
+      <div className="flex w-full flex-col items-center px-6 lg:w-1/2 lg:px-0 lg:pl-13">
+        <h1 className="mb-4 pt-8 text-center text-2xl font-bold lg:pt-24 lg:text-left">
+          Hi, I'm <span className="text-morocco-brown">Ian</span>, a Frontend
+          developer specialized in{' '}
+          <span className="text-highlight-rn bg-highlight-bg whitespace-nowrap">
+            React Native
+          </span>
+          .
+        </h1>
+        <p className="mb-4 text-center text-base lg:text-left">
+          I have 5 years developing within the{' '}
+          <span className="whitespace-nowrap">React Native</span> ecosystem.
+        </p>
       </div>
     </div>
   );
