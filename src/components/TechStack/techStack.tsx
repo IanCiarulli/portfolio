@@ -8,8 +8,8 @@ export function TechStack({
   title: string;
 }) {
   return (
-    <div className="flex w-full flex-col items-center pt-8">
-      <h2 className="mb-6 text-center text-xl font-bold">{title}</h2>
+    <div className="flex w-full flex-col items-center pt-16">
+      <h2 className="mb-6 text-center text-2xl font-bold">{title}</h2>
       <div className="flex justify-center space-x-10">
         {Object.entries(data).map(([key, data], index) => {
           const { iconPath, iconAltText, iconLink, shadowColor } = data;

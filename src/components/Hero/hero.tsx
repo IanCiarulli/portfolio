@@ -40,7 +40,6 @@ function ContactLinks({ className = '' }: { className?: string }) {
 export function Hero() {
   return (
     <div className="flex w-full flex-col items-center lg:flex-row lg:items-start">
-      {/* Texto a la izquierda (55%) */}
       <div className="flex w-full flex-col items-center px-6 lg:w-[55%] lg:px-0 lg:pl-13">
         <h1 className="mb-6 text-center text-3xl font-bold lg:text-left">
           Hi, I'm <span className="text-morocco-brown">Ian</span>, a Frontend
@@ -54,18 +53,15 @@ export function Hero() {
           I have 5 years developing within the{' '}
           <span className="whitespace-nowrap">React Native</span> ecosystem.
         </p>
-        {/* Links: solo visibles en desktop */}
         <ContactLinks className="hidden lg:flex" />
       </div>
 
-      {/* Imagen y datos a la derecha (45%) */}
       <div className="flex w-full flex-col items-center lg:w-[45%]">
         <img
           src="https://images.generated.photos/xjb1f1tmusZFtOLWl6VdasrPFgVVv-gtngIJvnwT1_8/rs:auto:1024:1024/wm:1:sowe:18:18:0.5/wmid:gp/czM6Ly9odW1hbi1n/ZW5lcmF0b3ItcHJv/ZC83NTMvYjk3NWYy/YjktZmNjYi00ZTU2/LWEyMWEtNzhiYmU2/YzUwMzFiLnBuZw.jpg"
           alt="Hero Profile Image"
           className="h-36 w-36 rounded-full border border-cyan-50 object-cover lg:mb-0 lg:h-52 lg:w-52"
         />
-        {/* Links: solo visibles en mobile */}
         <ContactLinks className="mt-4 lg:hidden" />
       </div>
     </div>
