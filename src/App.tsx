@@ -3,7 +3,7 @@ import { TECHNOLOGIES_DATA } from './utils';
 
 function App() {
   return (
-    <div className="flex h-full w-full flex-col items-center justify-start pt-6 font-mono lg:mx-auto lg:w-7/12 lg:pt-12">
+    <div className="font-inter flex h-full w-full flex-col items-center justify-start pt-24 lg:mx-auto lg:w-7/12 lg:pt-24">
       <Menu />
       <Hero />
       <TechStack data={TECHNOLOGIES_DATA} title="Main Stack" />
