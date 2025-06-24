@@ -2,7 +2,7 @@ import { ExperienceItem } from '../../models';
 
 export function Experience() {
   return (
-    <section id="projects" className="w-full px-4 py-16">
+    <section id="projects" className="w-full px-6 py-16">
       <div className="mx-auto max-w-3xl">
         <h2 className="mb-12 text-center text-2xl font-bold">Experience</h2>
         <div className="space-y-12">
@@ -42,7 +42,10 @@ const experiences: ExperienceItem[] = [
     company: 'Freelance',
     role: 'React Native Developer',
     period: [2024],
-    description: ['Bullet point 1', 'Bullet point 2'],
+    description: [
+      'Longest bullet point text ever in the existence of the universe, it is so long that it will overflow the container and cause layout issues if not handled properly.',
+      'Bullet point 2',
+    ],
   },
   {
     id: 2,
