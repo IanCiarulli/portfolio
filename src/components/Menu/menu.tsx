@@ -28,7 +28,7 @@ export function Menu() {
           </button>
           <ul className="space-y-6 text-2xl">
             <li>
-              <a href="#hero" onClick={() => toggleVisibility()}>
+              <a href="#home" onClick={() => toggleVisibility()}>
                 Home
               </a>
             </li>
