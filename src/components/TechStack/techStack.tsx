@@ -1,4 +1,5 @@
 import { TECHNOLOGIES_DATA } from '../../utils';
+import { Thumbnail } from '../Thumbnail/thumbnail';
 
 export function TechStack({
   title,
@@ -15,22 +16,14 @@ export function TechStack({
           const { iconPath, iconAltText, iconLink, shadowColor } = data;
 
           return (
-            <a
+            <Thumbnail
               key={`${index} + ${key}`}
-              href={iconLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center"
-            >
-              <img
-                src={iconPath}
-                aria-label={iconAltText}
-                className={`logo ${key}`}
-                style={
-                  { '--hover-shadow-color': shadowColor } as React.CSSProperties
-                }
-              />
-            </a>
+              iconPath={iconPath}
+              iconAltText={iconAltText}
+              iconLink={iconLink}
+              shadowColor={shadowColor}
+              className={key}
+            />
           );
         })}
       </div>
