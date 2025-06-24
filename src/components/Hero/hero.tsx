@@ -50,7 +50,7 @@ export function Hero() {
           .
         </h1>
         <p className="font-jetbrains mb-6 w-full text-center text-base lg:text-left">
-          I have 5 years developing within the{' '}
+          I have 5+ years developing within the{' '}
           <span className="whitespace-nowrap">React Native</span> ecosystem.
         </p>
         <ContactLinks className="hidden lg:flex" />
