@@ -1,5 +1,5 @@
 import { TECHNOLOGIES_DATA } from '../../utils';
-import { Thumbnail } from '../Thumbnail/thumbnail';
+import { Thumbnail } from '../index';
 
 export function TechStack({
   title,
