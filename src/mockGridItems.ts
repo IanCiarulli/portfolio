@@ -10,8 +10,7 @@ export type ProjectItemType = TECHNOLOGIES_DATA_TYPE[string] & {
 export const PROJECTS_LIST: ProjectItemType[] = [
   {
     id: '1',
-    thumbnailPath:
-      'https://ik.imagekit.io/kd907zpil/portfolio_assets/projects_thumbnails/1.webp?updatedAt=1751504953258',
+    thumbnailPath: '/portfolio_assets/thumbnails/1.webp',
     thumbnailAltText: 'React Native',
     thumbnailLink: '#',
     shadowColor: '#61dafb',
@@ -21,7 +20,7 @@ export const PROJECTS_LIST: ProjectItemType[] = [
   },
   {
     id: '2',
-    thumbnailPath: '/redux.svg',
+    thumbnailPath: '/portfolio_assets/thumbnails/2.webp',
     thumbnailAltText: 'Redux',
     thumbnailLink: '#',
     shadowColor: '#764abc',

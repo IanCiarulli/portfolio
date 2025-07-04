@@ -1,4 +1,5 @@
 import { type CSSProperties } from 'react';
+import { Image } from '@imagekit/react';
 
 export function Thumbnail({
   thumbnailPath,
@@ -29,10 +30,11 @@ export function Thumbnail({
           } as CSSProperties
         }
       >
-        <img
+        <Image
           src={thumbnailPath}
-          aria-label={thumbnailAltText}
+          alt={thumbnailAltText}
           className="logo"
+          loading="lazy"
         />
       </button>
     );
@@ -45,7 +47,12 @@ export function Thumbnail({
       className={`flex items-center justify-center ${className ?? ''}`}
       style={{ '--hover-shadow-color': shadowColor } as CSSProperties}
     >
-      <img src={thumbnailPath} aria-label={thumbnailAltText} className="logo" />
+      <Image
+        src={thumbnailPath}
+        alt={thumbnailAltText}
+        className="logo"
+        loading="lazy"
+      />
     </a>
   );
 }
