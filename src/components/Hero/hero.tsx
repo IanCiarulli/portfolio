@@ -42,7 +42,7 @@ export function Hero() {
     <div className="flex w-full flex-col items-center lg:flex-row lg:items-start">
       <div className="flex w-full flex-col items-center px-6 lg:w-[55%] lg:px-0 lg:pl-13">
         <h1 className="mb-6 text-center text-3xl font-bold lg:text-left">
-          Hi, I'm <span className="text-morocco-brown">Ian</span>, a Frontend
+          Hi, I'm <span className="text-morocco-brown">Ian</span>! a Frontend
           developer specialized in{' '}
           <span className="text-highlight-rn bg-highlight-bg whitespace-nowrap">
             React Native

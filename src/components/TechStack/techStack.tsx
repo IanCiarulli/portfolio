@@ -13,16 +13,20 @@ export function TechStack({
       <h2 className="mb-6 text-center text-2xl font-bold">{title}</h2>
       <div className="flex justify-center space-x-10">
         {Object.entries(data).map(([key, data], index) => {
-          const { iconPath, iconAltText, iconLink, shadowColor } = data;
-
+          const {
+            thumbnailPath,
+            thumbnailAltText,
+            thumbnailLink,
+            shadowColor,
+          } = data;
+          console.log('ClassName key', key);
           return (
             <Thumbnail
               key={`${index} + ${key}`}
-              iconPath={iconPath}
-              iconAltText={iconAltText}
-              iconLink={iconLink}
+              thumbnailPath={thumbnailPath}
+              thumbnailAltText={thumbnailAltText}
+              thumbnailLink={thumbnailLink}
               shadowColor={shadowColor}
-              className={key}
             />
           );
         })}

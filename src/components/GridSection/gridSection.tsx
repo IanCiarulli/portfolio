@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import { type FC, useState } from 'react';
 import { Thumbnail } from '../index';
 
 interface GridSectionProps {
   items: Array<{
     id: string;
-    iconPath: string;
-    iconAltText: string;
-    iconLink: string;
+    thumbnailPath: string;
+    thumbnailAltText: string;
+    thumbnailLink: string;
     shadowColor: string;
     className: string;
     title: string;
@@ -14,20 +14,20 @@ interface GridSectionProps {
   }>;
 }
 
-const GridSection: React.FC<GridSectionProps> = ({ items }) => {
+const GridSection: FC<GridSectionProps> = ({ items }) => {
   const [selected, setSelected] = useState<null | (typeof items)[0]>(null);
 
   return (
     <section className="flex w-full items-center justify-center pt-16">
-      <div className="grid grid-cols-2 justify-items-center gap-x-16 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-24">
+      <div className="grid grid-cols-2 justify-items-center gap-x-16 gap-y-8 rounded-lg sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-24">
         {items.map((item) => (
           <Thumbnail
             key={item.id}
-            iconPath={item.iconPath}
-            iconAltText={item.iconAltText}
-            iconLink={item.iconLink}
+            thumbnailPath={item.thumbnailPath}
+            thumbnailAltText={item.thumbnailAltText}
+            thumbnailLink={item.thumbnailLink}
             shadowColor={item.shadowColor}
-            className={item.className + ' mb-8 h-16 w-16'}
+            className={item.className}
             onClick={() => setSelected(item)}
           />
         ))}
@@ -43,8 +43,8 @@ const GridSection: React.FC<GridSectionProps> = ({ items }) => {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={selected.iconPath}
-              alt={selected.iconAltText}
+              src={selected.thumbnailPath}
+              alt={selected.thumbnailAltText}
               className="mb-4 h-48 w-full rounded object-cover"
             />
             <h2 className="mb-2 text-xl font-bold">{selected.title}</h2>
