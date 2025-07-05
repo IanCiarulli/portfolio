@@ -1,35 +1,24 @@
 import { type FC, useState } from 'react';
 import { Thumbnail } from '../index';
+import type { ProjectProps } from '../../models';
 
-interface GridSectionProps {
-  items: Array<{
-    id: string;
-    thumbnailPath: string;
-    thumbnailAltText: string;
-    thumbnailLink: string;
-    shadowColor: string;
-    className: string;
-    title: string;
-    description?: string;
-  }>;
+interface ProjectsListProps {
+  items: ProjectProps[];
 }
 
-const GridSection: FC<GridSectionProps> = ({ items }) => {
-  const [selected, setSelected] = useState<null | (typeof items)[0]>(null);
+export const ProjectsList: FC<ProjectsListProps> = ({ items }) => {
+  const [selected, setSelected] = useState<null | ProjectProps>(null);
 
   return (
     <section className="flex w-full items-center justify-center pt-16">
       <div className="grid grid-cols-2 justify-items-center gap-x-16 gap-y-8 rounded-lg sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-24">
         {items.map((item) => (
-          <Thumbnail
-            key={item.id}
-            thumbnailPath={item.thumbnailPath}
-            thumbnailAltText={item.thumbnailAltText}
-            thumbnailLink={item.thumbnailLink}
-            shadowColor={item.shadowColor}
-            className={item.className}
-            onClick={() => setSelected(item)}
-          />
+          <button onClick={() => setSelected(item)} key={item.title}>
+            <Thumbnail
+              thumbnailPath={item.thumbnailPath}
+              thumbnailAltText={item.thumbnailAltText}
+            />
+          </button>
         ))}
       </div>
       {selected && (
@@ -55,5 +44,3 @@ const GridSection: FC<GridSectionProps> = ({ items }) => {
     </section>
   );
 };
-
-export default GridSection;

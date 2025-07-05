@@ -1,58 +1,13 @@
-import { type CSSProperties } from 'react';
 import { Image } from '@imagekit/react';
+import type { ThumbnailProps } from '../../models/thumbnail.model';
 
-export function Thumbnail({
-  thumbnailPath,
-  thumbnailAltText,
-  thumbnailLink,
-  shadowColor,
-  className,
-  onClick,
-}: {
-  thumbnailPath: string;
-  thumbnailAltText: string;
-  thumbnailLink: string;
-  shadowColor: string;
-  className?: string;
-  onClick?: () => void;
-}) {
-  const clickable = typeof onClick === 'function';
-  if (clickable) {
-    return (
-      <button
-        type="button"
-        onClick={onClick}
-        className={`m-0 flex items-center justify-center border-none bg-transparent p-0 ${className ?? ''}`}
-        style={
-          {
-            cursor: 'pointer',
-            '--hover-shadow-color': shadowColor,
-          } as CSSProperties
-        }
-      >
-        <Image
-          src={thumbnailPath}
-          alt={thumbnailAltText}
-          className={`${className ?? ''} thumbnail`}
-          loading="lazy"
-        />
-      </button>
-    );
-  }
+export function Thumbnail({ thumbnailPath, thumbnailAltText }: ThumbnailProps) {
   return (
-    <a
-      href={thumbnailLink}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`flex items-center justify-center`}
-      style={{ '--hover-shadow-color': shadowColor } as CSSProperties}
-    >
-      <Image
-        src={thumbnailPath}
-        alt={thumbnailAltText}
-        className={`${className ?? ''} thumbnail`}
-        loading="lazy"
-      />
-    </a>
+    <Image
+      src={thumbnailPath}
+      alt={thumbnailAltText}
+      className="thumbnail"
+      loading="lazy"
+    />
   );
 }

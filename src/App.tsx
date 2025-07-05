@@ -1,20 +1,20 @@
-import { Experience, Hero, Menu, TechStack } from './components';
-import { TECHNOLOGIES_DATA } from './utils';
-import GridSection from './components/GridSection/gridSection';
-import { PROJECTS_LIST } from './mockGridItems';
+import { Experience, Hero, Menu, TechStack, ProjectsList } from './components';
+import { StackData } from './data/stackData';
+import { Projects } from './data/projectsData';
 import { ImageKitProvider } from '@imagekit/react';
+import { IK_ENDPOINT } from './constants';
 
 function App() {
   return (
-    <ImageKitProvider urlEndpoint="https://ik.imagekit.io/kd907zpil">
+    <ImageKitProvider urlEndpoint={IK_ENDPOINT}>
       <div
         className="font-inter flex h-full w-full flex-col items-center justify-start pt-18 lg:mx-auto lg:w-7/12 lg:pt-24"
         id="home"
       >
         <Menu />
         <Hero />
-        <TechStack data={TECHNOLOGIES_DATA} title="Main Stack" />
-        <GridSection items={PROJECTS_LIST} />
+        <TechStack data={StackData} title="Main Stack" />
+        <ProjectsList items={Projects} />
         <Experience />
       </div>
     </ImageKitProvider>

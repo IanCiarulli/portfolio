@@ -1,3 +1,4 @@
+// Convertir a componente
 function ContactLinks({ className = '' }: { className?: string }) {
   return (
     <div
