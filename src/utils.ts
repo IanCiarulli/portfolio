@@ -7,6 +7,8 @@ export type TECHNOLOGIES_DATA_TYPE = {
   };
 };
 
+export const IMG_BASE_URL = '/portfolio_assets/thumbnails/' as const;
+
 export const TECHNOLOGIES_DATA: TECHNOLOGIES_DATA_TYPE = {
   reactNative: {
     thumbnailPath: '/reactnative.svg',

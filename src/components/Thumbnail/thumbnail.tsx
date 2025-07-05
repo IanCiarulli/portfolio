@@ -33,7 +33,7 @@ export function Thumbnail({
         <Image
           src={thumbnailPath}
           alt={thumbnailAltText}
-          className="logo"
+          className="logo rounded-[16px]"
           loading="lazy"
         />
       </button>
@@ -50,7 +50,7 @@ export function Thumbnail({
       <Image
         src={thumbnailPath}
         alt={thumbnailAltText}
-        className="logo"
+        className="logo rounded-[16px]"
         loading="lazy"
       />
     </a>
