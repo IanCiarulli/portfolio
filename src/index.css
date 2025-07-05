@@ -58,23 +58,11 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.logo {
+.thumbnail {
   will-change: filter;
   transition: filter 300ms;
 }
 
-.logo:hover {
+.thumbnail:hover {
   filter: drop-shadow(0 0 1.6em var(--hover-shadow-color));
-}
-
-.logo.reactNative:hover {
-  filter: drop-shadow(0 0 1.6em #06bcee);
-}
-
-.logo.typescript:hover {
-  filter: drop-shadow(0 0 1.6em #3179c6);
-}
-
-.logo.expo:hover {
-  filter: drop-shadow(0 0 1.6em #766c65);
 }

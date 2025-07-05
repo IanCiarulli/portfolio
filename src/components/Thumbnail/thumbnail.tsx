@@ -33,7 +33,7 @@ export function Thumbnail({
         <Image
           src={thumbnailPath}
           alt={thumbnailAltText}
-          className={className ?? ''}
+          className={`${className ?? ''} thumbnail`}
           loading="lazy"
         />
       </button>
@@ -50,7 +50,7 @@ export function Thumbnail({
       <Image
         src={thumbnailPath}
         alt={thumbnailAltText}
-        className={className ?? ''}
+        className={`${className ?? ''} thumbnail`}
         loading="lazy"
       />
     </a>
