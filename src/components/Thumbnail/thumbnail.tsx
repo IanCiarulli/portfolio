@@ -33,7 +33,7 @@ export function Thumbnail({
         <Image
           src={thumbnailPath}
           alt={thumbnailAltText}
-          className="logo rounded-[16px]"
+          className={className ?? ''}
           loading="lazy"
         />
       </button>
@@ -44,13 +44,13 @@ export function Thumbnail({
       href={thumbnailLink}
       target="_blank"
       rel="noopener noreferrer"
-      className={`flex items-center justify-center ${className ?? ''}`}
+      className={`flex items-center justify-center`}
       style={{ '--hover-shadow-color': shadowColor } as CSSProperties}
     >
       <Image
         src={thumbnailPath}
         alt={thumbnailAltText}
-        className="logo rounded-[16px]"
+        className={className ?? ''}
         loading="lazy"
       />
     </a>
