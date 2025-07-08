@@ -4,7 +4,7 @@ export function Experience() {
   return (
     <section id="projects" className="w-full px-6 py-16">
       <div className="mx-auto max-w-3xl">
-        <h2 className="mb-12 text-center text-2xl font-bold">Experience</h2>
+        <h2 className="mb-8 text-center text-2xl font-bold">Experience</h2>
         <div className="space-y-12">
           {experiences.map((exp, index) => (
             <div
