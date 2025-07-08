@@ -13,7 +13,11 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items }) => {
     <section className="flex w-full items-center justify-center pt-16">
       <div className="grid grid-cols-2 justify-items-center gap-x-16 gap-y-8 rounded-lg sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-24">
         {items.map((item) => (
-          <button onClick={() => setSelected(item)} key={item.title}>
+          <button
+            onClick={() => setSelected(item)}
+            key={item.title}
+            className="overflow-hidden rounded-[16px]"
+          >
             <Thumbnail
               thumbnailPath={item.thumbnailPath}
               thumbnailAltText={item.thumbnailAltText}
