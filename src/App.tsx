@@ -14,7 +14,7 @@ function App() {
         <Menu />
         <Hero />
         <TechStack data={StackData} title="Main Stack" />
-        <ProjectsList items={Projects} />
+        <ProjectsList items={Projects} title="Experience" />
         <Experience />
       </div>
     </ImageKitProvider>
