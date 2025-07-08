@@ -40,7 +40,7 @@ function ContactLinks({ className = '' }: { className?: string }) {
 
 export function Hero() {
   return (
-    <div className="flex w-full flex-col items-center lg:flex-row lg:items-start">
+    <section className="flex w-full flex-col items-center lg:flex-row lg:items-start">
       <div className="flex w-full flex-col items-center px-6 lg:w-[55%] lg:px-0 lg:pl-13">
         <h1 className="mb-6 text-center text-3xl font-bold lg:text-left">
           Hi, I'm <span className="text-morocco-brown">Ian</span>! Mobile
@@ -65,6 +65,6 @@ export function Hero() {
         />
         <ContactLinks className="mt-4 lg:hidden" />
       </div>
-    </div>
+    </section>
   );
 }

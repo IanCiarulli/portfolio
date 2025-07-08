@@ -11,7 +11,10 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
   const [selected, setSelected] = useState<null | ProjectProps>(null);
 
   return (
-    <section className="flex w-full flex-col items-center justify-center pt-16">
+    <section
+      className="flex w-full flex-col items-center justify-center pt-16"
+      id="projects"
+    >
       <h2 className="mb-8 text-center text-2xl font-bold">{title}</h2>
       <div className="grid grid-cols-2 justify-items-center gap-x-16 gap-y-8 rounded-lg sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-24">
         {items.map((item) => (

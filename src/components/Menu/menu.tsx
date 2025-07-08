@@ -28,13 +28,8 @@ export function Menu() {
           </button>
           <ul className="space-y-6 text-2xl">
             <li>
-              <a href="#home" onClick={() => toggleVisibility()}>
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#about" onClick={() => toggleVisibility()}>
-                About Me
+              <a href="#hero" onClick={() => toggleVisibility()}>
+                About me
               </a>
             </li>
             <li>
@@ -43,8 +38,8 @@ export function Menu() {
               </a>
             </li>
             <li>
-              <a href="#contact" onClick={() => toggleVisibility()}>
-                Contact
+              <a href="#experience" onClick={() => toggleVisibility()}>
+                Experience
               </a>
             </li>
           </ul>
