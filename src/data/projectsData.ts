@@ -4,7 +4,7 @@ import type { ProjectProps } from '../models';
 export const Projects: ProjectProps[] = [
   {
     onClick: () => {},
-    thumbnailPath: `${THUMBNAILS_URL}12.webp`,
+    thumbnailPath: `${THUMBNAILS_URL}lb.webp`,
     thumbnailAltText: 'React Native',
     className: 'mb-8 h-30 w-30 object-contain rounded-[16px]',
     title: 'React Native',
@@ -12,7 +12,7 @@ export const Projects: ProjectProps[] = [
   },
   {
     onClick: () => {},
-    thumbnailPath: `${THUMBNAILS_URL}12.webp`,
+    thumbnailPath: `${THUMBNAILS_URL}zest.webp`,
     thumbnailAltText: 'Redux',
     className: 'mb-8 h-30 w-30 object-contain rounded-[16px]',
     title: 'Redux',
@@ -20,7 +20,7 @@ export const Projects: ProjectProps[] = [
   },
   {
     onClick: () => {},
-    thumbnailPath: `${THUMBNAILS_URL}12.webp`,
+    thumbnailPath: `${THUMBNAILS_URL}chanel.webp`,
     thumbnailAltText: 'TypeScript',
     className: 'mb-8 h-30 w-30 object-contain rounded-[16px]',
     title: 'TypeScript',
@@ -28,7 +28,7 @@ export const Projects: ProjectProps[] = [
   },
   {
     onClick: () => {},
-    thumbnailPath: `${THUMBNAILS_URL}12.webp`,
+    thumbnailPath: `${THUMBNAILS_URL}dolby.webp`,
     thumbnailAltText: 'Vite',
     className: 'mb-8 h-30 w-30 object-contain rounded-[16px]',
     title: 'Vite',
@@ -36,7 +36,7 @@ export const Projects: ProjectProps[] = [
   },
   {
     onClick: () => {},
-    thumbnailPath: `${THUMBNAILS_URL}12.webp`,
+    thumbnailPath: `${THUMBNAILS_URL}10.webp`,
     thumbnailAltText: 'JavaScript',
     className: 'mb-8 h-30 w-30 object-contain rounded-[16px]',
     title: 'JavaScript',
@@ -44,7 +44,7 @@ export const Projects: ProjectProps[] = [
   },
   {
     onClick: () => {},
-    thumbnailPath: `${THUMBNAILS_URL}12.webp`,
+    thumbnailPath: `${THUMBNAILS_URL}9.webp`,
     thumbnailAltText: 'Expo',
     className: 'mb-8 h-30 w-30 object-contain rounded-[16px]',
     title: 'Expo',
@@ -58,17 +58,10 @@ export const Projects: ProjectProps[] = [
     title: 'Location',
     description: 'Servicios de geolocalización.',
   },
+
   {
     onClick: () => {},
-    thumbnailPath: `${THUMBNAILS_URL}12.webp`,
-    thumbnailAltText: 'LinkedIn',
-    className: 'mb-8 h-30 w-30 object-contain rounded-[16px]',
-    title: 'LinkedIn',
-    description: 'Red profesional.',
-  },
-  {
-    onClick: () => {},
-    thumbnailPath: `${THUMBNAILS_URL}12.webp`,
+    thumbnailPath: `${THUMBNAILS_URL}7.webp`,
     thumbnailAltText: 'Mail',
     className: 'mb-8 h-30 w-30 object-contain rounded-[16px]',
     title: 'Mail',
@@ -76,7 +69,7 @@ export const Projects: ProjectProps[] = [
   },
   {
     onClick: () => {},
-    thumbnailPath: `${THUMBNAILS_URL}12.webp`,
+    thumbnailPath: `${THUMBNAILS_URL}4.webp`,
     thumbnailAltText: 'Menu',
     className: 'mb-8 h-30 w-30 object-contain rounded-[16px]',
     title: 'Menú',
@@ -84,7 +77,7 @@ export const Projects: ProjectProps[] = [
   },
   {
     onClick: () => {},
-    thumbnailPath: `${THUMBNAILS_URL}12.webp`,
+    thumbnailPath: `${THUMBNAILS_URL}11.webp`,
     thumbnailAltText: 'Menu White',
     className: 'mb-8 h-30 w-30 object-contain rounded-[16px]',
     title: 'Menú Blanco',
@@ -92,7 +85,7 @@ export const Projects: ProjectProps[] = [
   },
   {
     onClick: () => {},
-    thumbnailPath: `${THUMBNAILS_URL}12.webp`,
+    thumbnailPath: `${THUMBNAILS_URL}15.webp`,
     thumbnailAltText: 'X Black',
     className: 'mb-8 h-30 w-30 object-contain rounded-[16px]',
     title: 'X Black',
@@ -100,7 +93,7 @@ export const Projects: ProjectProps[] = [
   },
   {
     onClick: () => {},
-    thumbnailPath: `${THUMBNAILS_URL}12.webp`,
+    thumbnailPath: `${THUMBNAILS_URL}5.webp`,
     thumbnailAltText: 'X White',
     className: 'mb-8 h-30 w-30 object-contain rounded-[16px]',
     title: 'X White',
