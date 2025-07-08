@@ -12,7 +12,7 @@ export function Menu() {
       {!open ? (
         <button
           onClick={() => toggleVisibility()}
-          className="fixed top-4 right-4 z-50 flex h-12 w-12 items-center justify-center rounded-full"
+          className="bg-spring-wood fixed top-4 right-4 z-50 flex h-12 w-12 items-center justify-center rounded-full"
           aria-label={'Open menu'}
         >
           <img src={'/menu_b.svg'} alt="Menu Icon" className="h-5 w-5" />
