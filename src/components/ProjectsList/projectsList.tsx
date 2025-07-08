@@ -18,7 +18,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
           <button
             onClick={() => setSelected(item)}
             key={item.title}
-            className="overflow-hidden rounded-[16px]"
+            className="overflow-hidden rounded-[8px]"
           >
             <Thumbnail
               thumbnailPath={item.thumbnailPath}
