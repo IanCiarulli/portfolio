@@ -9,7 +9,7 @@ function App() {
     <ImageKitProvider urlEndpoint={IK_ENDPOINT}>
       <div
         className="font-inter flex h-full w-full flex-col items-center justify-start pt-18 lg:mx-auto lg:w-7/12 lg:pt-24"
-        id="hero"
+        id="home"
       >
         <Menu />
         <Hero />

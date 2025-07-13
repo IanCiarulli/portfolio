@@ -28,17 +28,29 @@ export function Menu() {
           </button>
           <ul className="space-y-6 text-2xl">
             <li>
-              <a href="#hero" onClick={() => toggleVisibility()}>
-                About me
+              <a
+                href="#home"
+                aria-label="Home"
+                onClick={() => toggleVisibility()}
+              >
+                Home
               </a>
             </li>
             <li>
-              <a href="#projects" onClick={() => toggleVisibility()}>
+              <a
+                href="#projects"
+                aria-label="Projects"
+                onClick={() => toggleVisibility()}
+              >
                 Projects
               </a>
             </li>
             <li>
-              <a href="#experience" onClick={() => toggleVisibility()}>
+              <a
+                href="#experience"
+                aria-label="Experience"
+                onClick={() => toggleVisibility()}
+              >
                 Experience
               </a>
             </li>
