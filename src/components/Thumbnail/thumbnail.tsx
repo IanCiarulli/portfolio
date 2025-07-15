@@ -1,29 +1,13 @@
-export function Thumbnail({
-  iconPath,
-  iconAltText,
-  iconLink,
-  shadowColor,
-  className,
-}: {
-  iconPath: string;
-  iconAltText: string;
-  iconLink: string;
-  shadowColor: string;
-  className: string;
-}) {
+import { Image } from '@imagekit/react';
+import type { ThumbnailProps } from '../../models';
+
+export function Thumbnail({ thumbnailPath, thumbnailAltText }: ThumbnailProps) {
   return (
-    <a
-      href={iconLink}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center justify-center"
-    >
-      <img
-        src={iconPath}
-        aria-label={iconAltText}
-        className={`logo ${className}`}
-        style={{ '--hover-shadow-color': shadowColor } as React.CSSProperties}
-      />
-    </a>
+    <Image
+      src={thumbnailPath}
+      alt={thumbnailAltText}
+      className="thumbnail"
+      loading="lazy"
+    />
   );
 }

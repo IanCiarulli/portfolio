@@ -1,31 +1,25 @@
-import { TECHNOLOGIES_DATA } from '../../utils';
-import { Thumbnail } from '../Thumbnail/thumbnail';
+import { Thumbnail } from '../index';
+import type { ThumbnailProps } from '../../models';
 
 export function TechStack({
   title,
   data,
 }: {
-  data: typeof TECHNOLOGIES_DATA;
+  data: ThumbnailProps[];
   title: string;
 }) {
   return (
     <div className="flex w-full flex-col items-center pt-16">
-      <h2 className="mb-6 text-center text-2xl font-bold">{title}</h2>
-      <div className="flex justify-center space-x-10">
-        {Object.entries(data).map(([key, data], index) => {
-          const { iconPath, iconAltText, iconLink, shadowColor } = data;
-
-          return (
+      <h2 className="mb-8 text-center text-2xl font-bold">{title}</h2>
+      <div className="flex justify-between gap-2 lg:gap-6">
+        {data.map(({ thumbnailPath, thumbnailAltText }) => (
+          <div className="h-8 w-8 lg:h-12 lg:w-12" key={thumbnailAltText}>
             <Thumbnail
-              key={`${index} + ${key}`}
-              iconPath={iconPath}
-              iconAltText={iconAltText}
-              iconLink={iconLink}
-              shadowColor={shadowColor}
-              className={key}
+              thumbnailPath={thumbnailPath}
+              thumbnailAltText={thumbnailAltText}
             />
-          );
-        })}
+          </div>
+        ))}
       </div>
     </div>
   );

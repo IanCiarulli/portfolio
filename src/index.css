@@ -1,5 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@100..900&display=swap');
 @import 'tailwindcss';
-@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono&display=swap');
 
 @theme {
   --color-cta: #704326;
@@ -58,23 +58,13 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.logo {
+.thumbnail {
   will-change: filter;
   transition: filter 300ms;
+  width: 100%;
+  height: 100%;
 }
 
-.logo:hover {
+.thumbnail:hover {
   filter: drop-shadow(0 0 1.6em var(--hover-shadow-color));
-}
-
-.logo.reactNative:hover {
-  filter: drop-shadow(0 0 1.6em #06bcee);
-}
-
-.logo.typescript:hover {
-  filter: drop-shadow(0 0 1.6em #3179c6);
-}
-
-.logo.expo:hover {
-  filter: drop-shadow(0 0 1.6em #766c65);
 }

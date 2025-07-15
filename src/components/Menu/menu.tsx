@@ -12,7 +12,7 @@ export function Menu() {
       {!open ? (
         <button
           onClick={() => toggleVisibility()}
-          className="fixed top-4 right-4 z-50 flex h-12 w-12 items-center justify-center rounded-full"
+          className="bg-spring-wood fixed top-4 right-4 z-50 flex h-12 w-12 items-center justify-center rounded-full"
           aria-label={'Open menu'}
         >
           <img src={'/menu_b.svg'} alt="Menu Icon" className="h-5 w-5" />
@@ -28,23 +28,30 @@ export function Menu() {
           </button>
           <ul className="space-y-6 text-2xl">
             <li>
-              <a href="#home" onClick={() => toggleVisibility()}>
+              <a
+                href="#home"
+                aria-label="Home"
+                onClick={() => toggleVisibility()}
+              >
                 Home
               </a>
             </li>
             <li>
-              <a href="#about" onClick={() => toggleVisibility()}>
-                About Me
-              </a>
-            </li>
-            <li>
-              <a href="#projects" onClick={() => toggleVisibility()}>
+              <a
+                href="#projects"
+                aria-label="Projects"
+                onClick={() => toggleVisibility()}
+              >
                 Projects
               </a>
             </li>
             <li>
-              <a href="#contact" onClick={() => toggleVisibility()}>
-                Contact
+              <a
+                href="#experience"
+                aria-label="Experience"
+                onClick={() => toggleVisibility()}
+              >
+                Experience
               </a>
             </li>
           </ul>
