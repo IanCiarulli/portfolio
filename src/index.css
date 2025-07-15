@@ -38,10 +38,10 @@
 
 @theme {
   --color-cta: #704326;
+  --color-cta-hover: #5c351f;
+  --color-cta-text: #fff5e3;
   --color-element: #a68c6d;
-  --color-link: #497c78;
-  --color-link-hover: #4ba3a2;
-  --color-text-secondary: #766c65;
+  --color-text-secondary: #59524c;
   --color-highlight-rn: #06bcee;
   --color-highlight-bg: #e4f6f9;
   --color-spring-wood: #f8f5f0;
@@ -69,7 +69,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #f8f5f0;
+  background-color: #fff5e3;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
