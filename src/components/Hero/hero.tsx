@@ -65,7 +65,18 @@ export function Hero() {
           src={`${THUMBNAILS_URL}dolby.webp`}
           alt="Hero Profile Image"
           className="h-36 w-36 rounded-full border border-cyan-50 object-cover lg:mb-0 lg:h-52 lg:w-52"
-          loading="lazy"
+          fetchpriority="high"
+          loading="eager"
+          transformation={[
+            {
+              height: 208,
+              width: 208,
+              quality: 95,
+              format: 'webp',
+              progressive: true,
+              cropMode: 'extract',
+            },
+          ]}
         />
         <ContactLinks className="mt-4 lg:hidden" />
       </div>
