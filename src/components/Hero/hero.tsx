@@ -26,20 +26,22 @@ export function Hero() {
         />
       </div>
       <div className="flex w-full flex-col px-6">
-        <h1 className="mb-8 w-full text-left text-6xl font-bold whitespace-nowrap">
-          Ian Ciarulli
-        </h1>
-        <h2 className="mb-6 w-full text-left text-3xl font-bold whitespace-nowrap">
-          <span className="mr-1 rounded bg-[#061c29] px-2 py-1 text-[#61dafb]">
-            React Native
-          </span>
-          Developer
-        </h2>
-        <p className="font-jetbrains mb-4 w-full text-left text-base">
-          <span className="font-bold"> 5+ </span>Years of experience / 15+
-          projects
-        </p>
-        <div className="text-cta flex w-full items-end bg-amber-400 text-sm">
+        <div>
+          <h1 className="mb-8 w-full text-left text-6xl font-bold whitespace-nowrap">
+            Ian Ciarulli
+          </h1>
+          <h2 className="mb-6 w-full text-left text-3xl font-bold whitespace-nowrap">
+            <span className="mr-1 rounded bg-[#061c29] px-2 py-1 text-[#61dafb]">
+              React Native
+            </span>
+            Developer
+          </h2>
+          <p className="font-jetbrains mb-4 w-full text-left text-base">
+            <span className="font-bold"> 5+ </span>Years of experience / 15+
+            projects
+          </p>
+        </div>
+        <div className="text-cta flex w-full">
           <MapPinned className="text-cta mr-2 h-5 w-5" />
           <span>Merlo, Argentina</span>
         </div>
