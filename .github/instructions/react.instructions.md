@@ -35,6 +35,7 @@ coding-conventions:
 - File-based modularization with folder grouping
 - Tailwind utility-first for all styling
 - ESLint + Prettier enforced on commit
+- Bajo ninguna circunstancia se debe importar React completo. Siempre importar los elementos de React de forma destructurada, por ejemplo: `import { useState, useEffect } from 'react';`
 
 # React Concepts
 
