@@ -67,11 +67,6 @@ export function Hero() {
           className="h-36 w-36 rounded-full border border-cyan-50 object-cover lg:mb-0 lg:h-52 lg:w-52"
           loading="lazy"
         />
-        {/* <img
-          src="https://images.generated.photos/xjb1f1tmusZFtOLWl6VdasrPFgVVv-gtngIJvnwT1_8/rs:auto:1024:1024/wm:1:sowe:18:18:0.5/wmid:gp/czM6Ly9odW1hbi1n/ZW5lcmF0b3ItcHJv/ZC83NTMvYjk3NWYy/YjktZmNjYi00ZTU2/LWEyMWEtNzhiYmU2/YzUwMzFiLnBuZw.jpg"
-          alt="Hero Profile Image"
-          className="h-36 w-36 rounded-full border border-cyan-50 object-cover lg:mb-0 lg:h-52 lg:w-52"
-        /> */}
         <ContactLinks className="mt-4 lg:hidden" />
       </div>
     </section>
