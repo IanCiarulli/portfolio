@@ -13,9 +13,10 @@ function App() {
       >
         <Menu />
         <Hero />
-        <TechStack data={StackData} title="Main Stack" />
+        {/*         <TechStack data={StackData} title="Main Stack" />
         <ProjectsList items={Projects} title="Projects" />
-        <Experience />
+        <Experience /> */}
+        {/* <Footer> */}
       </div>
     </ImageKitProvider>
   );

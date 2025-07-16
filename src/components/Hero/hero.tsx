@@ -1,78 +1,68 @@
 import { Image } from '@imagekit/react';
 import { THUMBNAILS_URL } from '../../constants';
-
-// Convertir a componente
-function ContactLinks({ className = '' }: { className?: string }) {
-  return (
-    <div
-      className={`flex w-full justify-center space-x-4 lg:justify-start ${className}`}
-    >
-      <a
-        href="mailto:ian.ciarulli@gmail.com"
-        target="_blank"
-        aria-label="Email"
-      >
-        <img src="/mail.svg" alt="Mail Icon" className="h-6 w-6" />
-      </a>
-      <div className="pt-0.75">
-        <a
-          href="https://www.linkedin.com/in/ian-ciarulli/"
-          target="_blank"
-          aria-label="LinkedIn"
-        >
-          <img
-            src="/linkedin.svg"
-            alt="LinkedIn Icon"
-            className="h-4.5 w-4.5"
-          />
-        </a>
-      </div>
-      <div className="text-text-secondary mb-2 flex flex-col items-start text-sm">
-        <div className="text-secondary flex justify-start pt-1">
-          <img
-            src="/location.svg"
-            alt="Location Icon"
-            className="mr-1.5 h-4.5 w-4.5"
-          />
-          <span>Merlo, Argentina</span>
-        </div>
-      </div>
-    </div>
-  );
-}
+import { Mail, Linkedin, MapPinned } from 'lucide-react';
+import { CvCta } from '..';
 
 export function Hero() {
   return (
-    <section className="flex w-full flex-col items-center lg:flex-row lg:items-start">
-      <div className="flex w-full flex-col items-center px-6 lg:w-[55%] lg:px-0 lg:pl-13">
-        <h1 className="mb-6 text-center text-3xl font-bold lg:text-left">
-          Hi, I'm <span className="text-morocco-brown">Ian</span>! Mobile
-          developer specialized in{' '}
-          <span className="text-highlight-rn bg-highlight-bg whitespace-nowrap">
-            React Native
-          </span>
-          .
-        </h1>
-        <p className="font-jetbrains mb-6 w-full text-center text-base lg:text-left">
-          I have<span className="font-bold"> 5+ </span>years developing within
-          the <span className="whitespace-nowrap">React Native</span> ecosystem.
-        </p>
-        <ContactLinks className="hidden lg:flex" />
-      </div>
-
-      <div className="flex w-full flex-col items-center lg:w-[45%]">
+    <section className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 pt-2 lg:flex-row lg:items-start lg:gap-12">
+      <div className="mb-4 flex w-full justify-center sm:mb-6">
         <Image
-          src={`${THUMBNAILS_URL}dolby.webp`}
+          src={`${THUMBNAILS_URL}portrait.webp`}
           alt="Hero Profile Image"
-          className="h-36 w-36 rounded-full border border-cyan-50 object-cover lg:mb-0 lg:h-52 lg:w-52"
-          loading="lazy"
+          fetchPriority="high"
+          loading="eager"
+          className="aspect-[4/5] w-[160px] rounded-xl border border-[#e8dbca] object-cover shadow-[0_12px_30px_rgba(0,0,0,0.35)] sm:w-[200px] lg:w-[240px] xl:w-[280px]"
+          transformation={[
+            {
+              height: 480,
+              width: 384,
+              quality: 95,
+              format: 'webp',
+              progressive: true,
+            },
+          ]}
         />
-        {/* <img
-          src="https://images.generated.photos/xjb1f1tmusZFtOLWl6VdasrPFgVVv-gtngIJvnwT1_8/rs:auto:1024:1024/wm:1:sowe:18:18:0.5/wmid:gp/czM6Ly9odW1hbi1n/ZW5lcmF0b3ItcHJv/ZC83NTMvYjk3NWYy/YjktZmNjYi00ZTU2/LWEyMWEtNzhiYmU2/YzUwMzFiLnBuZw.jpg"
-          alt="Hero Profile Image"
-          className="h-36 w-36 rounded-full border border-cyan-50 object-cover lg:mb-0 lg:h-52 lg:w-52"
-        /> */}
-        <ContactLinks className="mt-4 lg:hidden" />
+      </div>
+      <div className="flex w-full flex-col px-6">
+        <div>
+          <h1 className="mb-4 w-full text-left text-4xl font-bold whitespace-nowrap sm:mb-8 sm:text-6xl">
+            Ian Ciarulli
+          </h1>
+          <h2 className="mb-3 w-full text-left text-xl font-bold whitespace-nowrap sm:mb-6 sm:text-3xl">
+            <span className="mr-1 rounded bg-[#061c29] px-2 py-1 text-[#61dafb]">
+              React Native
+            </span>
+            Developer
+          </h2>
+          <p className="font-jetbrains mb-4 w-full text-left text-base sm:text-lg">
+            <span className="text-base font-bold sm:text-lg"> 5+ </span>Years of
+            experience / 15+ projects
+          </p>
+        </div>
+        <div className="text-cta flex w-full">
+          <MapPinned className="text-cta mr-2 h-5 w-5" />
+          <span>Merlo, Argentina</span>
+        </div>
+        <div className="mt-4 flex gap-4">
+          <a
+            href="mailto:ian@mail.com"
+            aria-label="Email"
+            className="text-cta rounded-full bg-[#f0e9dc] p-3 shadow-sm transition-all hover:bg-[#e8e0d0]"
+          >
+            <Mail className="h-5 w-5" />
+          </a>
+          <a
+            href="https://linkedin.com/in/ian"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cta rounded-full bg-[#f0e9dc] p-3 shadow-sm transition-all hover:bg-[#e8e0d0]"
+          >
+            <Linkedin className="h-5 w-5" />
+          </a>
+          <CvCta />
+        </div>
       </div>
     </section>
   );

@@ -5,3 +5,4 @@ export * from './TechStack/techStack';
 export * from './Menu/menu';
 export * from './Thumbnail/thumbnail';
 export * from './ProjectsList/projectsList';
+export * from './CvCta/cvCta';

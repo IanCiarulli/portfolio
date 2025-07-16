@@ -1,0 +1,23 @@
+.arrow-container:hover .arrow-icon {
+  animation: arrowDown 1.33s ease-in-out infinite;
+}
+.arrow-container:hover .arrow-icon.second {
+  animation: arrowDownSecond 1.33s ease-in-out infinite;
+}
+
+@keyframes arrowDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(24px);
+  }
+}
+@keyframes arrowDownSecond {
+  0% {
+    transform: translateY(-24px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

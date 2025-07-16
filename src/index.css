@@ -1,15 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=JetBrains+Mono:wght@100..900&display=swap');
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrainsMono-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import 'tailwindcss';
 
 @theme {
   --color-cta: #704326;
+  --color-cta-hover: #5c351f;
+  --color-cta-text: #fff5e3;
   --color-element: #a68c6d;
-  --color-link: #497c78;
-  --color-link-hover: #4ba3a2;
-  --color-text-secondary: #766c65;
+  --color-text-secondary: #59524c;
   --color-highlight-rn: #06bcee;
   --color-highlight-bg: #e4f6f9;
   --color-spring-wood: #f8f5f0;
+  --color-sazerac: #fff5e3;
   --color-morocco-brown: #442000;
 
   --font-inter: 'Inter', sans-serif;
@@ -34,7 +70,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #f8f5f0;
+  background-color: #fff5e3;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
