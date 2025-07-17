@@ -44,7 +44,7 @@ export function Hero() {
           <MapPinned className="text-cta mr-2 h-5 w-5" />
           <span>Merlo, Argentina</span>
         </div>
-        <div className="mt-4 flex gap-4">
+        <div className="mt-4 flex gap-4 max-[361px]:flex-wrap max-[361px]:items-center max-[361px]:justify-center max-[361px]:gap-3 sm:justify-start">
           <a
             href="mailto:ian@mail.com"
             aria-label="Email"

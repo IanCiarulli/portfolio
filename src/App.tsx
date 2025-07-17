@@ -1,8 +1,8 @@
-import { Experience, Hero, Menu, TechStack, ProjectsList } from './components';
-import { StackData } from './data/stackData';
-import { Projects } from './data/projectsData';
+import { Experience, Hero, Menu, ProjectsList, TechStack } from './components';
+import { techStackData } from './data/stackData';
 import { ImageKitProvider } from '@imagekit/react';
 import { IK_ENDPOINT } from './constants';
+import { Projects } from './data/projectsData';
 
 function App() {
   return (
@@ -13,9 +13,9 @@ function App() {
       >
         <Menu />
         <Hero />
-        {/*         <TechStack data={StackData} title="Main Stack" />
+        <TechStack data={techStackData} title="Tech Stack" />
         <ProjectsList items={Projects} title="Projects" />
-        <Experience /> */}
+        <Experience />
         {/* <Footer> */}
       </div>
     </ImageKitProvider>
