@@ -5,7 +5,7 @@ export interface ThumbnailProps {
 
 export interface ProjectProps extends ThumbnailProps {
   className: string;
-  onClick: () => void;
+  onClick?: () => void;
   title: string;
-  description: string;
+  role: string;
 }
