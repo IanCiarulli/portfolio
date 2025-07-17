@@ -99,6 +99,7 @@ body::-webkit-scrollbar {
   transition: filter 300ms;
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 .thumbnail:hover {
