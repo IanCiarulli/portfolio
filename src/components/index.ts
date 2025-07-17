@@ -6,3 +6,4 @@ export * from './Menu/menu';
 export * from './Thumbnail/thumbnail';
 export * from './ProjectsList/projectsList';
 export * from './CvCta/cvCta';
+export * from './TechTooltip/techTooltip';
