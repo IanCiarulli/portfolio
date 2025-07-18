@@ -43,7 +43,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
     >
       <h2 className="mb-8 text-center text-2xl font-bold">{title}</h2>
 
-      <div className="w-full max-w-5xl px-4">
+      <div className="4 w-full max-w-5xl">
         <motion.div className="hidden grid-cols-3 gap-6 lg:grid" layout>
           <AnimatePresence>
             {visibleProjects.map((project, i) => (
