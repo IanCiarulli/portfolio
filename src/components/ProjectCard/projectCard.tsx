@@ -1,6 +1,6 @@
-import { TECHS } from '../../constants';
 import { Thumbnail } from '..';
 import { ProjectProps } from '../../models';
+import { TECHS } from '../../constants';
 
 export const ProjectCard = ({
   thumbnailPath,
@@ -8,14 +8,10 @@ export const ProjectCard = ({
   title,
   role,
   techs = [],
-  onClick,
 }: ProjectProps) => {
   return (
-    <button
-      onClick={onClick}
-      className="group border-element bg-spring-wood focus:ring-cta w-full max-w-xs cursor-pointer rounded-xl border p-4 text-left shadow-sm transition hover:scale-[1.01] hover:shadow-md focus:ring-2 focus:outline-none"
-    >
-      <div className="mb-4 flex justify-center">
+    <div className="bg-spring-wood border-element flex w-full max-w-xs flex-shrink-0 flex-col items-start rounded-xl border p-4 shadow-sm transition-all hover:scale-[1.01] hover:shadow-md sm:max-w-full">
+      <div className="mb-4 flex w-full justify-center">
         <div className="h-20 w-20">
           <Thumbnail
             thumbnailPath={thumbnailPath}
@@ -23,10 +19,8 @@ export const ProjectCard = ({
           />
         </div>
       </div>
-
       <h3 className="text-morocco-brown mb-1 text-lg font-bold">{title}</h3>
       <p className="text-text-secondary mb-3 text-sm">{role}</p>
-
       <div className="flex flex-wrap items-center gap-2">
         {techs.map((techKey) => {
           const tech = TECHS[techKey];
@@ -44,6 +38,6 @@ export const ProjectCard = ({
           );
         })}
       </div>
-    </button>
+    </div>
   );
 };

@@ -6,7 +6,6 @@ export interface ThumbnailProps {
 }
 
 export interface ProjectProps extends ThumbnailProps {
-  onClick?: () => void;
   title: string;
   role: string;
   techs?: (keyof typeof TECHS)[];
