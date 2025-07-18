@@ -43,22 +43,24 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
     >
       <h2 className="mb-8 text-center text-2xl font-bold">{title}</h2>
 
-      <motion.div className="hidden grid-cols-3 gap-6 lg:grid" layout>
-        <AnimatePresence>
-          {visibleProjects.map((project, i) => (
-            <motion.div
-              key={project.title}
-              layout
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3, delay: i * 0.05 }}
-            >
-              <ProjectCard {...project} />
-            </motion.div>
-          ))}
-        </AnimatePresence>
-      </motion.div>
+      <div className="w-full max-w-5xl px-4">
+        <motion.div className="hidden grid-cols-3 gap-6 lg:grid" layout>
+          <AnimatePresence>
+            {visibleProjects.map((project, i) => (
+              <motion.div
+                key={project.title}
+                layout
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3, delay: i * 0.05 }}
+              >
+                <ProjectCard {...project} />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+      </div>
 
       <div
         className="w-full overflow-x-auto px-6 lg:hidden"
@@ -71,13 +73,13 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
         <div className="flex gap-4">
           <div
             className="flex-shrink-0"
-            style={{ width: 'calc((100vw - 260px) / 2)' }}
+            style={{ width: 'calc((100vw - 280px) / 2)' }}
           />
           {items.map((project, i) => (
             <motion.div
               key={project.title}
               className="flex-shrink-0 snap-center"
-              style={{ width: '260px' }}
+              style={{ width: '280px' }}
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: i * 0.05 }}
@@ -88,7 +90,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
 
           <div
             className="flex-shrink-0"
-            style={{ width: 'calc((100vw - 260px) / 2)' }}
+            style={{ width: 'calc((100vw - 280px) / 2)' }}
           />
         </div>
       </div>

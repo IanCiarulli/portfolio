@@ -3,6 +3,7 @@ import { TECHS } from '../constants';
 export interface ThumbnailProps {
   thumbnailPath: string;
   thumbnailAltText: string;
+  className?: string;
 }
 
 export interface ProjectProps extends ThumbnailProps {
