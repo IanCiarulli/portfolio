@@ -12,7 +12,7 @@ export const ProjectCard = ({
   return (
     <div className="bg-spring-wood border-element w-[260px] flex-shrink-0 rounded-xl border p-4 shadow-sm transition-all hover:shadow-md sm:w-full">
       <div className="mb-4 flex w-full justify-center">
-        <div className="h-20 w-20">
+        <div className="h-20 w-20 overflow-hidden rounded-md">
           <Thumbnail
             thumbnailPath={thumbnailPath}
             thumbnailAltText={thumbnailAltText}
