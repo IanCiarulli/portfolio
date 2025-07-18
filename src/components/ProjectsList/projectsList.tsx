@@ -16,6 +16,25 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
 
   const visibleProjects = showAll ? items : items.slice(0, 3);
 
+  const handleToggleShowAll = () => {
+    setShowAll((prev) => {
+      const newShowAll = !prev;
+
+      if (prev && !newShowAll) {
+        setTimeout(() => {
+          if (sectionRef.current) {
+            sectionRef.current.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            });
+          }
+        }, 100);
+      }
+
+      return newShowAll;
+    });
+  };
+
   return (
     <section
       ref={sectionRef}
@@ -76,7 +95,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
 
       <button
         className="text-morocco-brown mt-6 hidden transform text-base font-semibold transition-transform duration-200 hover:scale-105 lg:block"
-        onClick={() => setShowAll((prev) => !prev)}
+        onClick={handleToggleShowAll}
       >
         {showAll ? 'Show Less' : 'Show More'}
       </button>
