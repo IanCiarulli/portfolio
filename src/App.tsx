@@ -1,7 +1,7 @@
-import { Experience, Hero, Menu, ProjectsList, TechStack } from './components';
-import { techStackData } from './data/stackData';
 import { ImageKitProvider } from '@imagekit/react';
+import { Experience, Hero, Menu, ProjectsList, TechStack } from './components';
 import { IK_ENDPOINT } from './constants';
+import { techStackData } from './data/stackData';
 import { Projects } from './data/projectsData';
 
 function App() {
