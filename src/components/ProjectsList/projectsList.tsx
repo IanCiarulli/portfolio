@@ -1,7 +1,8 @@
-import { type FC, useRef, useState, useEffect } from 'react';
+import { type FC, useRef, useState } from 'react';
 import { type ProjectProps } from '../../models';
 import { ProjectCard } from '../ProjectCard/projectCard';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useDelayedSnap } from '../../hooks/';
 
 interface ProjectsListProps {
   items: ProjectProps[];
@@ -11,17 +12,9 @@ interface ProjectsListProps {
 export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
   const [showAll, setShowAll] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+  const snapEnabled = useDelayedSnap(300);
 
   const visibleProjects = showAll ? items : items.slice(0, 3);
-
-  useEffect(() => {
-    if (!showAll) {
-      sectionRef.current?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
-    }
-  }, [showAll]);
 
   return (
     <section
@@ -51,7 +44,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
       <div
         className="w-full overflow-x-auto px-6 lg:hidden"
         style={{
-          scrollSnapType: 'x mandatory',
+          scrollSnapType: snapEnabled ? 'x mandatory' : 'none',
           WebkitOverflowScrolling: 'touch',
           scrollbarWidth: 'none',
         }}
