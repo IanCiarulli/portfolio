@@ -24,17 +24,20 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
           <ProjectCard key={i} {...project} />
         ))}
       </div>
-      <div className="w-full overflow-x-auto lg:hidden">
-        <motion.div
-          className="flex snap-x snap-mandatory gap-4 px-4"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, ease: 'easeOut' }}
-        >
+
+      <div
+        className="w-full overflow-x-auto px-6 lg:hidden"
+        style={{
+          scrollSnapType: 'x mandatory',
+          WebkitOverflowScrolling: 'touch',
+        }}
+      >
+        <div className="flex gap-4">
           {items.map((project, i) => (
             <motion.div
               key={i}
-              className="w-[85%] snap-start"
+              className="flex-shrink-0 snap-center"
+              style={{ width: '260px' }}
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: i * 0.05 }}
@@ -42,7 +45,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
               <ProjectCard {...project} />
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
       <button
         className="text-morocco-brown mt-6 hidden text-sm font-medium hover:underline lg:block"
