@@ -55,11 +55,11 @@ export const PROJECT_THUMBNAILS = {
   },
   CHANEL: {
     thumbnailPath: `${THUMBNAILS_URL}chanel.webp`,
-    thumbnailAltText: 'Chanel',
+    thumbnailAltText: 'Chanel Beauty Atelier',
   },
   DOLBY: {
     thumbnailPath: `${THUMBNAILS_URL}dolby.webp`,
-    thumbnailAltText: 'Dolby',
+    thumbnailAltText: 'Dolby XP',
   },
   DROPDESK: {
     thumbnailPath: `${THUMBNAILS_URL}dropdesk.webp`,
