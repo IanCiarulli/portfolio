@@ -6,7 +6,7 @@ export interface TechVersion {
 export const TECH_VERSIONS: TechVersion[] = [
   { name: 'React Native', version: '^0.74.0' },
   { name: 'Expo', version: '^51.0.0' },
-  { name: 'TypeScript', version: '^5.3.0' },
+  { name: 'TypeScript', version: '' },
   { name: 'Copilot', version: '^1.0.0' },
   { name: 'Redux', version: '^5.0.0' },
   { name: 'Zustand', version: '^4.5.0' },

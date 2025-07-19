@@ -61,7 +61,7 @@ export const TechModal: FC<TechModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-md"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 italic backdrop-blur-md"
       onClick={onClose}
     >
       <div
@@ -87,15 +87,6 @@ export const TechModal: FC<TechModalProps> = ({
                 <span className="text-spring-wood font-medium">
                   "{projectTitle.toLowerCase().replace(/\s+/g, '-')}"
                 </span>
-                <span className="text-sazerac/70">,</span>
-              </div>
-
-              <div className="text-sazerac/90 mb-3">
-                <span className="text-highlight-rn font-semibold">
-                  "version"
-                </span>
-                <span className="text-sazerac/70">: </span>
-                <span className="text-spring-wood font-medium">"1.0.0"</span>
                 <span className="text-sazerac/70">,</span>
               </div>
 
@@ -153,7 +144,7 @@ export const TechModal: FC<TechModalProps> = ({
                             : 'text-spring-wood'
                         }`}
                       >
-                        "{techVersion?.version || '1.0.0'}"
+                        "{techVersion?.version || 'unknown'}"
                       </span>
                       {index < techs.length - 1 && (
                         <span className="text-sazerac/70">,</span>
@@ -165,6 +156,10 @@ export const TechModal: FC<TechModalProps> = ({
 
               <div className="text-sazerac/70 mt-3">{'}'}</div>
             </div>
+
+            <span className="text-sm text-gray-400/60">
+              _Some of the versions might be unknown_
+            </span>
           </div>
 
           <div className="mt-4 text-center">
