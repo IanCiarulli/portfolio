@@ -59,13 +59,18 @@ export const ProjectCard = ({
             return (
               <div
                 key={tech.thumbnailAltText}
-                className="from-sazerac to-sazerac/80 ring-sazerac/20 h-6 w-6 rounded-sm bg-gradient-to-br p-1 shadow-sm ring-1 transition-transform duration-200 hover:scale-110"
+                className="group from-spring-wood/90 to-spring-wood ring-spring-wood/30 hover:ring-highlight-rn/40 relative h-8 w-8 rounded-lg bg-gradient-to-br shadow-md ring-2 transition-all duration-300 hover:-translate-y-0.5 hover:scale-110 hover:shadow-lg"
                 title={tech.thumbnailAltText}
               >
-                <Thumbnail
-                  thumbnailPath={tech.thumbnailPath}
-                  thumbnailAltText={tech.thumbnailAltText}
-                />
+                <div className="to-morocco-brown/10 absolute inset-0 rounded-lg bg-gradient-to-br from-transparent via-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                <div className="flex h-full w-full items-center justify-center p-1.5">
+                  <Thumbnail
+                    thumbnailPath={tech.thumbnailPath}
+                    thumbnailAltText={tech.thumbnailAltText}
+                    className="transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+                <div className="from-highlight-rn/80 to-highlight-rn absolute -top-1 -right-1 h-2 w-2 rounded-full bg-gradient-to-br opacity-0 shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:opacity-100"></div>
               </div>
             );
           })}
