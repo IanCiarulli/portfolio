@@ -1,5 +1,5 @@
 import { atom } from 'jotai';
-import { Projects } from '../data/projectsData';
+import { Projects } from './projectsData';
 import type { ProjectProps } from '../models';
 
 export const projectsAtom = atom<ProjectProps[]>(Projects);
