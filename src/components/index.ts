@@ -5,6 +5,7 @@ export * from './TechStack/techStack';
 export * from './Menu/menu';
 export * from './Thumbnail/thumbnail';
 export * from './ProjectsList/projectsList';
+export * from './ProjectCard/projectCard';
 export * from './CvCta/cvCta';
 export * from './TechTooltip/techTooltip';
 export * from './TechModal/techModal';

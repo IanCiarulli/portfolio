@@ -43,7 +43,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
     >
       <h2 className="mb-8 text-center text-2xl font-bold">{title}</h2>
 
-      <div className="4 w-full max-w-5xl">
+      <div className="w-full max-w-5xl px-4">
         <motion.div className="hidden grid-cols-3 gap-6 lg:grid" layout>
           <AnimatePresence>
             {visibleProjects.map((project, i) => (
@@ -87,7 +87,6 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
               <ProjectCard {...project} />
             </motion.div>
           ))}
-
           <div
             className="flex-shrink-0"
             style={{ width: 'calc((100vw - 280px) / 2)' }}
