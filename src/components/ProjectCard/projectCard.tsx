@@ -12,13 +12,22 @@ export const ProjectCard = ({
   techs = [],
 }: ProjectProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedTech, setSelectedTech] = useState<string | null>(null);
 
   const handleCardClick = () => {
+    setSelectedTech(null);
+    setIsModalOpen(true);
+  };
+
+  const handleTechClick = (e: React.MouseEvent, techKey: string) => {
+    e.stopPropagation();
+    setSelectedTech(techKey);
     setIsModalOpen(true);
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
+    setSelectedTech(null);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -59,8 +68,9 @@ export const ProjectCard = ({
             return (
               <div
                 key={tech.thumbnailAltText}
-                className="group from-spring-wood/90 to-spring-wood ring-spring-wood/30 hover:ring-highlight-rn/40 relative h-8 w-8 rounded-lg bg-gradient-to-br shadow-md ring-2 transition-all duration-300 hover:-translate-y-0.5 hover:scale-110 hover:shadow-lg"
+                className="group from-spring-wood/90 to-spring-wood ring-spring-wood/30 hover:ring-highlight-rn/40 relative h-8 w-8 cursor-pointer rounded-lg bg-gradient-to-br shadow-md ring-2 transition-all duration-300 hover:-translate-y-0.5 hover:scale-110 hover:shadow-lg"
                 title={tech.thumbnailAltText}
+                onClick={(e) => handleTechClick(e, techKey)}
               >
                 <div className="to-morocco-brown/10 absolute inset-0 rounded-lg bg-gradient-to-br from-transparent via-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                 <div className="flex h-full w-full items-center justify-center p-1.5">
@@ -83,6 +93,7 @@ export const ProjectCard = ({
         projectTitle={title}
         techs={techs}
         techVersions={TECH_VERSIONS}
+        selectedTech={selectedTech}
       />
     </>
   );

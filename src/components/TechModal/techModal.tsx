@@ -1,4 +1,4 @@
-import { type FC, useEffect } from 'react';
+import { type FC, useEffect, useState } from 'react';
 import { TECHS } from '../../constants';
 import { type TechVersion } from '../../data/techVersions';
 
@@ -8,6 +8,7 @@ interface TechModalProps {
   projectTitle: string;
   techs: (keyof typeof TECHS)[];
   techVersions: TechVersion[];
+  selectedTech?: string | null;
 }
 
 export const TechModal: FC<TechModalProps> = ({
@@ -16,7 +17,19 @@ export const TechModal: FC<TechModalProps> = ({
   projectTitle,
   techs,
   techVersions,
+  selectedTech,
 }) => {
+  const [highlightedTech, setHighlightedTech] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (isOpen && selectedTech) {
+      setHighlightedTech(selectedTech);
+      const timer = setTimeout(() => {
+        setHighlightedTech(null);
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen, selectedTech]);
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
@@ -101,10 +114,31 @@ export const TechModal: FC<TechModalProps> = ({
                       tv.name.toLowerCase().replace(/\s+/g, '-') ===
                       tech.thumbnailAltText.toLowerCase().replace(/\s+/g, '-')
                   );
+                  const isHighlighted = highlightedTech === techKey;
+
                   return (
-                    <div key={techKey} className="flex items-center gap-2">
-                      <div className="bg-highlight-rn/20 h-1 w-1 rounded-full"></div>
-                      <span className="text-highlight-rn font-medium">
+                    <div
+                      key={techKey}
+                      className={`flex items-center gap-2 rounded-lg px-3 py-2 transition-all duration-300 ${
+                        isHighlighted
+                          ? 'from-highlight-rn/30 to-highlight-rn/20 ring-highlight-rn/40 animate-pulse bg-gradient-to-r shadow-md ring-2'
+                          : 'hover:bg-morocco-brown/20'
+                      }`}
+                    >
+                      <div
+                        className={`h-1 w-1 rounded-full transition-all duration-300 ${
+                          isHighlighted
+                            ? 'bg-highlight-rn shadow-highlight-rn/50 shadow-sm'
+                            : 'bg-highlight-rn/20'
+                        }`}
+                      ></div>
+                      <span
+                        className={`font-medium transition-all duration-300 ${
+                          isHighlighted
+                            ? 'text-highlight-rn font-semibold'
+                            : 'text-highlight-rn'
+                        }`}
+                      >
                         "
                         {tech.thumbnailAltText
                           .toLowerCase()
@@ -112,7 +146,13 @@ export const TechModal: FC<TechModalProps> = ({
                         "
                       </span>
                       <span className="text-sazerac/70">: </span>
-                      <span className="text-spring-wood font-medium">
+                      <span
+                        className={`font-medium transition-all duration-300 ${
+                          isHighlighted
+                            ? 'text-spring-wood font-semibold'
+                            : 'text-spring-wood'
+                        }`}
+                      >
                         "{techVersion?.version || '1.0.0'}"
                       </span>
                       {index < techs.length - 1 && (
