@@ -35,7 +35,8 @@ coding-conventions:
 - File-based modularization with folder grouping
 - Tailwind utility-first for all styling
 - ESLint + Prettier enforced on commit
-- Bajo ninguna circunstancia se debe importar React completo. Siempre importar los elementos de React de forma destructurada, por ejemplo: `import { useState, useEffect } from 'react';`
+- Under no circumstances should React be imported completely. Always import React elements destructured, for example: `import { useState, useEffect } from 'react';`
+- Do not add "What is" or "How it works" type comments, that should be deducible from the component/function name and how it works, from the names of its internal variables. Only add comments about "Why" something is being done.
 
 # React Concepts
 
