@@ -47,10 +47,12 @@ export const ProjectCard = ({
             />
           </div>
         </div>
-        <h3 className="text-cta-text mb-2 truncate text-lg font-bold drop-shadow-sm">
+        <h3 className="text-cta-text mb-2 truncate text-lg font-bold drop-shadow-sm md:text-base lg:text-base xl:text-base 2xl:text-base">
           {title}
         </h3>
-        <p className="text-cta-text/90 mb-4 text-base font-medium">{role}</p>
+        <p className="text-cta-text/90 mb-4 text-base font-medium md:text-sm lg:text-sm xl:text-sm 2xl:text-sm">
+          {role}
+        </p>
         <div className="flex flex-wrap items-center gap-2">
           {techs.map((techKey) => {
             const tech = TECHS[techKey];

@@ -38,12 +38,12 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
   return (
     <section
       ref={sectionRef}
-      className="flex w-full flex-col items-center justify-center pt-16"
+      className="font-jetbrains flex w-full flex-col items-center justify-center pt-16"
       id="projects"
     >
       <h2 className="mb-8 text-center text-2xl font-bold">{title}</h2>
 
-      <div className="w-full max-w-5xl px-4">
+      <div className="w-full max-w-5xl">
         <motion.div className="hidden grid-cols-3 gap-6 lg:grid" layout>
           <AnimatePresence>
             {visibleProjects.map((project, i) => (
@@ -54,6 +54,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3, delay: i * 0.05 }}
+                className=""
               >
                 <ProjectCard {...project} />
               </motion.div>
