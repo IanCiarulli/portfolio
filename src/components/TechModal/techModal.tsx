@@ -1,13 +1,12 @@
 import { type FC, useEffect, useState } from 'react';
 import { TECHS } from '../../constants';
-import { type TechVersion } from '../../data/techVersions';
+import { type TechWithVersion } from '../../models';
 
 interface TechModalProps {
   isOpen: boolean;
   onClose: () => void;
   projectTitle: string;
-  techs: (keyof typeof TECHS)[];
-  techVersions: TechVersion[];
+  techs: TechWithVersion[];
   selectedTech?: string | null;
 }
 
@@ -16,7 +15,6 @@ export const TechModal: FC<TechModalProps> = ({
   onClose,
   projectTitle,
   techs,
-  techVersions,
   selectedTech,
 }) => {
   const [highlightedTech, setHighlightedTech] = useState<string | null>(null);
@@ -98,18 +96,14 @@ export const TechModal: FC<TechModalProps> = ({
               </div>
 
               <div className="ml-6 space-y-2">
-                {techs.map((techKey, index) => {
-                  const tech = TECHS[techKey];
-                  const techVersion = techVersions.find(
-                    (tv) =>
-                      tv.name.toLowerCase().replace(/\s+/g, '-') ===
-                      tech.thumbnailAltText.toLowerCase().replace(/\s+/g, '-')
-                  );
-                  const isHighlighted = highlightedTech === techKey;
+                {techs.map((techWithVersion, index) => {
+                  const tech = TECHS[techWithVersion.tech];
+                  const isHighlighted =
+                    highlightedTech === techWithVersion.tech;
 
                   return (
                     <div
-                      key={techKey}
+                      key={techWithVersion.tech}
                       className={`flex items-center gap-2 rounded-lg px-3 py-2 transition-all duration-300 ${
                         isHighlighted
                           ? 'from-highlight-rn/30 to-highlight-rn/20 ring-highlight-rn/40 animate-pulse bg-gradient-to-r shadow-md ring-2'
@@ -144,7 +138,7 @@ export const TechModal: FC<TechModalProps> = ({
                             : 'text-spring-wood'
                         }`}
                       >
-                        "{techVersion?.version || 'unknown'}"
+                        "{techWithVersion.version}"
                       </span>
                       {index < techs.length - 1 && (
                         <span className="text-sazerac/70">,</span>

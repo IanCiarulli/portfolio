@@ -1,7 +1,7 @@
-import { type FC, useRef, useState } from 'react';
+import { type FC, useRef, useState, useEffect } from 'react';
 import { type ProjectProps } from '../../models';
 import { ProjectCard } from '../ProjectCard/projectCard';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useDelayedSnap } from '../../hooks/';
 
 interface ProjectsListProps {
@@ -11,10 +11,19 @@ interface ProjectsListProps {
 
 export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
   const [showAll, setShowAll] = useState(false);
+  const [isInitialMount, setIsInitialMount] = useState(true);
   const sectionRef = useRef<HTMLElement>(null);
   const snapEnabled = useDelayedSnap(300);
 
   const visibleProjects = showAll ? items : items.slice(0, 3);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsInitialMount(false);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleToggleShowAll = () => {
     setShowAll((prev) => {
@@ -44,23 +53,27 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
       <h2 className="mb-8 text-center text-2xl font-bold">{title}</h2>
 
       <div className="w-full max-w-5xl">
-        <motion.div className="hidden grid-cols-3 gap-6 lg:grid" layout>
-          <AnimatePresence>
-            {visibleProjects.map((project, i) => (
-              <motion.div
-                key={project.title}
-                layout
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.3, delay: i * 0.05 }}
-                className=""
-              >
-                <ProjectCard {...project} />
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
+        <div className="hidden lg:grid lg:grid-cols-3 lg:gap-6">
+          {visibleProjects.map((project, i) => (
+            <motion.div
+              key={project.title}
+              initial={{
+                opacity: isInitialMount ? 1 : 0,
+                y: isInitialMount ? 0 : 10,
+              }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{
+                duration: isInitialMount ? 0 : 0.3,
+                delay: isInitialMount ? 0 : Math.min(i * 0.05, 0.15),
+                ease: 'easeOut',
+              }}
+              className="w-full"
+            >
+              <ProjectCard {...project} />
+            </motion.div>
+          ))}
+        </div>
       </div>
 
       <div

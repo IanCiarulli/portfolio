@@ -6,8 +6,13 @@ export interface ThumbnailProps {
   className?: string;
 }
 
+export interface TechWithVersion {
+  tech: keyof typeof TECHS;
+  version: string;
+}
+
 export interface ProjectProps extends ThumbnailProps {
   title: string;
   role: string;
-  techs?: (keyof typeof TECHS)[];
+  techs?: TechWithVersion[];
 }

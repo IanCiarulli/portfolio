@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Thumbnail, TechModal } from '..';
 import { ProjectProps } from '../../models';
 import { TECHS } from '../../constants';
-import { TECH_VERSIONS } from '../../data/techVersions';
 
 export const ProjectCard = ({
   thumbnailPath,
@@ -19,7 +18,10 @@ export const ProjectCard = ({
     setIsModalOpen(true);
   };
 
-  const handleTechClick = (e: React.MouseEvent, techKey: string) => {
+  const handleTechClick = (
+    e: React.MouseEvent,
+    techKey: keyof typeof TECHS
+  ) => {
     e.stopPropagation();
     setSelectedTech(techKey);
     setIsModalOpen(true);
@@ -40,7 +42,7 @@ export const ProjectCard = ({
   return (
     <>
       <div
-        className="from-cta/95 via-cta to-cta-hover border-cta-hover hover:from-cta-hover/90 hover:via-cta-hover hover:to-cta-hover focus:from-cta-hover/90 focus:via-cta-hover focus:to-cta-hover active:from-cta-hover active:via-cta-hover active:to-cta-hover focus:ring-highlight-rn/50 w-[280px] flex-shrink-0 cursor-pointer rounded-xl border bg-gradient-to-br p-5 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.3),0_4px_16px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_4px_12px_-2px_rgba(0,0,0,0.4),0_8px_24px_-6px_rgba(0,0,0,0.15)] focus:scale-[1.02] focus:shadow-[0_4px_12px_-2px_rgba(0,0,0,0.4),0_8px_24px_-6px_rgba(0,0,0,0.15)] focus:ring-2 focus:outline-none active:scale-[1.01] sm:w-full"
+        className="from-cta/95 via-cta to-cta-hover border-cta-hover hover:from-cta-hover/90 hover:via-cta-hover hover:to-cta-hover focus:from-cta-hover/90 focus:via-cta-hover focus:to-cta-hover active:from-cta-hover active:via-cta-hover active:to-cta-hover focus:ring-highlight-rn/50 w-[280px] flex-shrink-0 cursor-pointer rounded-xl border bg-gradient-to-br p-5 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.3),0_4px_16px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_4px_12px_-2px_rgba(0,0,0,0.4),0_8px_24px_-6px_rgba(0,0,0,0.15)] focus:scale-[1.02] focus:shadow-[0_4px_12px_-2px_rgba(0,0,0,0.4),0_8px_24px_-6px_rgba(0,0,0,0.15)] focus:ring-2 focus:outline-none active:scale-[1.01] lg:w-full"
         onClick={handleCardClick}
         onKeyDown={handleKeyDown}
         tabIndex={0}
@@ -63,14 +65,14 @@ export const ProjectCard = ({
           {role}
         </p>
         <div className="flex flex-wrap items-center gap-2">
-          {techs.map((techKey) => {
-            const tech = TECHS[techKey];
+          {techs.map((techWithVersion) => {
+            const tech = TECHS[techWithVersion.tech];
             return (
               <div
                 key={tech.thumbnailAltText}
                 className="group from-spring-wood/90 to-spring-wood ring-spring-wood/30 hover:ring-highlight-rn/40 relative h-8 w-8 cursor-pointer rounded-lg bg-gradient-to-br shadow-md ring-2 transition-all duration-300 hover:-translate-y-0.5 hover:scale-110 hover:shadow-lg"
                 title={tech.thumbnailAltText}
-                onClick={(e) => handleTechClick(e, techKey)}
+                onClick={(e) => handleTechClick(e, techWithVersion.tech)}
               >
                 <div className="to-morocco-brown/10 absolute inset-0 rounded-lg bg-gradient-to-br from-transparent via-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                 <div className="flex h-full w-full items-center justify-center p-1.5">
@@ -92,7 +94,6 @@ export const ProjectCard = ({
         onClose={handleCloseModal}
         projectTitle={title}
         techs={techs}
-        techVersions={TECH_VERSIONS}
         selectedTech={selectedTech}
       />
     </>
