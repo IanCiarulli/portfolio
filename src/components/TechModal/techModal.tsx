@@ -26,8 +26,11 @@ export const TechModal: FC<TechModalProps> = ({
         setHighlightedTech(null);
       }, 2000);
       return () => clearTimeout(timer);
+    } else {
+      setHighlightedTech(null);
     }
   }, [isOpen, selectedTech]);
+
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
@@ -95,7 +98,7 @@ export const TechModal: FC<TechModalProps> = ({
                 <span className="text-sazerac/70">: {'{'}</span>
               </div>
 
-              <div className="ml-6 space-y-2">
+              <div className="ml-4 space-y-2">
                 {techs.map((techWithVersion, index) => {
                   const tech = TECHS[techWithVersion.tech];
                   const isHighlighted =
@@ -111,10 +114,10 @@ export const TechModal: FC<TechModalProps> = ({
                       }`}
                     >
                       <div
-                        className={`h-1 w-1 rounded-full transition-all duration-300 ${
+                        className={`h-1 w-1 flex-shrink-0 rounded-full transition-all duration-300 ${
                           isHighlighted
                             ? 'bg-highlight-rn shadow-highlight-rn/50 shadow-sm'
-                            : 'bg-highlight-rn/20'
+                            : 'bg-highlight-rn/50 sm:bg-highlight-rn/20'
                         }`}
                       ></div>
                       <span
