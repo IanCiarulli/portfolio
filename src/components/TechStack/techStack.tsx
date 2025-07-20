@@ -18,7 +18,7 @@ export function TechStack({
       <h2 className="mb-8 text-center text-2xl font-bold">{title}</h2>
 
       <div className="w-full px-4 lg:hidden">
-        <div className="from-spring-wood/95 via-spring-wood to-spring-wood/90 border-spring-wood/60 mx-auto max-w-xs rounded-xl border bg-gradient-to-br p-4 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.15),0_4px_16px_-4px_rgba(0,0,0,0.1)]">
+        <div className="from-spring-wood/88 via-spring-wood/92 to-spring-wood/85 border-spring-wood/45 mx-auto max-w-xs rounded-xl border bg-gradient-to-br p-4 shadow-[0_3px_10px_-2px_rgba(0,0,0,0.08),0_6px_18px_-4px_rgba(0,0,0,0.05)]">
           <div className="flex flex-col items-center gap-6">
             {data.map((category) => (
               <div
@@ -32,7 +32,7 @@ export function TechStack({
                   {category.data.map(({ thumbnailPath, thumbnailAltText }) => (
                     <div
                       key={thumbnailAltText}
-                      className="from-sazerac/10 to-sazerac/5 border-sazerac/20 hover:from-sazerac/15 hover:to-sazerac/8 flex flex-col items-center gap-1 rounded-lg border bg-gradient-to-br px-2 py-2 shadow-sm transition-all duration-200 hover:shadow-md"
+                      className="via-spring-wood/6 to-spring-wood/10 border-spring-wood/28 hover:via-spring-wood/10 hover:to-spring-wood/15 hover:border-spring-wood/38 flex flex-col items-center gap-1 rounded-lg border bg-gradient-to-br from-white/85 px-2 py-2 shadow-[0_2px_6px_-1px_rgba(0,0,0,0.07)] transition-all duration-220 hover:from-white/92 hover:shadow-[0_3px_10px_-1px_rgba(0,0,0,0.11)]"
                       title={thumbnailAltText}
                     >
                       <div className="flex h-8 w-8 items-center justify-center">
