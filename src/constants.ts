@@ -30,6 +30,10 @@ export const TECHS = {
     thumbnailPath: `${THUMBNAILS_URL}jotai.png`,
     thumbnailAltText: 'Jotai',
   },
+  MOBX: {
+    thumbnailPath: `${THUMBNAILS_URL}mobx.png`,
+    thumbnailAltText: 'MobX',
+  },
   GRAPHQL: {
     thumbnailPath: `${THUMBNAILS_URL}graphql.png`,
     thumbnailAltText: 'GraphQL',
