@@ -3,49 +3,50 @@ import { TECHS } from '../constants';
 export const coreStack = [
   {
     ...TECHS.REACT_NATIVE,
-    tooltip: 'The core of my daily toolkit — built everything around it',
+    tooltip: "My daily bread — I've built 18+ apps with this beauty",
   },
   {
     ...TECHS.EXPO,
-    tooltip: 'My go-to for starting projects from scratch',
+    tooltip: 'I reach for this first when starting any new project',
   },
   {
     ...TECHS.TYPESCRIPT,
-    tooltip: 'Mandatory — strong types or exile',
+    tooltip:
+      'I see no reason to go back to JavaScript — types help way too much to keep things in order',
   },
   {
     ...TECHS.COPILOT,
-    tooltip: 'Essential for a fast, modern development flow',
+    tooltip: 'My coding companion — speeds up my workflow like crazy',
   },
 ];
 
 export const stateManagementStack = [
   {
     ...TECHS.REDUX,
-    tooltip: 'Clear logic boundaries, perfect for scalable architectures',
+    tooltip: 'My go-to for complex apps — I love its predictable patterns',
   },
   {
     ...TECHS.ZUSTAND,
-    tooltip: 'Lean, powerful, and dead simple for focused state needs',
+    tooltip: 'I use this when I want Redux power without the boilerplate',
   },
   {
     ...TECHS.JOTAI,
-    tooltip: 'State as atoms — perfect for isolated, reactive flows',
+    tooltip: "I'm exploring this for granular, reactive state management",
   },
   {
-    ...TECHS.GRAPHQL,
-    tooltip: 'Typed, precise and clean — no wasteful data fetching',
+    ...TECHS.MOBX,
+    tooltip: 'Used this to orchestrate state across 4 platforms in Dolby',
   },
 ];
 
 export const testingStack = [
   {
     ...TECHS.JEST,
-    tooltip: 'Fast, focused, and reliable — my go-to for logic validation',
+    tooltip: "I write unit tests with this — it's fast and reliable",
   },
   {
     ...TECHS.DETOX,
-    tooltip: 'When flows *must* work on device, not just in theory',
+    tooltip: 'When I need to test real user flows on actual devices',
   },
 ];
 
