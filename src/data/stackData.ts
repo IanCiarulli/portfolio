@@ -3,7 +3,7 @@ import { TECHS } from '../constants';
 export const coreStack = [
   {
     ...TECHS.REACT_NATIVE,
-    tooltip: "My daily bread — I've built 18+ apps with this beauty",
+    tooltip: "My daily bread — I've built all my apps with this beauty",
   },
   {
     ...TECHS.EXPO,
