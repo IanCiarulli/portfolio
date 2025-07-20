@@ -5,13 +5,23 @@ export function Experience() {
   const experiences = useAtomValue(experienceAtom);
 
   return (
-    <section id="experience" className="w-full py-32">
+    <section
+      id="experience"
+      className="w-full py-32"
+      aria-label="Experience Section"
+    >
       <div className="mx-auto max-w-4xl px-4">
-        <div className="mb-12 flex flex-col items-center">
+        <div className="mb-6 flex flex-col items-center">
           <h2 className="text-morocco-brown mb-2 text-center text-3xl font-bold tracking-tight">
             Experience
           </h2>
           <div className="bg-element h-1 w-16 rounded-full"></div>
+          <div className="text-cta/80 mt-6 w-[85%] text-center text-sm italic max-[361px]:w-[90%] lg:w-full">
+            <p>
+              This is an extended version; for a more streamlined one, please
+              refer to my resume.
+            </p>
+          </div>
         </div>
         <div className="space-y-6">
           {experiences.map((exp, index) => (
