@@ -1,33 +1,49 @@
-import { ExperienceItem } from '../../models';
+import { useAtomValue } from 'jotai';
+import { experienceAtom } from '../../store';
 
 export function Experience() {
+  const experiences = useAtomValue(experienceAtom);
+
   return (
-    <section id="experience" className="w-full px-6 py-16">
-      <div className="mx-auto max-w-3xl">
-        <h2 className="mb-8 text-center text-2xl font-bold">Experience</h2>
-        <div className="space-y-12">
+    <section id="experience" className="w-full py-32">
+      <div className="mx-auto max-w-4xl px-4">
+        <div className="mb-12 flex flex-col items-center">
+          <h2 className="text-morocco-brown mb-2 text-center text-3xl font-bold tracking-tight">
+            Experience
+          </h2>
+          <div className="bg-element h-1 w-16 rounded-full"></div>
+        </div>
+        <div className="space-y-6">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="border-element relative border-l-2 pl-8"
+              className="bg-spring-wood/95 border-spring-wood/40 rounded-xl border p-6 shadow-[0_2px_8px_-1px_rgba(0,0,0,0.08)] transition-all duration-200 hover:shadow-[0_4px_16px_-2px_rgba(0,0,0,0.12)]"
             >
-              <div className="bg-cta absolute top-0 left-[-9px] h-4 w-4 rounded-full" />
-              <h3 className="text-morocco-brown mb-1 text-xl font-semibold">
-                {exp.company}
-              </h3>
-              <p className="mb-1 text-lg font-medium">{exp.role}</p>
-              <p className="mb-1 font-medium">Remote</p>
-              <p className="text-element mb-2 text-sm">
-                {exp.period[0]} - {exp.period[1] ? exp.period[1] : 'Present'}
-              </p>
-              <ul className="text-text-secondary mb-2 list-none pl-0 text-sm">
-                {exp.description.map((desc, i) => (
-                  <li key={i} className="mb-1 flex items-start">
-                    <span className="text-morocco-brown mr-2">•</span>
-                    <span>{desc}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-1">
+                  <h3 className="text-morocco-brown text-xl font-semibold">
+                    {exp.company}
+                  </h3>
+                  <p className="font-cta-hover text-lg font-medium">
+                    {exp.role}
+                  </p>
+                  <div className="text-cta flex items-center gap-4 text-sm">
+                    <span className="font-medium">Remote</span>
+                    <span className="font-medium">
+                      {exp.period[0]} -{' '}
+                      {exp.period[1] ? exp.period[1] : 'Present'}
+                    </span>
+                  </div>
+                </div>
+                <ul className="space-y-2">
+                  {exp.description.map((desc, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="text-morocco-brown mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-current"></span>
+                      <span className="text-sm leading-relaxed">{desc}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>
@@ -35,42 +51,3 @@ export function Experience() {
     </section>
   );
 }
-
-const experiences: ExperienceItem[] = [
-  {
-    id: 1,
-    company: 'Freelance',
-    role: 'React Native Developer',
-    period: [2024],
-    description: [
-      'Longest bullet point text ever in the existence of the universe, it is so long that it will overflow the container and cause layout issues if not handled properly.',
-      'Bullet point 2',
-    ],
-  },
-  {
-    id: 2,
-    company: 'Southern Code',
-    role: 'React Native Developer',
-    period: [2021, 2022],
-    description: ['Bullet point 3', 'Bullet point 4'],
-  },
-  {
-    id: 3,
-    company: 'Puzzle Digital',
-    role: 'React Native Developer',
-    period: [2020, 2021],
-    description: [
-      'Bullet point 5',
-      'Bullet point 6',
-      'Bullet point 7',
-      'Bullet point 8',
-    ],
-  },
-  {
-    id: 4,
-    company: 'Next Dots',
-    role: 'React Native Developer',
-    period: [2018, 2020],
-    description: ['Bullet point 9', 'Bullet point 10'],
-  },
-];
