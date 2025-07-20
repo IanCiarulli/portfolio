@@ -53,25 +53,34 @@ export function TechStack({
         </div>
       </div>
 
-      <div className="hidden w-full flex-col items-center gap-6 lg:flex">
-        {data.map((category) => (
-          <div key={category.title} className="w-full max-w-5xl">
-            <div className="from-spring-wood/95 via-spring-wood to-spring-wood/90 border-spring-wood/60 rounded-xl border bg-gradient-to-br p-6 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.15),0_4px_16px_-4px_rgba(0,0,0,0.1)] transition-all duration-200 hover:shadow-[0_4px_12px_-2px_rgba(0,0,0,0.2),0_8px_24px_-6px_rgba(0,0,0,0.1)]">
-              <h3 className="text-morocco-brown mb-4 text-left text-lg font-bold">
-                {category.title}
-              </h3>
-              <div className="flex flex-wrap items-center gap-3">
+      <div className="hidden w-full flex-col items-center lg:flex">
+        <div className="grid w-full max-w-7xl grid-cols-3 gap-12">
+          {data.map((category) => (
+            <div key={category.title} className="flex flex-col items-center">
+              <div className="from-spring-wood/100 via-spring-wood/90 to-spring-wood/95 border-spring-wood/40 mb-6 rounded-lg border bg-gradient-to-br px-6 py-3 shadow-[0_2px_6px_-1px_rgba(0,0,0,0.1)]">
+                <h3 className="text-morocco-brown text-center text-lg font-bold">
+                  {category.title}
+                </h3>
+              </div>
+              <div className="flex w-full flex-col gap-4">
                 {category.data.map(
                   ({ thumbnailPath, thumbnailAltText, tooltip }) => (
-                    <TechTooltip key={thumbnailAltText} tooltip={tooltip}>
-                      <div className="from-sazerac/10 to-sazerac/5 border-sazerac/20 hover:from-sazerac/15 hover:to-sazerac/8 hover:border-sazerac/30 group flex items-center gap-2 rounded-lg border bg-gradient-to-br px-3 py-2 shadow-sm transition-all duration-200 hover:scale-105 hover:shadow-md">
-                        <div className="h-6 w-6 flex-shrink-0">
+                    <TechTooltip
+                      key={thumbnailAltText}
+                      tooltip={tooltip}
+                      className="border-spring-wood/40 from-spring-wood/80 via-spring-wood/90 to-spring-wood/95 hover:border-spring-wood/60 rounded-lg bg-gradient-to-br shadow-[0_2px_8px_-1px_rgba(0,0,0,0.1)] hover:shadow-[0_4px_16px_-2px_rgba(0,0,0,0.15)]"
+                    >
+                      <div className="to-spring-wood/30 border-element/25 hover:via-spring-wood/20 hover:to-element/10 hover:border-element/40 flex w-full items-center gap-2.5 overflow-hidden rounded-md border bg-gradient-to-r from-white/95 via-white px-3 py-2.5 pr-2 shadow-[0_2px_4px_rgba(0,0,0,0.08)] transition-all duration-300 hover:scale-[1.02] hover:from-white hover:shadow-[0_4px_12px_rgba(0,0,0,0.12)]">
+                        <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                          <div className="from-element/6 h-full w-full bg-gradient-to-r to-transparent"></div>
+                        </div>
+                        <div className="h-4 w-4 flex-shrink-0">
                           <Thumbnail
                             thumbnailPath={thumbnailPath}
                             thumbnailAltText={thumbnailAltText}
                           />
                         </div>
-                        <span className="text-morocco-brown text-sm font-medium">
+                        <span className="text-morocco-brown flex-1 overflow-hidden text-sm font-medium text-ellipsis whitespace-nowrap">
                           {thumbnailAltText}
                         </span>
                       </div>
@@ -80,8 +89,8 @@ export function TechStack({
                 )}
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

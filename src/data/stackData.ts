@@ -56,7 +56,7 @@ export const techStackData = [
     data: coreStack,
   },
   {
-    title: 'State Management',
+    title: 'State',
     data: stateManagementStack,
   },
   {
