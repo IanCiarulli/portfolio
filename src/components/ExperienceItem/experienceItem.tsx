@@ -18,7 +18,7 @@ export function Experience() {
           <div className="bg-element h-1 w-16 rounded-full"></div>
           <div className="text-cta/80 mt-6 w-[85%] text-center text-sm italic max-[361px]:w-[90%] lg:w-full">
             <p>
-              This is an extended version; for a more streamlined one, please
+              This is an extended version; for the more compact version, please
               refer to my resume.
             </p>
           </div>
