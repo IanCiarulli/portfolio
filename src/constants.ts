@@ -76,11 +76,15 @@ export const TECHS = {
   },
   OKTA: {
     thumbnailPath: `${THUMBNAILS_URL}okta.png`,
-    thumbnailAltText: 'Okta',
+    thumbnailAltText: 'Okta Auth',
   },
   LOTTIE: {
     thumbnailPath: `${THUMBNAILS_URL}lottie.png`,
     thumbnailAltText: 'Lottie',
+  },
+  STRIPE: {
+    thumbnailPath: `${THUMBNAILS_URL}stripe.png`,
+    thumbnailAltText: 'Stripe',
   },
 } as const;
 

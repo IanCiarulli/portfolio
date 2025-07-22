@@ -65,7 +65,7 @@ export const ProjectCard = ({
           {role}
         </p>
         <div className="flex flex-wrap items-center gap-2">
-          {techs.slice(0, 4).map((techWithVersion) => {
+          {techs.slice(1, 5).map((techWithVersion) => {
             const tech = TECHS[techWithVersion.tech];
             return (
               <div
