@@ -7,7 +7,7 @@ export function Experience() {
   return (
     <section
       id="experience"
-      className="w-full py-32"
+      className="w-full pt-32"
       aria-label="Experience Section"
     >
       <div className="mx-auto max-w-4xl px-4">
