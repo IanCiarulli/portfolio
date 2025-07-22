@@ -2,9 +2,17 @@ export const IK_ENDPOINT = 'https://ik.imagekit.io/kd907zpil';
 export const THUMBNAILS_URL = '/portfolio_assets/thumbnails/';
 
 export const TECHS = {
+  REACT: {
+    thumbnailPath: `${THUMBNAILS_URL}react.png`,
+    thumbnailAltText: 'React',
+  },
   REACT_NATIVE: {
     thumbnailPath: `${THUMBNAILS_URL}react.png`,
     thumbnailAltText: 'React Native',
+  },
+  REACT_NATIVE_NAV: {
+    thumbnailPath: `${THUMBNAILS_URL}reactnav.png`,
+    thumbnailAltText: 'React Native Navigation',
   },
   EXPO: {
     thumbnailPath: `${THUMBNAILS_URL}expo.png`,
@@ -34,6 +42,10 @@ export const TECHS = {
     thumbnailPath: `${THUMBNAILS_URL}mobx.png`,
     thumbnailAltText: 'MobX',
   },
+  WATERMELONDB: {
+    thumbnailPath: `${THUMBNAILS_URL}watermelondb.png`,
+    thumbnailAltText: 'Watermelon DB',
+  },
   GRAPHQL: {
     thumbnailPath: `${THUMBNAILS_URL}graphql.png`,
     thumbnailAltText: 'GraphQL',
@@ -45,6 +57,10 @@ export const TECHS = {
   DETOX: {
     thumbnailPath: `${THUMBNAILS_URL}detox.png`,
     thumbnailAltText: 'Detox',
+  },
+  SENTRY: {
+    thumbnailPath: `${THUMBNAILS_URL}sentry.png`,
+    thumbnailAltText: 'Sentry',
   },
 } as const;
 

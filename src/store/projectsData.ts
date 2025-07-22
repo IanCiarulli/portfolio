@@ -73,10 +73,12 @@ export const Projects: ProjectProps[] = [
     title: 'Motorculture',
     role: 'React Native Developer',
     techs: [
-      { tech: 'REACT_NATIVE', version: '^0.67.4' },
-      { tech: 'TYPESCRIPT', version: '^4.5.0' },
-      { tech: 'EXPO', version: '^44.0.0' },
-      { tech: 'JEST', version: '^27.2.0' },
+      { tech: 'REACT', version: '16.6.0' },
+      { tech: 'REACT_NATIVE', version: '0.56.0' },
+      { tech: 'REACT_NATIVE_NAV', version: '2.0.26' },
+      { tech: 'REDUX', version: '4.0.1' },
+      { tech: 'SENTRY', version: '0.43.1' },
+      { tech: 'JEST', version: '23.6.0' },
     ],
   },
   {
@@ -117,10 +119,11 @@ export const Projects: ProjectProps[] = [
     title: 'Saiprop',
     role: 'React Native Developer',
     techs: [
-      { tech: 'REACT_NATIVE', version: '^0.63.4' },
-      { tech: 'TYPESCRIPT', version: '^4.1.0' },
-      { tech: 'EXPO', version: '^40.0.0' },
-      { tech: 'JEST', version: '^26.4.0' },
+      { tech: 'REACT', version: '16.4.1' },
+      { tech: 'REACT_NATIVE', version: '0.56.0' },
+      { tech: 'REACT_NATIVE_NAV', version: '1.1.4' },
+      { tech: 'REDUX', version: '^4.0.0' },
+      { tech: 'JEST', version: '23.6.0' },
     ],
   },
   {
