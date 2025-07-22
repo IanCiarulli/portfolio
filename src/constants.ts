@@ -62,6 +62,18 @@ export const TECHS = {
     thumbnailPath: `${THUMBNAILS_URL}sentry.png`,
     thumbnailAltText: 'Sentry',
   },
+  APOLLO: {
+    thumbnailPath: `${THUMBNAILS_URL}apollo.png`,
+    thumbnailAltText: 'Apollo',
+  },
+  FIREBASE: {
+    thumbnailPath: `${THUMBNAILS_URL}firebase.png`,
+    thumbnailAltText: 'Firebase',
+  },
+  STYLED_COMPONENTS: {
+    thumbnailPath: `${THUMBNAILS_URL}styledcomponents.png`,
+    thumbnailAltText: 'Styled Components',
+  },
 } as const;
 
 export const PROJECT_THUMBNAILS = {

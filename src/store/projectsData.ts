@@ -62,10 +62,14 @@ export const Projects: ProjectProps[] = [
     title: 'Three43',
     role: 'React Native Developer',
     techs: [
-      { tech: 'REACT_NATIVE', version: '^0.68.2' },
-      { tech: 'TYPESCRIPT', version: '^4.6.0' },
-      { tech: 'EXPO', version: '^45.0.0' },
-      { tech: 'JEST', version: '^27.4.0' },
+      { tech: 'REACT', version: '16.9.0' },
+      { tech: 'REACT_NATIVE', version: '0.61.2' },
+      { tech: 'TYPESCRIPT', version: '3.6.3' },
+      { tech: 'GRAPHQL', version: '14.5.7' },
+      { tech: 'APOLLO', version: '2.6.8' },
+      { tech: 'FIREBASE', version: '6.2.0' },
+      { tech: 'JEST', version: '24.9.0' },
+      { tech: 'STYLED_COMPONENTS', version: '4.4.0' },
     ],
   },
   {
