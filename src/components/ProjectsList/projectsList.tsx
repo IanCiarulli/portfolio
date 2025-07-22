@@ -47,7 +47,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
   return (
     <section
       ref={sectionRef}
-      className="font-jetbrains flex w-full flex-col items-center justify-center pt-16"
+      className="font-jetbrains flex w-full flex-col items-center justify-center pt-32"
       id="projects"
     >
       <h2 className="mb-8 text-center text-2xl font-bold">{title}</h2>
