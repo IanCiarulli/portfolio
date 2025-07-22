@@ -40,10 +40,13 @@ export const Projects: ProjectProps[] = [
     title: 'Dolby XP',
     role: 'React Native Developer',
     techs: [
-      { tech: 'REACT_NATIVE', version: '^0.70.5' },
-      { tech: 'TYPESCRIPT', version: '^4.8.0' },
-      { tech: 'EXPO', version: '^47.0.0' },
-      { tech: 'JEST', version: '^28.1.0' },
+      { tech: 'REACT', version: '17.0.2' },
+      { tech: 'REACT_NATIVE', version: '0.66.5' },
+      { tech: 'TYPESCRIPT', version: '4.4.4' },
+      { tech: 'FIREBASE', version: '12.6.1' },
+      { tech: 'MOBX', version: '2.2.2' },
+      { tech: 'JEST', version: '26.3.0' },
+      { tech: 'STYLED_COMPONENTS', version: '5.3.0' },
     ],
   },
   {

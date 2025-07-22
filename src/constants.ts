@@ -74,6 +74,14 @@ export const TECHS = {
     thumbnailPath: `${THUMBNAILS_URL}styledcomponents.png`,
     thumbnailAltText: 'Styled Components',
   },
+  OKTA: {
+    thumbnailPath: `${THUMBNAILS_URL}okta.png`,
+    thumbnailAltText: 'Okta',
+  },
+  LOTTIE: {
+    thumbnailPath: `${THUMBNAILS_URL}lottie.png`,
+    thumbnailAltText: 'Lottie',
+  },
 } as const;
 
 export const PROJECT_THUMBNAILS = {
