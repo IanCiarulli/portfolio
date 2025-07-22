@@ -65,7 +65,7 @@ export const ProjectCard = ({
           {role}
         </p>
         <div className="flex flex-wrap items-center gap-2">
-          {techs.map((techWithVersion) => {
+          {techs.slice(0, 4).map((techWithVersion) => {
             const tech = TECHS[techWithVersion.tech];
             return (
               <div
@@ -86,6 +86,9 @@ export const ProjectCard = ({
               </div>
             );
           })}
+          {techs.length > 4 && (
+            <span className="text-cta-text bold text-xl">+</span>
+          )}
         </div>
       </div>
 
