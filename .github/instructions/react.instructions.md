@@ -37,6 +37,7 @@ coding-conventions:
 - ESLint + Prettier enforced on commit
 - Under no circumstances should React be imported completely. Always import React elements destructured, for example: `import { useState, useEffect } from 'react';`
 - Do not add "What is" or "How it works" type comments, that should be deducible from the component/function name and how it works, from the names of its internal variables. Only add comments about "Why" something is being done.
+- Do not add any comments in the code unless specifically requested by the user.
 
 # React Concepts
 

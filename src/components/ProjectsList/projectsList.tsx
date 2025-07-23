@@ -5,6 +5,17 @@ import { motion } from 'framer-motion';
 import { useDelayedSnap } from '../../hooks/';
 import { TECHS } from '../../constants';
 
+const FILTERABLE_TECHS = [
+  'EXPO',
+  'TYPESCRIPT',
+  'REDUX',
+  'ZUSTAND',
+  'MOBX',
+  'GRAPHQL',
+  'JEST',
+  'SENTRY',
+];
+
 interface ProjectsListProps {
   items: ProjectProps[];
   title: string;
@@ -21,10 +32,12 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
     const techSet = new Set<string>();
     items.forEach((project) => {
       project.techs?.forEach((tech) => {
-        techSet.add(tech.tech);
+        if (FILTERABLE_TECHS.includes(tech.tech)) {
+          techSet.add(tech.tech);
+        }
       });
     });
-    return Array.from(techSet).sort();
+    return FILTERABLE_TECHS.filter((tech) => techSet.has(tech));
   }, [items]);
 
   const filteredProjects = useMemo(() => {
@@ -96,7 +109,13 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
     >
       <h2 className="mb-8 text-center text-2xl font-bold">{title}</h2>
 
-      <div className="mb-8 hidden w-full max-w-5xl lg:block">
+      <div className="mb-6 hidden w-full max-w-5xl lg:block">
+        <div className="mb-3 text-center">
+          <span className="text-morocco-brown/80 text-xs tracking-wide uppercase">
+            Filter by technology
+          </span>
+        </div>
+
         <div className="flex flex-wrap items-center justify-center gap-3">
           {availableTechs.map((tech) => {
             const techConfig = TECHS[tech as keyof typeof TECHS];
@@ -115,25 +134,30 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
             );
           })}
 
-          {selectedTech && (
-            <button
-              onClick={clearFilter}
-              className="ml-2 rounded-full bg-red-500 px-4 py-2 text-sm font-medium text-white transition-all duration-200 hover:scale-105 hover:bg-red-600"
-            >
-              Clear Filter
-            </button>
-          )}
+          <div
+            onClick={clearFilter}
+            className={`flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg bg-gradient-to-br from-red-50 to-red-100 shadow-md ring-2 ring-red-200 transition-all duration-300 hover:-translate-y-0.5 hover:scale-110 hover:shadow-lg hover:ring-red-300 ${
+              selectedTech ? 'opacity-100' : 'pointer-events-none opacity-30'
+            }`}
+            title="Clear filter"
+          >
+            <img
+              src="/x_b.svg"
+              alt="Clear filter"
+              className="h-5 w-5 transition-transform duration-300 group-hover:scale-110"
+            />
+          </div>
         </div>
 
-        {selectedTech && (
-          <div className="mt-4 text-center">
-            <span className="text-sm text-gray-600">
+        <div className="mt-4 h-6 text-center">
+          {selectedTech && (
+            <span className="text-morocco-brown/80 text-sm">
               Showing {filteredProjects.length} project
               {filteredProjects.length !== 1 ? 's' : ''} using{' '}
               {TECHS[selectedTech as keyof typeof TECHS]?.thumbnailAltText}
             </span>
-          </div>
-        )}
+          )}
+        </div>
       </div>
 
       <div className="w-full max-w-5xl">

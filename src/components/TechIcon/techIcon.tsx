@@ -41,8 +41,10 @@ export const TechIcon = ({
   return (
     <div className="relative">
       <div
-        className={`group from-spring-wood/90 to-spring-wood ring-spring-wood/30 hover:ring-highlight-rn/40 relative cursor-pointer rounded-lg bg-gradient-to-br shadow-md ring-2 transition-all duration-300 hover:-translate-y-0.5 hover:scale-110 hover:shadow-lg ${sizeClasses[size]} ${
-          isSelected ? 'ring-morocco-brown/60 bg-morocco-brown/10' : ''
+        className={`group relative cursor-pointer rounded-lg bg-gradient-to-br shadow-md ring-2 transition-all duration-300 hover:-translate-y-0.5 hover:scale-110 hover:shadow-lg ${sizeClasses[size]} ${
+          isSelected
+            ? 'from-spring-wood/90 to-spring-wood ring-highlight-rn/60'
+            : 'from-spring-wood/90 to-spring-wood ring-spring-wood/30 hover:ring-highlight-rn/40'
         } ${className}`}
         title={showTooltip ? undefined : techConfig.thumbnailAltText}
         onClick={handleClick}
@@ -62,7 +64,6 @@ export const TechIcon = ({
         )}
       </div>
 
-      {/* Tooltip - only show if showTooltip is true and is hovered */}
       {showTooltip && isHovered && (
         <div className="absolute -top-10 left-1/2 z-50 -translate-x-1/2 transform">
           <div className="rounded-md bg-gray-800 px-2 py-1 text-sm whitespace-nowrap text-white shadow-lg">

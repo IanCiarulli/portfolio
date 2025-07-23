@@ -11,7 +11,7 @@ export const TECHS = {
     thumbnailAltText: 'React Native',
   },
   REACT_NATIVE_NAV: {
-    thumbnailPath: `${THUMBNAILS_URL}reactnav.png`,
+    thumbnailPath: `${THUMBNAILS_URL}reactnavigation.png`,
     thumbnailAltText: 'React Native Navigation',
   },
   EXPO: {
