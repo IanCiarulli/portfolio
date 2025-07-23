@@ -6,13 +6,13 @@ export const coreStack = [
     tooltip: "My daily bread — I've built all my apps with this beauty",
   },
   {
-    ...TECHS.EXPO,
-    tooltip: 'I reach for this first when starting any new project',
-  },
-  {
     ...TECHS.TYPESCRIPT,
     tooltip:
       'I see no reason to go back to JavaScript — types help way too much to keep things in order',
+  },
+  {
+    ...TECHS.EXPO,
+    tooltip: 'I reach for this first when starting any new project',
   },
   {
     ...TECHS.COPILOT,

@@ -154,8 +154,8 @@ export const TechModal: FC<TechModalProps> = ({
               <div className="text-sazerac/70 mt-3">{'}'}</div>
             </div>
 
-            <span className="text-sm text-gray-400/60">
-              _Some of the versions might be unknown_
+            <span className="flex justify-center text-center text-[10px] text-gray-400/80">
+              _versions are being inferred by the date, some may be wrong_
             </span>
           </div>
 

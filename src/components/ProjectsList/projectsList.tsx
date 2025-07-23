@@ -1,8 +1,20 @@
-import { type FC, useRef, useState, useEffect } from 'react';
+import { type FC, useRef, useState, useEffect, useMemo } from 'react';
 import { type ProjectProps } from '../../models';
-import { ProjectCard } from '../ProjectCard/projectCard';
+import { ProjectCard, TechIcon } from '..';
 import { motion } from 'framer-motion';
 import { useDelayedSnap } from '../../hooks/';
+import { TECHS } from '../../constants';
+
+const FILTERABLE_TECHS = [
+  'EXPO',
+  'TYPESCRIPT',
+  'REDUX',
+  'ZUSTAND',
+  'MOBX',
+  'GRAPHQL',
+  'JEST',
+  'SENTRY',
+];
 
 interface ProjectsListProps {
   items: ProjectProps[];
@@ -12,10 +24,38 @@ interface ProjectsListProps {
 export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
   const [showAll, setShowAll] = useState(false);
   const [isInitialMount, setIsInitialMount] = useState(true);
+  const [selectedTech, setSelectedTech] = useState<string | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const snapEnabled = useDelayedSnap(300);
 
-  const visibleProjects = showAll ? items : items.slice(0, 3);
+  const availableTechs = useMemo(() => {
+    const techSet = new Set<string>();
+    items.forEach((project) => {
+      project.techs?.forEach((tech) => {
+        if (FILTERABLE_TECHS.includes(tech.tech)) {
+          techSet.add(tech.tech);
+        }
+      });
+    });
+    return FILTERABLE_TECHS.filter((tech) => techSet.has(tech));
+  }, [items]);
+
+  const filteredProjects = useMemo(() => {
+    if (!selectedTech) return items;
+    return items.filter((project) =>
+      project.techs?.some((tech) => tech.tech === selectedTech)
+    );
+  }, [items, selectedTech]);
+
+  useEffect(() => {
+    if (selectedTech && filteredProjects.length > 3) {
+      setShowAll(true);
+    }
+  }, [selectedTech, filteredProjects.length]);
+
+  const visibleProjects = showAll
+    ? filteredProjects
+    : filteredProjects.slice(0, 3);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -44,13 +84,81 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
     });
   };
 
+  const handleTechFilter = (tech: string) => {
+    setSelectedTech(tech === selectedTech ? null : tech);
+    setShowAll(false);
+  };
+
+  const handleTechIconClick = (
+    _e: React.MouseEvent,
+    tech: keyof typeof TECHS
+  ) => {
+    handleTechFilter(tech);
+  };
+
+  const clearFilter = () => {
+    setSelectedTech(null);
+    setShowAll(false);
+  };
+
   return (
     <section
       ref={sectionRef}
-      className="font-jetbrains flex w-full flex-col items-center justify-center pt-16"
+      className="font-jetbrains flex w-full flex-col items-center justify-center pt-32"
       id="projects"
     >
       <h2 className="mb-8 text-center text-2xl font-bold">{title}</h2>
+
+      <div className="mb-6 hidden w-full max-w-5xl lg:block">
+        <div className="mb-3 text-center">
+          <span className="text-morocco-brown/80 text-xs tracking-wide uppercase">
+            Filter by technology
+          </span>
+        </div>
+
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          {availableTechs.map((tech) => {
+            const techConfig = TECHS[tech as keyof typeof TECHS];
+            if (!techConfig) return null;
+
+            return (
+              <TechIcon
+                key={tech}
+                tech={tech as keyof typeof TECHS}
+                onClick={handleTechIconClick}
+                isSelected={selectedTech === tech}
+                size="medium"
+                showDot={false}
+                showTooltip={true}
+              />
+            );
+          })}
+
+          <div
+            onClick={clearFilter}
+            className={`flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg bg-gradient-to-br from-red-50 to-red-100 shadow-md ring-2 ring-red-200 transition-all duration-300 hover:-translate-y-0.5 hover:scale-110 hover:shadow-lg hover:ring-red-300 ${
+              selectedTech ? 'opacity-100' : 'pointer-events-none opacity-30'
+            }`}
+            title="Clear filter"
+          >
+            <img
+              src="/x_b.svg"
+              alt="Clear filter"
+              className="h-5 w-5 transition-transform duration-300 group-hover:scale-110"
+            />
+          </div>
+        </div>
+
+        <div className="mt-4 h-6 text-center">
+          {selectedTech && (
+            <span className="text-morocco-brown/80 text-sm">
+              Showing {filteredProjects.length} project
+              {filteredProjects.length !== 1 ? 's' : ''} using{' '}
+              {TECHS[selectedTech as keyof typeof TECHS]?.thumbnailAltText}
+            </span>
+          )}
+        </div>
+      </div>
 
       <div className="w-full max-w-5xl">
         <div className="hidden lg:grid lg:grid-cols-3 lg:gap-6">
@@ -89,7 +197,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
             className="flex-shrink-0"
             style={{ width: 'calc((100vw - 280px) / 2)' }}
           />
-          {items.map((project, i) => (
+          {filteredProjects.map((project, i) => (
             <motion.div
               key={project.title}
               className="flex-shrink-0 snap-center"
@@ -111,6 +219,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
       <button
         className="text-morocco-brown mt-6 hidden transform text-base font-semibold transition-transform duration-200 hover:scale-105 lg:block"
         onClick={handleToggleShowAll}
+        style={{ display: filteredProjects.length <= 3 ? 'none' : 'block' }}
       >
         {showAll ? 'Show Less' : 'Show More'}
       </button>

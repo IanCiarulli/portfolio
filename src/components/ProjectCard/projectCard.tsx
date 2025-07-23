@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Thumbnail, TechModal } from '..';
+import { Thumbnail, TechModal, TechIcon } from '..';
 import { ProjectProps } from '../../models';
 import { TECHS } from '../../constants';
 
@@ -58,34 +58,23 @@ export const ProjectCard = ({
             />
           </div>
         </div>
-        <h3 className="text-cta-text mb-2 truncate text-lg font-bold drop-shadow-sm md:text-base lg:text-base xl:text-base 2xl:text-base">
+        <h3 className="text-cta-text mb-2 truncate text-lg font-bold drop-shadow-sm md:text-base lg:text-base xl:text-sm 2xl:text-base">
           {title}
         </h3>
-        <p className="text-cta-text/90 mb-4 text-base font-medium md:text-sm lg:text-sm xl:text-sm 2xl:text-sm">
+        <p className="text-cta-text/90 mb-4 text-base font-medium md:text-sm lg:text-sm xl:text-xs 2xl:text-sm">
           {role}
         </p>
         <div className="flex flex-wrap items-center gap-2">
-          {techs.map((techWithVersion) => {
-            const tech = TECHS[techWithVersion.tech];
-            return (
-              <div
-                key={tech.thumbnailAltText}
-                className="group from-spring-wood/90 to-spring-wood ring-spring-wood/30 hover:ring-highlight-rn/40 relative h-8 w-8 cursor-pointer rounded-lg bg-gradient-to-br shadow-md ring-2 transition-all duration-300 hover:-translate-y-0.5 hover:scale-110 hover:shadow-lg"
-                title={tech.thumbnailAltText}
-                onClick={(e) => handleTechClick(e, techWithVersion.tech)}
-              >
-                <div className="to-morocco-brown/10 absolute inset-0 rounded-lg bg-gradient-to-br from-transparent via-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-                <div className="flex h-full w-full items-center justify-center p-1.5">
-                  <Thumbnail
-                    thumbnailPath={tech.thumbnailPath}
-                    thumbnailAltText={tech.thumbnailAltText}
-                    className="transition-transform duration-300 group-hover:scale-110"
-                  />
-                </div>
-                <div className="from-highlight-rn/80 to-highlight-rn absolute -top-1 -right-1 h-2 w-2 rounded-full bg-gradient-to-br opacity-0 shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:opacity-100"></div>
-              </div>
-            );
-          })}
+          {techs.slice(1, 5).map((techWithVersion) => (
+            <TechIcon
+              key={techWithVersion.tech}
+              tech={techWithVersion.tech}
+              onClick={handleTechClick}
+            />
+          ))}
+          {techs.length > 5 && (
+            <span className="text-cta-text bold text-xl">+</span>
+          )}
         </div>
       </div>
 

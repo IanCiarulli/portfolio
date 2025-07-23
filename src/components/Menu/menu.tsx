@@ -2,10 +2,26 @@ import { useCallback, useState } from 'react';
 
 export function Menu() {
   const [open, setOpen] = useState(false);
-  // Function memorized to toggle the menu state
+
   const toggleVisibility = useCallback(() => {
     setOpen((prevOpen) => !prevOpen);
   }, []);
+
+  const handleNavigation = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+      e.preventDefault();
+      toggleVisibility();
+
+      setTimeout(() => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          window.history.pushState(null, '', `#${targetId}`);
+        }
+      }, 100);
+    },
+    [toggleVisibility]
+  );
 
   return (
     <>
@@ -31,7 +47,7 @@ export function Menu() {
               <a
                 href="#home"
                 aria-label="Home"
-                onClick={() => toggleVisibility()}
+                onClick={(e) => handleNavigation(e, 'home')}
               >
                 Home
               </a>
@@ -40,7 +56,7 @@ export function Menu() {
               <a
                 href="#projects"
                 aria-label="Projects"
-                onClick={() => toggleVisibility()}
+                onClick={(e) => handleNavigation(e, 'projects')}
               >
                 Projects
               </a>
@@ -49,7 +65,7 @@ export function Menu() {
               <a
                 href="#experience"
                 aria-label="Experience"
-                onClick={() => toggleVisibility()}
+                onClick={(e) => handleNavigation(e, 'experience')}
               >
                 Experience
               </a>
