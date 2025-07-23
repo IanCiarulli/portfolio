@@ -11,7 +11,7 @@ export const Projects: ProjectProps[] = [
       { tech: 'REACT_NATIVE', version: '0.76.9' },
       { tech: 'TYPESCRIPT', version: '5.3.3' },
       { tech: 'EXPO', version: '52.0.44' },
-      { tech: 'WATERMELONDB', version: '0.28.0' },
+      { tech: 'ZUSTAND', version: '4.5.0' },
       { tech: 'JEST', version: '29.2.1' },
     ],
   },
@@ -67,7 +67,6 @@ export const Projects: ProjectProps[] = [
       { tech: 'TYPESCRIPT', version: '3.6.3' },
       { tech: 'GRAPHQL', version: '14.5.7' },
       { tech: 'APOLLO', version: '2.6.8' },
-      { tech: 'FIREBASE', version: '6.2.0' },
       { tech: 'JEST', version: '24.9.0' },
       { tech: 'STYLED_COMPONENTS', version: '4.4.0' },
     ],
@@ -79,11 +78,12 @@ export const Projects: ProjectProps[] = [
     techs: [
       { tech: 'REACT', version: '16.8.6' },
       { tech: 'REACT_NATIVE', version: '0.59.9' },
-      { tech: 'REACT_NATIVE_NAV', version: '2.0.26' },
-      { tech: 'REDUX', version: '4.0.1' },
+      { tech: 'REACT_NATIVE_NAV', version: '2.0.2' },
+      { tech: 'TYPESCRIPT', version: '3.5.3' },
+      { tech: 'MOBX', version: '4.0.1' },
       { tech: 'SENTRY', version: '0.43.1' },
-      { tech: 'FIREBASE', version: '6.2.0' },
       { tech: 'JEST', version: '24.8.0' },
+      { tech: 'DETOX', version: '10.0.7' },
     ],
   },
   {
@@ -115,13 +115,14 @@ export const Projects: ProjectProps[] = [
   },
   {
     ...PROJECT_THUMBNAILS.DARE_YOU,
-    title: 'Dar You',
+    title: 'Dare You',
     role: 'React Native Developer',
     techs: [
       { tech: 'REACT', version: '16.7.0' },
       { tech: 'REACT_NATIVE', version: '0.58.4' },
       { tech: 'REACT_NATIVE_NAV', version: '1.1.4' },
       { tech: 'REDUX', version: '4.0.0' },
+      { tech: 'GRAPHQL', version: '14.0.2' },
       { tech: 'JEST', version: '24.1.0' },
     ],
   },
@@ -135,6 +136,7 @@ export const Projects: ProjectProps[] = [
       { tech: 'REACT_NATIVE_NAV', version: '1.1.4' },
       { tech: 'REDUX', version: '4.0.0' },
       { tech: 'JEST', version: '24.0.0' },
+      { tech: 'DETOX', version: '10.0.7' },
     ],
   },
   {
@@ -144,9 +146,10 @@ export const Projects: ProjectProps[] = [
     techs: [
       { tech: 'REACT', version: '16.6.3' },
       { tech: 'REACT_NATIVE', version: '0.57.8' },
+      { tech: 'REACT_NATIVE_NAV', version: '2.0.2' },
       { tech: 'EXPO', version: '32.0.0' },
       { tech: 'REDUX', version: '4.0.0' },
-      { tech: 'REACT_NATIVE_NAV', version: '2.0.26' },
+      { tech: 'SENTRY', version: '0.43.1' }, //check
     ],
   },
   {
@@ -157,8 +160,9 @@ export const Projects: ProjectProps[] = [
       { tech: 'REACT', version: '16.6.3' },
       { tech: 'REACT_NATIVE', version: '0.57.8' },
       { tech: 'EXPO', version: '32.0.0' },
-      { tech: 'REDUX', version: '4.0.0' },
+      { tech: 'MOBX', version: '4.0.0' },
       { tech: 'JEST', version: '23.6.0' },
+      { tech: 'DETOX', version: '9.0.6' },
     ],
   },
   {
@@ -168,6 +172,7 @@ export const Projects: ProjectProps[] = [
     techs: [
       { tech: 'REACT', version: '16.6.0' },
       { tech: 'REACT_NATIVE', version: '0.57.8' },
+      { tech: 'REACT_NATIVE_NAV', version: '2.0.2' },
       { tech: 'REDUX', version: '4.0.0' },
       { tech: 'EXPO', version: '32.0.0' },
     ],
@@ -192,6 +197,7 @@ export const Projects: ProjectProps[] = [
       { tech: 'REACT', version: '16.4.1' },
       { tech: 'REACT_NATIVE', version: '0.56.0' },
       { tech: 'REDUX', version: '4.0.0' },
+      { tech: 'FIREBASE', version: '5.5.0' },
       { tech: 'JEST', version: '23.6.0' },
     ],
   },
@@ -202,10 +208,10 @@ export const Projects: ProjectProps[] = [
     techs: [
       { tech: 'REACT', version: '16.3.0' },
       { tech: 'REACT_NATIVE', version: '0.55.4' },
+      { tech: 'REACT_NATIVE_NAV', version: '2.0.0' },
       { tech: 'EXPO', version: '27.0.0' },
       { tech: 'REDUX', version: '4.0.0' },
       { tech: 'LOTTIE', version: '2.5.0' },
-      { tech: 'REACT_NATIVE_NAV', version: '2.0.0' },
     ],
   },
   {
@@ -215,8 +221,8 @@ export const Projects: ProjectProps[] = [
     techs: [
       { tech: 'REACT', version: '16.3.0' },
       { tech: 'REACT_NATIVE', version: '0.55.4' },
-      { tech: 'REDUX', version: '4.0.0' },
       { tech: 'REACT_NATIVE_NAV', version: '2.0.0' },
+      { tech: 'REDUX', version: '4.0.0' },
       { tech: 'JEST', version: '22.4.3' },
     ],
   },

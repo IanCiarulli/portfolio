@@ -72,7 +72,7 @@ export const ProjectCard = ({
               onClick={handleTechClick}
             />
           ))}
-          {techs.length > 4 && (
+          {techs.length > 5 && (
             <span className="text-cta-text bold text-xl">+</span>
           )}
         </div>
