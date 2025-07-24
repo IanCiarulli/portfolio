@@ -7,16 +7,16 @@ export function Experience() {
   return (
     <section
       id="experience"
-      className="w-full pt-32"
+      className="flex w-full flex-col items-center justify-center px-12 pt-32 lg:px-0"
       aria-label="Experience Section"
     >
-      <div className="mx-auto max-w-4xl px-4">
+      <div className="mx-auto">
         <div className="mb-6 flex flex-col items-center">
           <h2 className="text-morocco-brown mb-2 text-center text-3xl font-bold tracking-tight">
             Experience
           </h2>
           <div className="bg-element h-1 w-16 rounded-full"></div>
-          <div className="text-cta/80 mt-6 w-[85%] text-center text-sm italic max-[361px]:w-[90%] lg:w-full">
+          <div className="text-cta/80 mt-6 w-[85%] text-center text-sm italic lg:w-full">
             <p>
               This is an extended version; for the more compact version, please
               refer to my resume.
@@ -37,7 +37,7 @@ export function Experience() {
                   <p className="font-cta-hover text-lg font-medium">
                     {exp.role}
                   </p>
-                  <div className="text-cta flex items-center gap-4 text-sm">
+                  <div className="text-cta flex items-center gap-2 text-sm">
                     <span className="font-medium">Remote</span>
                     <span className="font-medium">
                       {exp.period[0]} -{' '}
