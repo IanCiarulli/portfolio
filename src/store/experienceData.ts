@@ -4,7 +4,7 @@ export const ExperienceItems: ExperienceItem[] = [
   {
     id: 1,
     company: 'Freelance',
-    role: 'Technical Consultant - Sole Engineer',
+    role: 'Sole Engineer - Technical Consultant',
     period: [2024],
     description: [
       "First time doing technical consulting for a project where I wouldn't actually be hands-on with development. Great opportunity to see things from the other side and broaden my perspective.",
