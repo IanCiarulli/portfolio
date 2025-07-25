@@ -23,18 +23,22 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps) => {
       <div className="p-6 pb-2">
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-1">
-            <h3 className="text-morocco-brown text-xl font-semibold">
-              {experience.company}
-            </h3>
-            <p className="font-cta-hover text-lg font-medium">
-              {experience.role}
-            </p>
-            <div className="text-cta flex items-center gap-2 text-sm">
-              <span className="font-medium">Remote</span>
-              <span className="font-medium">
-                {experience.period[0]} -{' '}
-                {experience.period[1] ? experience.period[1] : 'Present'}
-              </span>
+            <div className="flex items-start justify-between">
+              <div className="flex flex-col">
+                <h3 className="text-morocco-brown text-xl font-semibold">
+                  {experience.company}
+                </h3>
+                <p className="font-cta-hover text-lg font-medium">
+                  {experience.role}
+                </p>
+              </div>
+              <div className="text-cta flex flex-col items-end gap-1 text-sm">
+                <span className="font-bold">
+                  {experience.period[0]} -{' '}
+                  {experience.period[1] ? experience.period[1] : 'Present'}
+                </span>
+                <span className="italic">Remote</span>
+              </div>
             </div>
           </div>
 
