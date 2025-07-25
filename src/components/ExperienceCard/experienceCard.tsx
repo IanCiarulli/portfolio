@@ -43,7 +43,7 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps) => {
           </div>
 
           <div className="relative">
-            <motion.ul className="space-y-2 pb-1" layout>
+            <motion.ul className="space-y-2" layout>
               {experience.description.map((desc: string, i: number) => (
                 <motion.li
                   key={i}
@@ -90,7 +90,7 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps) => {
 
             {hasMoreDescriptions && (
               <motion.div
-                className="text-cta/70 hover:text-cta mt-2 flex items-center gap-2 text-sm font-medium transition-colors duration-200"
+                className={`text-cta/70 hover:text-cta ${!isExpanded ? 'mt-0' : 'mt-2'} flex items-center gap-2 text-sm font-medium transition-colors duration-200`}
                 initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.2 }}
