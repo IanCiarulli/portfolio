@@ -6,7 +6,7 @@ import { CvCta } from '..';
 export function Hero() {
   return (
     <section className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 pt-2 lg:flex-row lg:items-start lg:gap-12">
-      <div className="mb-4 flex w-full justify-center sm:mb-6">
+      <div className="mb-4 flex w-full justify-center">
         <Image
           src={`${THUMBNAILS_URL}portrait.webp`}
           alt="Hero Profile Image"
