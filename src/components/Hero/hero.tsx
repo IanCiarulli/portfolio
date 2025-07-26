@@ -5,14 +5,14 @@ import { CvCta } from '..';
 
 export function Hero() {
   return (
-    <section className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 pt-2 lg:flex-row lg:items-start lg:gap-12">
-      <div className="mb-4 flex w-full justify-center">
+    <section className="mx-auto flex w-full max-w-6xl flex-col items-center gap-6 px-4 pt-4 lg:flex-row lg:items-start lg:gap-6 lg:px-6 xl:gap-10">
+      <div className="flex flex-shrink-0 justify-center lg:justify-start">
         <Image
           src={`${THUMBNAILS_URL}portrait.webp`}
           alt="Hero Profile Image"
           fetchPriority="high"
           loading="eager"
-          className="aspect-[4/5] w-[160px] rounded-xl border border-[#e8dbca] object-cover shadow-[0_12px_30px_rgba(0,0,0,0.35)] sm:w-[200px] lg:w-[240px] xl:w-[280px]"
+          className="aspect-[4/5] w-[200px] rounded-xl border border-[#e8dbca] object-cover shadow-[0_12px_30px_rgba(0,0,0,0.35)] sm:w-[240px] lg:w-[240px] xl:w-[260px]"
           transformation={[
             {
               height: 480,
@@ -24,42 +24,49 @@ export function Hero() {
           ]}
         />
       </div>
-      <div className="flex w-full flex-col px-6">
-        <div>
-          <h1 className="mb-4 w-full text-left text-4xl font-bold whitespace-nowrap sm:mb-8 sm:text-6xl">
+
+      <div className="flex w-full flex-col items-center text-center lg:min-w-0 lg:flex-1 lg:items-start lg:pl-2 lg:text-left xl:pl-4">
+        <div className="w-full max-w-lg lg:max-w-none">
+          <h1 className="mb-3 text-3xl font-bold sm:mb-4 sm:text-4xl lg:mb-3 lg:text-4xl xl:mb-4 xl:text-5xl">
             Ian Ciarulli
           </h1>
-          <h2 className="mb-3 w-full text-left text-xl font-bold whitespace-nowrap sm:mb-6 sm:text-3xl">
-            <span className="mr-1 rounded bg-[#061c29] px-2 py-1 text-[#61dafb]">
+          <h2 className="mb-2 text-lg font-bold sm:mb-3 sm:text-xl lg:mb-2 lg:text-xl xl:mb-3 xl:text-2xl">
+            <span className="mr-2 rounded bg-[#061c29] px-2 py-1 text-sm text-[#61dafb] sm:text-base lg:text-base xl:text-lg">
               React Native
             </span>
             Developer
           </h2>
-          <p className="font-jetbrains mb-4 w-full text-left text-base sm:text-lg">
-            <span className="text-base font-bold sm:text-lg"> 5+ </span>Years of
-            experience / 15+ projects
+          <p className="font-jetbrains mb-4 text-sm sm:text-base lg:mb-4 lg:text-base xl:mb-5 xl:text-lg">
+            <span className="whitespace-nowrap">
+              <span className="font-bold">5+</span> Years of experience /
+              <span className="font-bold"> 15+</span> projects
+            </span>
           </p>
         </div>
-        <div className="text-cta flex w-full">
-          <MapPinned className="text-cta mr-2 h-5 w-5" />
-          <span>Merlo, Argentina</span>
+
+        <div className="text-cta mb-4 flex items-center justify-center lg:mb-4 lg:justify-start xl:mb-5">
+          <MapPinned className="text-cta mr-2 h-4 w-4 lg:h-4 lg:w-4 xl:h-5 xl:w-5" />
+          <span className="text-sm sm:text-base lg:text-base xl:text-lg">
+            Merlo, Argentina
+          </span>
         </div>
-        <div className="mt-4 flex gap-4 max-[361px]:flex-wrap max-[361px]:items-center max-[361px]:justify-center max-[361px]:gap-3 sm:justify-start">
+
+        <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-start lg:gap-3 xl:gap-4">
           <a
             href="mailto:ian@mail.com"
             aria-label="Email"
-            className="text-cta rounded-full bg-[#f0e9dc] p-3 shadow-sm transition-all hover:bg-[#e8e0d0]"
+            className="text-cta rounded-full bg-[#f0e9dc] p-2.5 shadow-sm transition-all hover:bg-[#e8e0d0] hover:shadow-md lg:p-2.5 xl:p-3"
           >
-            <Mail className="h-5 w-5" />
+            <Mail className="h-4 w-4 lg:h-4 lg:w-4 xl:h-5 xl:w-5" />
           </a>
           <a
             href="https://linkedin.com/in/ian"
             aria-label="LinkedIn"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-cta rounded-full bg-[#f0e9dc] p-3 shadow-sm transition-all hover:bg-[#e8e0d0]"
+            className="text-cta rounded-full bg-[#f0e9dc] p-2.5 shadow-sm transition-all hover:bg-[#e8e0d0] hover:shadow-md lg:p-2.5 xl:p-3"
           >
-            <Linkedin className="h-5 w-5" />
+            <Linkedin className="h-4 w-4 lg:h-4 lg:w-4 xl:h-5 xl:w-5" />
           </a>
           <CvCta />
         </div>
