@@ -10,3 +10,4 @@ export * from './CvCta/cvCta';
 export * from './TechTooltip/techTooltip';
 export * from './TechModal/techModal';
 export * from './TechIcon/techIcon';
+export * from './ExperienceCard/experienceCard';
