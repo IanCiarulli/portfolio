@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Building2, Briefcase, Calendar, MapPin } from 'lucide-react';
 import type { ExperienceItem } from '../../models';
 
 interface ExperienceCardProps {
@@ -20,24 +21,47 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps) => {
         hasMoreDescriptions ? () => setIsExpanded(!isExpanded) : undefined
       }
     >
-      <div className="p-6 pb-2">
+      <div className="p-4 pb-2 sm:p-6 sm:pb-2">
         <div className="flex flex-col gap-4">
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-3">
             <div className="flex items-start justify-between gap-4">
-              <div className="flex min-w-0 flex-1 flex-col">
-                <h3 className="text-morocco-brown text-xl font-semibold">
-                  {experience.company}
-                </h3>
-                <p className="font-cta-hover text-lg font-medium">
-                  {experience.role}
-                </p>
+              <div className="flex min-w-0 flex-1 flex-col gap-2">
+                <div className="flex items-center gap-2.5">
+                  <Building2
+                    size={16}
+                    className="text-morocco-brown/60 mt-0.5 flex-shrink-0"
+                  />
+                  <h3 className="text-morocco-brown text-lg leading-tight font-bold sm:text-xl">
+                    {experience.company}
+                  </h3>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Briefcase
+                    size={15}
+                    className="text-cta/50 mt-0.5 flex-shrink-0"
+                  />
+                  <p className="text-cta text-base leading-tight font-medium sm:text-lg">
+                    {experience.role.replace(
+                      'Technical Consultant',
+                      'Tech Consultant'
+                    )}
+                  </p>
+                </div>
               </div>
-              <div className="text-cta flex flex-shrink-0 flex-col items-end gap-1 text-sm">
-                <span className="text-right font-bold">
-                  {experience.period[0]} -{' '}
-                  {experience.period[1] ? experience.period[1] : 'Present'}
-                </span>
-                <span className="text-right italic">Remote</span>
+              <div className="flex flex-shrink-0 flex-col items-end gap-1.5 text-xs sm:text-sm">
+                <div className="flex items-center gap-1.5">
+                  <Calendar size={12} className="text-cta/40 flex-shrink-0" />
+                  <span className="text-cta text-right leading-tight font-bold">
+                    {experience.period[0]} -{' '}
+                    {experience.period[1] ? experience.period[1] : 'Present'}
+                  </span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <MapPin size={12} className="text-cta/40 flex-shrink-0" />
+                  <span className="text-cta/70 text-right leading-tight font-medium">
+                    Remote
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -82,8 +106,10 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps) => {
                     overflow: 'hidden',
                   }}
                 >
-                  <span className="text-morocco-brown mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-current"></span>
-                  <span className="text-sm leading-relaxed">{desc}</span>
+                  <span className="text-morocco-brown mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-current sm:mt-1.5 sm:h-1.5 sm:w-1.5"></span>
+                  <span className="text-xs leading-relaxed sm:text-sm">
+                    {desc}
+                  </span>
                 </motion.li>
               ))}
             </motion.ul>
