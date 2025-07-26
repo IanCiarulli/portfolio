@@ -23,8 +23,8 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps) => {
       <div className="p-6 pb-2">
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-1">
-            <div className="flex items-start justify-between">
-              <div className="flex flex-col">
+            <div className="flex items-start justify-between gap-4">
+              <div className="flex min-w-0 flex-1 flex-col">
                 <h3 className="text-morocco-brown text-xl font-semibold">
                   {experience.company}
                 </h3>
@@ -32,12 +32,12 @@ export const ExperienceCard = ({ experience }: ExperienceCardProps) => {
                   {experience.role}
                 </p>
               </div>
-              <div className="text-cta flex flex-col items-end gap-1 text-sm">
-                <span className="font-bold">
+              <div className="text-cta flex flex-shrink-0 flex-col items-end gap-1 text-sm">
+                <span className="text-right font-bold">
                   {experience.period[0]} -{' '}
                   {experience.period[1] ? experience.period[1] : 'Present'}
                 </span>
-                <span className="italic">Remote</span>
+                <span className="text-right italic">Remote</span>
               </div>
             </div>
           </div>
