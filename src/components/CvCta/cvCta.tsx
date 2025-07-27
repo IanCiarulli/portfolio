@@ -1,4 +1,3 @@
-import { ArrowDown } from 'lucide-react';
 import './cvCta.css';
 
 export const CvCta = () => {
@@ -9,10 +8,6 @@ export const CvCta = () => {
       className="arrow-container group bg-cta text-cta-text hover:bg-cta-hover inline-flex items-center gap-2 overflow-hidden rounded-md px-5 py-2 text-sm font-semibold shadow transition-all sm:text-base"
     >
       Download CV
-      <span className="relative h-4 w-4 overflow-hidden">
-        <ArrowDown className="arrow-icon absolute left-0 h-4 w-4" />
-        <ArrowDown className="arrow-icon second absolute left-0 h-4 w-4" />
-      </span>
     </a>
   );
 };
