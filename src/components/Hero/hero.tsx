@@ -38,7 +38,13 @@ export function Hero() {
           </h2>
           <p className="font-jetbrains mb-4 text-sm sm:text-base lg:mb-4 lg:text-base xl:mb-5 xl:text-lg">
             <span className="whitespace-nowrap">
-              <span className="font-bold">5+</span> Years of experience /
+              <span className="group relative">
+                5+{' '}
+                <div className="pointer-events-none absolute top-[-25px] left-1/2 z-10 -translate-x-1/2 scale-95 rounded-md bg-[#333] px-2 py-1 text-xs whitespace-nowrap text-white opacity-0 shadow-md transition-all duration-150 group-hover:scale-100 group-hover:opacity-100">
+                  Since 2018
+                </div>
+                Years of experience /
+              </span>
               <span className="font-bold"> 15+</span> projects
             </span>
           </p>
@@ -55,7 +61,7 @@ export function Hero() {
           <a
             href="mailto:ian@mail.com"
             aria-label="Email"
-            className="text-cta rounded-full bg-[#f0e9dc] p-2.5 shadow-sm transition-all hover:bg-[#e8e0d0] hover:shadow-md lg:p-2.5 xl:p-3"
+            className="text-cta bg-spring-wood rounded-full p-2.5 shadow-sm transition-all hover:bg-[#e8e0d0] hover:shadow-md lg:p-2.5 xl:p-3"
           >
             <Mail className="h-4 w-4 lg:h-4 lg:w-4 xl:h-5 xl:w-5" />
           </a>
@@ -64,7 +70,7 @@ export function Hero() {
             aria-label="LinkedIn"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-cta rounded-full bg-[#f0e9dc] p-2.5 shadow-sm transition-all hover:bg-[#e8e0d0] hover:shadow-md lg:p-2.5 xl:p-3"
+            className="text-cta bg-spring-wood rounded-full p-2.5 shadow-sm transition-all hover:bg-[#e8e0d0] hover:shadow-md lg:p-2.5 xl:p-3"
           >
             <Linkedin className="h-4 w-4 lg:h-4 lg:w-4 xl:h-5 xl:w-5" />
           </a>
