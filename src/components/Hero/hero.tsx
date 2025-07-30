@@ -36,7 +36,7 @@ export function Hero() {
             </span>
             Developer
           </h2>
-          <p className="font-jetbrains mb-4 text-sm sm:text-base lg:mb-4 lg:text-base xl:mb-5 xl:text-lg">
+          <div className="font-jetbrains mb-4 text-sm sm:text-base lg:mb-4 lg:text-base xl:mb-5 xl:text-lg">
             <span className="whitespace-nowrap">
               <span className="group relative">
                 5+{' '}
@@ -47,7 +47,7 @@ export function Hero() {
               </span>
               <span className="font-bold"> 15+</span> projects
             </span>
-          </p>
+          </div>
         </div>
 
         <div className="text-cta mb-4 flex items-center justify-center lg:mb-4 lg:justify-start xl:mb-5">

@@ -15,4 +15,5 @@ export interface ProjectProps extends ThumbnailProps {
   title: string;
   role: string;
   techs?: TechWithVersion[];
+  techCount?: number;
 }
