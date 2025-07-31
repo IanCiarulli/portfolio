@@ -15,5 +15,4 @@ export interface Project {
 }
 export interface ProjectsList {
   items: Project[];
-  title: string;
 }

@@ -6,18 +6,17 @@ interface TechStackCategory {
   data: (ThumbnailType & { tooltip: string })[];
 }
 
-export function TechStack({
-  title,
-  data,
-}: {
-  data: TechStackCategory[];
-  title: string;
-}) {
+export function TechStack({ data }: { data: TechStackCategory[] }) {
   return (
-    <div className="font-jetbrains flex w-full flex-col items-center pt-16">
-      <h2 className="mb-8 text-center text-2xl font-bold">{title}</h2>
-
-      <div className="w-full px-4 lg:hidden">
+    <div
+      className="font-jetbrains flex w-full flex-col items-center justify-center px-12 pt-32 lg:px-0"
+      aria-label="Technologies Section"
+    >
+      <h2 className="text-morocco-brown mb-2 text-center text-3xl font-bold tracking-tight">
+        Tech Stack
+      </h2>
+      <div className="bg-element h-1 w-16 rounded-full"></div>
+      <div className="mt-6 w-full px-4 lg:hidden">
         <div className="from-spring-wood/88 via-spring-wood/92 to-spring-wood/85 border-spring-wood/45 mx-auto max-w-xs rounded-xl border bg-gradient-to-br p-4 shadow-[0_3px_10px_-2px_rgba(0,0,0,0.08),0_6px_18px_-4px_rgba(0,0,0,0.05)]">
           <div className="flex flex-col items-center gap-6">
             {data.map((category) => (
@@ -53,7 +52,7 @@ export function TechStack({
         </div>
       </div>
 
-      <div className="hidden w-full flex-col items-center lg:flex">
+      <div className="mt-6 hidden w-full flex-col items-center lg:flex">
         <div className="grid w-full max-w-7xl grid-cols-3 gap-12">
           {data.map((category) => (
             <div key={category.title} className="flex flex-col items-center">

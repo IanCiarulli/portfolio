@@ -38,8 +38,8 @@ function App() {
       >
         <Menu />
         <Hero />
-        <TechStack data={techStackData} title="Tech Stack" />
-        <ProjectsList items={Projects} title="Projects" />
+        <TechStack data={techStackData} />
+        <ProjectsList items={Projects} />
         <Experience />
         {/* <Footer> */}
       </div>
