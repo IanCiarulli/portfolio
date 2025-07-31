@@ -1,9 +1,11 @@
 import { PROJECT_THUMBNAILS } from '../constants';
-import type { ProjectProps } from '../models';
+import type { Project } from '../models';
 
-export const Projects: ProjectProps[] = [
+export const Projects: Project[] = [
   {
-    ...PROJECT_THUMBNAILS.LA_BRAVA,
+    projectThumbnail: {
+      ...PROJECT_THUMBNAILS.LA_BRAVA,
+    },
     title: 'La Brava CSR',
     role: 'Sole Engineer',
     techs: [
@@ -16,7 +18,9 @@ export const Projects: ProjectProps[] = [
     ],
   },
   {
-    ...PROJECT_THUMBNAILS.ZEST,
+    projectThumbnail: {
+      ...PROJECT_THUMBNAILS.ZEST,
+    },
     title: 'Zest Partner Program',
     role: 'React Native Team Lead',
     techs: [
@@ -29,7 +33,9 @@ export const Projects: ProjectProps[] = [
     ],
   },
   {
-    ...PROJECT_THUMBNAILS.CHANEL,
+    projectThumbnail: {
+      ...PROJECT_THUMBNAILS.CHANEL,
+    },
     title: 'Chanel Beauty Atelier',
     role: 'React Native Developer',
     techs: [
@@ -43,7 +49,9 @@ export const Projects: ProjectProps[] = [
     ],
   },
   {
-    ...PROJECT_THUMBNAILS.DOLBY,
+    projectThumbnail: {
+      ...PROJECT_THUMBNAILS.DOLBY,
+    },
     title: 'Dolby XP - HUB',
     role: 'React Native Developer',
     techs: [
@@ -58,7 +66,9 @@ export const Projects: ProjectProps[] = [
     ],
   },
   {
-    ...PROJECT_THUMBNAILS.THREE43,
+    projectThumbnail: {
+      ...PROJECT_THUMBNAILS.THREE43,
+    },
     title: 'Three43',
     role: 'React Native Developer',
     techs: [
@@ -72,7 +82,9 @@ export const Projects: ProjectProps[] = [
     ],
   },
   {
-    ...PROJECT_THUMBNAILS.MOTORCULTURE,
+    projectThumbnail: {
+      ...PROJECT_THUMBNAILS.MOTORCULTURE,
+    },
     title: 'Motorculture',
     role: 'React Native Developer',
     techs: [
@@ -87,7 +99,9 @@ export const Projects: ProjectProps[] = [
     ],
   },
   {
-    ...PROJECT_THUMBNAILS.VIGIT,
+    projectThumbnail: {
+      ...PROJECT_THUMBNAILS.VIGIT,
+    },
     title: 'Vigit',
     role: 'React Native Developer',
     techs: [
@@ -102,7 +116,9 @@ export const Projects: ProjectProps[] = [
     ],
   },
   {
-    ...PROJECT_THUMBNAILS.COSMO,
+    projectThumbnail: {
+      ...PROJECT_THUMBNAILS.COSMO,
+    },
     title: 'Cosmo',
     role: 'React Native Developer',
     techs: [
@@ -114,7 +130,9 @@ export const Projects: ProjectProps[] = [
     ],
   },
   {
-    ...PROJECT_THUMBNAILS.DARE_YOU,
+    projectThumbnail: {
+      ...PROJECT_THUMBNAILS.DARE_YOU,
+    },
     title: 'Dare You',
     role: 'React Native Developer',
     techs: [
@@ -127,7 +145,9 @@ export const Projects: ProjectProps[] = [
     ],
   },
   {
-    ...PROJECT_THUMBNAILS.SAIPROP,
+    projectThumbnail: {
+      ...PROJECT_THUMBNAILS.SAIPROP,
+    },
     title: 'Saiprop',
     role: 'React Native Developer',
     techs: [
@@ -140,7 +160,9 @@ export const Projects: ProjectProps[] = [
     ],
   },
   {
-    ...PROJECT_THUMBNAILS.DROPDESK,
+    projectThumbnail: {
+      ...PROJECT_THUMBNAILS.DROPDESK,
+    },
     title: 'Dropdesk',
     role: 'React Native Developer',
     techs: [
@@ -153,7 +175,9 @@ export const Projects: ProjectProps[] = [
     ],
   },
   {
-    ...PROJECT_THUMBNAILS.INGAGEDIN,
+    projectThumbnail: {
+      ...PROJECT_THUMBNAILS.INGAGEDIN,
+    },
     title: 'Ingagedin',
     role: 'React Native Developer',
     techs: [
@@ -166,7 +190,9 @@ export const Projects: ProjectProps[] = [
     ],
   },
   {
-    ...PROJECT_THUMBNAILS.ACCOMPLISH,
+    projectThumbnail: {
+      ...PROJECT_THUMBNAILS.ACCOMPLISH,
+    },
     title: 'Now Accomplish',
     role: 'React Native Developer',
     techs: [
@@ -178,7 +204,9 @@ export const Projects: ProjectProps[] = [
     ],
   },
   {
-    ...PROJECT_THUMBNAILS.POLLAPP,
+    projectThumbnail: {
+      ...PROJECT_THUMBNAILS.POLLAPP,
+    },
     title: 'Pollap',
     role: 'React Native Developer',
     techs: [
@@ -190,7 +218,9 @@ export const Projects: ProjectProps[] = [
     ],
   },
   {
-    ...PROJECT_THUMBNAILS.EVERWASH,
+    projectThumbnail: {
+      ...PROJECT_THUMBNAILS.EVERWASH,
+    },
     title: 'Everwash',
     role: 'React Native Developer',
     techs: [
@@ -202,7 +232,9 @@ export const Projects: ProjectProps[] = [
     ],
   },
   {
-    ...PROJECT_THUMBNAILS.APLACASH,
+    projectThumbnail: {
+      ...PROJECT_THUMBNAILS.APLACASH,
+    },
     title: 'AplaCash',
     role: 'React Native Developer',
     techs: [
@@ -215,7 +247,9 @@ export const Projects: ProjectProps[] = [
     ],
   },
   {
-    ...PROJECT_THUMBNAILS.HOLCIM,
+    projectThumbnail: {
+      ...PROJECT_THUMBNAILS.HOLCIM,
+    },
     title: 'Holcim H&S',
     role: 'React Native Developer',
     techs: [

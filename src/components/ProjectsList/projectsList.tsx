@@ -1,5 +1,5 @@
 import { type FC, useRef, useState, useEffect, useMemo } from 'react';
-import { type ProjectProps } from '../../models';
+import { type ProjectsList as ProjectListProps } from '../../models';
 import { ProjectCard, TechIcon } from '..';
 import { useResponsiveTechCount } from '../../hooks/useResponsiveTechCount';
 import { motion } from 'framer-motion';
@@ -17,12 +17,7 @@ const FILTERABLE_TECHS = [
   'SENTRY',
 ];
 
-interface ProjectsListProps {
-  items: ProjectProps[];
-  title: string;
-}
-
-export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
+export const ProjectsList: FC<ProjectListProps> = ({ items, title }) => {
   const techCount = useResponsiveTechCount();
   const [showAll, setShowAll] = useState(false);
   const [isInitialMount, setIsInitialMount] = useState(true);

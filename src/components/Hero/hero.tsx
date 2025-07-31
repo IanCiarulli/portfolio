@@ -31,7 +31,7 @@ export function Hero() {
             Ian Ciarulli
           </h1>
           <h2 className="mb-2 text-lg font-bold sm:mb-3 sm:text-xl lg:mb-2 lg:text-xl xl:mb-3 xl:text-2xl">
-            <span className="mr-2 rounded bg-[#061c29] px-2 py-1 text-sm text-[#61dafb] sm:text-base lg:text-base xl:text-lg">
+            <span className="mr-1 rounded bg-[#061c29] px-1 py-1 text-sm text-[#61dafb] sm:text-base lg:text-base xl:text-lg">
               React Native
             </span>
             Developer

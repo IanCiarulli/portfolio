@@ -1,11 +1,11 @@
 import { Image } from '@imagekit/react';
-import type { ThumbnailProps } from '../../models';
+import type { Thumbnail } from '../../models';
 
 export function Thumbnail({
   thumbnailPath,
   thumbnailAltText,
   className,
-}: ThumbnailProps) {
+}: Thumbnail) {
   return (
     <Image
       src={thumbnailPath}

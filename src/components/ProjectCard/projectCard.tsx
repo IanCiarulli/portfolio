@@ -1,16 +1,15 @@
 import { useState } from 'react';
 import { Thumbnail, TechModal, TechIcon } from '..';
-import { ProjectProps } from '../../models';
+import { Project } from '../../models';
 import { TECHS } from '../../constants';
 
 export const ProjectCard = ({
-  thumbnailPath,
-  thumbnailAltText,
+  projectThumbnail: { thumbnailPath, thumbnailAltText },
   title,
   role,
   techs = [],
   techCount = 5,
-}: ProjectProps) => {
+}: Project) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedTech, setSelectedTech] = useState<string | null>(null);
 
