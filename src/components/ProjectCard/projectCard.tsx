@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { Thumbnail, TechModal, TechIcon } from '..';
-import { ProjectProps } from '../../models';
+import { Project } from '../../models';
 import { TECHS } from '../../constants';
 
 export const ProjectCard = ({
-  thumbnailPath,
-  thumbnailAltText,
+  projectThumbnail: { thumbnailPath, thumbnailAltText },
   title,
   role,
   techs = [],
-}: ProjectProps) => {
+  techCount = 5,
+}: Project) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedTech, setSelectedTech] = useState<string | null>(null);
 
@@ -65,14 +65,14 @@ export const ProjectCard = ({
           {role}
         </p>
         <div className="flex flex-wrap items-center gap-2">
-          {techs.slice(1, 5).map((techWithVersion) => (
+          {techs.slice(1, techCount).map((techWithVersion) => (
             <TechIcon
               key={techWithVersion.tech}
               tech={techWithVersion.tech}
               onClick={handleTechClick}
             />
           ))}
-          {techs.length > 5 && (
+          {techs.length > techCount && (
             <span className="text-cta-text bold text-xl">+</span>
           )}
         </div>

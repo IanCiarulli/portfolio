@@ -31,12 +31,12 @@ export function Hero() {
             Ian Ciarulli
           </h1>
           <h2 className="mb-2 text-lg font-bold sm:mb-3 sm:text-xl lg:mb-2 lg:text-xl xl:mb-3 xl:text-2xl">
-            <span className="mr-2 rounded bg-[#061c29] px-2 py-1 text-sm text-[#61dafb] sm:text-base lg:text-base xl:text-lg">
+            <span className="mr-1 rounded bg-[#061c29] px-1 py-1 text-sm text-[#61dafb] sm:text-base lg:text-base xl:text-lg">
               React Native
             </span>
             Developer
           </h2>
-          <p className="font-jetbrains mb-4 text-sm sm:text-base lg:mb-4 lg:text-base xl:mb-5 xl:text-lg">
+          <div className="font-jetbrains mb-4 text-sm sm:text-base lg:mb-4 lg:text-base xl:mb-5 xl:text-lg">
             <span className="whitespace-nowrap">
               <span className="group relative">
                 5+{' '}
@@ -47,7 +47,7 @@ export function Hero() {
               </span>
               <span className="font-bold"> 15+</span> projects
             </span>
-          </p>
+          </div>
         </div>
 
         <div className="text-cta mb-4 flex items-center justify-center lg:mb-4 lg:justify-start xl:mb-5">

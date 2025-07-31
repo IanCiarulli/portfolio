@@ -1,9 +1,9 @@
 import { TechTooltip, Thumbnail } from '../index';
-import type { ThumbnailProps } from '../../models';
+import type { Thumbnail as ThumbnailType } from '../../models';
 
 interface TechStackCategory {
   title: string;
-  data: (ThumbnailProps & { tooltip: string })[];
+  data: (ThumbnailType & { tooltip: string })[];
 }
 
 export function TechStack({

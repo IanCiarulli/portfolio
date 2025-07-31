@@ -1,10 +1,10 @@
 import { atom } from 'jotai';
 import { Projects } from './projectsData';
-import type { ProjectProps } from '../models';
+import type { Project } from '../models';
 
-export const projectsAtom = atom<ProjectProps[]>(Projects);
+export const projectsAtom = atom<Project[]>(Projects);
 
-export const selectedProjectAtom = atom<ProjectProps | null>(null);
+export const selectedProjectAtom = atom<Project | null>(null);
 
 export const selectedTechAtom = atom<string | null>(null);
 

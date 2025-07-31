@@ -1,6 +1,7 @@
 import { type FC, useRef, useState, useEffect, useMemo } from 'react';
-import { type ProjectProps } from '../../models';
+import { type ProjectsList as ProjectListProps } from '../../models';
 import { ProjectCard, TechIcon } from '..';
+import { useResponsiveTechCount } from '../../hooks/useResponsiveTechCount';
 import { motion } from 'framer-motion';
 import { useDelayedSnap } from '../../hooks/';
 import { TECHS } from '../../constants';
@@ -16,12 +17,8 @@ const FILTERABLE_TECHS = [
   'SENTRY',
 ];
 
-interface ProjectsListProps {
-  items: ProjectProps[];
-  title: string;
-}
-
-export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
+export const ProjectsList: FC<ProjectListProps> = ({ items, title }) => {
+  const techCount = useResponsiveTechCount();
   const [showAll, setShowAll] = useState(false);
   const [isInitialMount, setIsInitialMount] = useState(true);
   const [selectedTech, setSelectedTech] = useState<string | null>(null);
@@ -178,7 +175,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
               }}
               className="w-full"
             >
-              <ProjectCard {...project} />
+              <ProjectCard {...project} techCount={techCount} />
             </motion.div>
           ))}
         </div>
@@ -206,7 +203,7 @@ export const ProjectsList: FC<ProjectsListProps> = ({ items, title }) => {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: i * 0.05 }}
             >
-              <ProjectCard {...project} />
+              <ProjectCard {...project} techCount={techCount} />
             </motion.div>
           ))}
           <div
