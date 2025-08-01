@@ -1,9 +1,9 @@
 import { type FC, useRef, useState, useEffect, useMemo } from 'react';
-import { type ProjectsList as ProjectListProps } from '../../models';
+import { type ProjectsSection as ProjectSectionProps } from '../../models';
 import { ProjectCard, TechIcon } from '..';
 import { useResponsiveTechCount } from '../../hooks/useResponsiveTechCount';
 import { motion } from 'framer-motion';
-import { useDelayedSnap } from '../../hooks/';
+import { useDelayedSnap } from '../../hooks';
 import { TECHS } from '../../constants';
 
 const FILTERABLE_TECHS = [
@@ -17,7 +17,7 @@ const FILTERABLE_TECHS = [
   'SENTRY',
 ];
 
-export const ProjectsList: FC<ProjectListProps> = ({ items }) => {
+export const ProjectsSection: FC<ProjectSectionProps> = ({ items }) => {
   const techCount = useResponsiveTechCount();
   const [showAll, setShowAll] = useState(false);
   const [isInitialMount, setIsInitialMount] = useState(true);
