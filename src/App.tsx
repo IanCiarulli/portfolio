@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { ImageKitProvider } from '@imagekit/react';
 import {
-  Experience,
+  ExperienceSection,
   Hero,
   Menu,
   ProjectsSection,
@@ -46,7 +46,7 @@ function App() {
         <Hero />
         <TechStack data={techStackData} />
         <ProjectsSection items={Projects} />
-        <Experience />
+        <ExperienceSection />
         {/* <Footer> */}
       </div>
     </ImageKitProvider>

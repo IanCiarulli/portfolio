@@ -2,7 +2,7 @@ import { useAtomValue } from 'jotai';
 import { experienceAtom } from '../../store';
 import { ExperienceCard } from '../ExperienceCard/experienceCard';
 
-export function Experience() {
+export function ExperienceSection() {
   const experiences = useAtomValue(experienceAtom);
 
   return (
