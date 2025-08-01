@@ -22,6 +22,7 @@ export const ProjectsSection: FC<ProjectSectionProps> = ({ items }) => {
   const [showAll, setShowAll] = useState(false);
   const [isInitialMount, setIsInitialMount] = useState(true);
   const [selectedTech, setSelectedTech] = useState<string | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const snapEnabled = useDelayedSnap(300);
 
@@ -62,6 +63,23 @@ export const ProjectsSection: FC<ProjectSectionProps> = ({ items }) => {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3, rootMargin: '-100px' }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const handleToggleShowAll = () => {
     setShowAll((prev) => {
       const newShowAll = !prev;
@@ -99,11 +117,20 @@ export const ProjectsSection: FC<ProjectSectionProps> = ({ items }) => {
   };
 
   return (
-    <section
+    <motion.section
       ref={sectionRef}
       className="font-jetbrains flex w-full flex-col items-center justify-center px-12 pt-32 lg:px-0"
       aria-label="Projects Section"
       id="projects"
+      initial={{ opacity: 0, y: 40 }}
+      animate={{
+        opacity: isVisible ? 1 : 0,
+        y: isVisible ? 0 : 40,
+      }}
+      transition={{
+        duration: 0.8,
+        ease: 'easeOut',
+      }}
     >
       <h2 className="text-morocco-brown mb-2 text-center text-3xl font-bold tracking-tight">
         Projects
@@ -224,6 +251,6 @@ export const ProjectsSection: FC<ProjectSectionProps> = ({ items }) => {
       >
         {showAll ? 'Show Less' : 'Show More'}
       </button>
-    </section>
+    </motion.section>
   );
 };
