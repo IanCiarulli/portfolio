@@ -13,7 +13,6 @@ export interface Project {
   techs?: TechWithVersion[];
   techCount?: number;
 }
-export interface ProjectsList {
+export interface ProjectsSection {
   items: Project[];
-  title: string;
 }

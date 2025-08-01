@@ -1,9 +1,9 @@
 import { type FC, useRef, useState, useEffect, useMemo } from 'react';
-import { type ProjectsList as ProjectListProps } from '../../models';
+import { type ProjectsSection as ProjectSectionProps } from '../../models';
 import { ProjectCard, TechIcon } from '..';
 import { useResponsiveTechCount } from '../../hooks/useResponsiveTechCount';
 import { motion } from 'framer-motion';
-import { useDelayedSnap } from '../../hooks/';
+import { useDelayedSnap } from '../../hooks';
 import { TECHS } from '../../constants';
 
 const FILTERABLE_TECHS = [
@@ -17,7 +17,7 @@ const FILTERABLE_TECHS = [
   'SENTRY',
 ];
 
-export const ProjectsList: FC<ProjectListProps> = ({ items, title }) => {
+export const ProjectsSection: FC<ProjectSectionProps> = ({ items }) => {
   const techCount = useResponsiveTechCount();
   const [showAll, setShowAll] = useState(false);
   const [isInitialMount, setIsInitialMount] = useState(true);
@@ -101,12 +101,16 @@ export const ProjectsList: FC<ProjectListProps> = ({ items, title }) => {
   return (
     <section
       ref={sectionRef}
-      className="font-jetbrains flex w-full flex-col items-center justify-center pt-32"
+      className="font-jetbrains flex w-full flex-col items-center justify-center px-12 pt-32 lg:px-0"
+      aria-label="Projects Section"
       id="projects"
     >
-      <h2 className="mb-8 text-center text-2xl font-bold">{title}</h2>
+      <h2 className="text-morocco-brown mb-2 text-center text-3xl font-bold tracking-tight">
+        Projects
+      </h2>
+      <div className="bg-element h-1 w-16 rounded-full"></div>
 
-      <div className="mb-6 hidden w-full max-w-5xl lg:block">
+      <div className="mt-6 mb-6 hidden w-full max-w-5xl lg:block">
         <div className="mb-3 text-center">
           <span className="text-morocco-brown/80 text-xs tracking-wide uppercase">
             Filter by technology

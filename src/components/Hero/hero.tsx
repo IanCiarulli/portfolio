@@ -27,16 +27,16 @@ export function Hero() {
 
       <div className="flex w-full flex-col items-center text-center lg:min-w-0 lg:flex-1 lg:items-start lg:pl-2 lg:text-left xl:pl-4">
         <div className="w-full max-w-lg lg:max-w-none">
-          <h1 className="mb-3 text-3xl font-bold sm:mb-4 sm:text-4xl lg:mb-3 lg:text-4xl xl:mb-4 xl:text-5xl">
+          <h1 className="mb-4 text-3xl font-bold sm:text-4xl lg:text-5xl xl:text-7xl">
             Ian Ciarulli
           </h1>
-          <h2 className="mb-2 text-lg font-bold sm:mb-3 sm:text-xl lg:mb-2 lg:text-xl xl:mb-3 xl:text-2xl">
-            <span className="mr-1 rounded bg-[#061c29] px-1 py-1 text-sm text-[#61dafb] sm:text-base lg:text-base xl:text-lg">
+          <h2 className="mb-4 text-lg font-bold text-nowrap sm:text-xl lg:text-2xl xl:mb-3 xl:text-3xl">
+            <span className="mr-1 rounded bg-[#061c29] px-1 py-1 text-sm text-[#61dafb] sm:text-base lg:text-2xl xl:text-3xl">
               React Native
             </span>
             Developer
           </h2>
-          <div className="font-jetbrains mb-4 text-sm sm:text-base lg:mb-4 lg:text-base xl:mb-5 xl:text-lg">
+          <div className="font-jetbrains mb-4 text-sm sm:text-base lg:text-base xl:text-lg">
             <span className="whitespace-nowrap">
               <span className="group relative">
                 5+{' '}
@@ -50,14 +50,14 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="text-cta mb-4 flex items-center justify-center lg:mb-4 lg:justify-start xl:mb-5">
+        <div className="text-cta mb-4 flex items-center justify-center lg:justify-start">
           <MapPinned className="text-cta mr-2 h-4 w-4 lg:h-4 lg:w-4 xl:h-5 xl:w-5" />
           <span className="text-sm sm:text-base lg:text-base xl:text-lg">
             Merlo, Argentina
           </span>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-start lg:gap-3 xl:gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-start xl:gap-4">
           <a
             href="mailto:ian@mail.com"
             aria-label="Email"
