@@ -119,7 +119,7 @@ export const ProjectsSection: FC<ProjectSectionProps> = ({ items }) => {
   return (
     <motion.section
       ref={sectionRef}
-      className="font-jetbrains flex w-full flex-col items-center justify-center px-12 pt-32 lg:px-0"
+      className="font-jetbrains flex w-full flex-col items-center justify-center px-8 pt-32 md:px-12 lg:px-0"
       aria-label="Projects Section"
       id="projects"
       initial={{ opacity: 0, y: 40 }}
@@ -135,9 +135,9 @@ export const ProjectsSection: FC<ProjectSectionProps> = ({ items }) => {
       <h2 className="text-morocco-brown mb-2 text-center text-3xl font-bold tracking-tight">
         Projects
       </h2>
-      <div className="bg-element h-1 w-16 rounded-full"></div>
+      <div className="bg-element mb-6 h-1 w-16 rounded-full"></div>
 
-      <div className="mt-6 mb-6 hidden w-full max-w-5xl lg:block">
+      <div className="mb-6 hidden w-full max-w-5xl lg:block">
         <div className="mb-3 text-center">
           <span className="text-morocco-brown/80 text-xs tracking-wide uppercase">
             Filter by technology
@@ -245,9 +245,8 @@ export const ProjectsSection: FC<ProjectSectionProps> = ({ items }) => {
       </div>
 
       <button
-        className="text-morocco-brown mt-6 hidden transform text-base font-semibold transition-transform duration-200 hover:scale-105 lg:block"
+        className={`text-morocco-brown mt-6 hidden transform text-base font-semibold transition-transform duration-200 hover:scale-105 lg:block ${selectedTech ? 'lg:hidden' : ''}`}
         onClick={handleToggleShowAll}
-        style={{ display: filteredProjects.length <= 3 ? 'none' : 'block' }}
       >
         {showAll ? 'Show Less' : 'Show More'}
       </button>
