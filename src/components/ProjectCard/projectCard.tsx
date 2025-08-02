@@ -58,10 +58,10 @@ export const ProjectCard = ({
             />
           </div>
         </div>
-        <h3 className="text-cta-text mb-2 truncate text-lg font-bold drop-shadow-sm md:text-base lg:text-base xl:text-sm 2xl:text-base">
+        <h3 className="text-cta-text mb-2 truncate text-lg font-bold drop-shadow-sm md:text-base lg:text-xs xl:text-sm 2xl:text-base">
           {title}
         </h3>
-        <p className="text-cta-text/90 mb-4 text-base font-medium md:text-sm lg:text-sm xl:text-xs 2xl:text-sm">
+        <p className="text-cta-text/90 mb-4 text-base font-medium md:text-sm lg:text-xs 2xl:text-sm">
           {role}
         </p>
         <div className="flex flex-wrap items-center gap-2">
