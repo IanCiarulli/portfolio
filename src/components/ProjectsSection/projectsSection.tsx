@@ -22,6 +22,7 @@ export const ProjectsSection: FC<ProjectSectionProps> = ({ items }) => {
   const [showAll, setShowAll] = useState(false);
   const [isInitialMount, setIsInitialMount] = useState(true);
   const [selectedTech, setSelectedTech] = useState<string | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
   const snapEnabled = useDelayedSnap(300);
 
@@ -62,6 +63,23 @@ export const ProjectsSection: FC<ProjectSectionProps> = ({ items }) => {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3, rootMargin: '-100px' }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const handleToggleShowAll = () => {
     setShowAll((prev) => {
       const newShowAll = !prev;
@@ -99,18 +117,27 @@ export const ProjectsSection: FC<ProjectSectionProps> = ({ items }) => {
   };
 
   return (
-    <section
+    <motion.section
       ref={sectionRef}
-      className="font-jetbrains flex w-full flex-col items-center justify-center px-12 pt-32 lg:px-0"
+      className="font-jetbrains flex w-full flex-col items-center justify-center px-8 pt-32 md:px-12 lg:px-0"
       aria-label="Projects Section"
       id="projects"
+      initial={{ opacity: 0, y: 40 }}
+      animate={{
+        opacity: isVisible ? 1 : 0,
+        y: isVisible ? 0 : 40,
+      }}
+      transition={{
+        duration: 0.8,
+        ease: 'easeOut',
+      }}
     >
       <h2 className="text-morocco-brown mb-2 text-center text-3xl font-bold tracking-tight">
         Projects
       </h2>
-      <div className="bg-element h-1 w-16 rounded-full"></div>
+      <div className="bg-element mb-6 h-1 w-16 rounded-full"></div>
 
-      <div className="mt-6 mb-6 hidden w-full max-w-5xl lg:block">
+      <div className="mb-6 hidden w-full max-w-5xl lg:block">
         <div className="mb-3 text-center">
           <span className="text-morocco-brown/80 text-xs tracking-wide uppercase">
             Filter by technology
@@ -218,12 +245,11 @@ export const ProjectsSection: FC<ProjectSectionProps> = ({ items }) => {
       </div>
 
       <button
-        className="text-morocco-brown mt-6 hidden transform text-base font-semibold transition-transform duration-200 hover:scale-105 lg:block"
+        className={`text-morocco-brown mt-6 hidden transform text-base font-semibold transition-transform duration-200 hover:scale-105 lg:block ${selectedTech ? 'lg:hidden' : ''}`}
         onClick={handleToggleShowAll}
-        style={{ display: filteredProjects.length <= 3 ? 'none' : 'block' }}
       >
         {showAll ? 'Show Less' : 'Show More'}
       </button>
-    </section>
+    </motion.section>
   );
 };
