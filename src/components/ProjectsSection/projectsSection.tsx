@@ -70,7 +70,7 @@ export const ProjectsSection: FC<ProjectSectionProps> = ({ items }) => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.3, rootMargin: '-100px' }
+      { threshold: 0.2, rootMargin: '-50px' }
     );
 
     if (sectionRef.current) {
