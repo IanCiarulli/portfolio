@@ -36,10 +36,10 @@ export function Hero() {
             </span>
             Developer
           </h2>
-          <div className="font-jetbrains mb-4 text-sm sm:text-base lg:text-base xl:text-lg">
+          <div className="mb-4 text-sm sm:text-base lg:text-base xl:text-lg">
             <span className="whitespace-nowrap">
               <span className="group relative">
-                5+{' '}
+                <span className="font-bold">5+ </span>
                 <div className="pointer-events-none absolute top-[-25px] left-1/2 z-10 -translate-x-1/2 scale-95 rounded-md bg-[#333] px-2 py-1 text-xs whitespace-nowrap text-white opacity-0 shadow-md transition-all duration-150 group-hover:scale-100 group-hover:opacity-100">
                   Since 2018
                 </div>
