@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { ImageKitProvider } from '@imagekit/react';
 import {
   ExperienceSection,
+  Footer,
   Hero,
   Menu,
   ProjectsSection,
@@ -39,7 +40,7 @@ function App() {
   return (
     <ImageKitProvider urlEndpoint={IK_ENDPOINT}>
       <div
-        className="font-inter flex h-full w-full flex-col items-center justify-start pt-18 lg:mx-auto lg:w-7/12 lg:pt-24"
+        className="font-inter flex min-h-full w-full flex-col items-center justify-start pt-18 lg:mx-auto lg:w-7/12 lg:pt-24"
         id="home"
       >
         <Menu />
@@ -47,8 +48,8 @@ function App() {
         <TechStack data={techStackData} />
         <ProjectsSection items={Projects} />
         <ExperienceSection />
-        {/* <Footer> */}
       </div>
+      <Footer />
     </ImageKitProvider>
   );
 }
