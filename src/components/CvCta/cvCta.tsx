@@ -12,7 +12,7 @@ export const CvCta = ({ brownBackground = true }: CvCtaProps) => {
 
   const colorClasses = brownBackground
     ? 'bg-cta text-cta-text hover:bg-cta-hover'
-    : 'text-morocco-brown bg-spring-wood hover:bg-spring-wood/90';
+    : 'text-cta bg-spring-wood hover:bg-spring-wood/90';
 
   return (
     <motion.a

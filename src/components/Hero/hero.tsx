@@ -1,7 +1,7 @@
 import { Image } from '@imagekit/react';
 import { THUMBNAILS_URL } from '../../constants';
-import { Mail, MapPinned } from 'lucide-react';
-import { CvCta } from '..';
+import { MapPinned } from 'lucide-react';
+import { CvCta, MailCta, LinkedInCta } from '..';
 
 export function Hero() {
   return (
@@ -58,26 +58,8 @@ export function Hero() {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-start xl:gap-4">
-          <a
-            href="mailto:ian.ciarulli@gmail.com"
-            aria-label="Email"
-            className="text-cta bg-spring-wood rounded-full p-2.5 shadow-sm transition-all hover:bg-[#e8e0d0] hover:shadow-md lg:p-2.5 xl:p-3"
-          >
-            <Mail className="h-4 w-4 xl:h-5 xl:w-5" />
-          </a>
-          <a
-            href="https://linkedin.com/in/ian-ciarulli/"
-            aria-label="LinkedIn"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-spring-wood rounded-full p-2.5 shadow-sm transition-all hover:bg-[#e8e0d0] hover:shadow-md lg:p-2.5 xl:p-3"
-          >
-            <img
-              src="/linkedin.svg"
-              alt="LinkedIn"
-              className="h-4 w-4 xl:h-5 xl:w-5"
-            />
-          </a>
+          <MailCta rounded={true} />
+          <LinkedInCta rounded={true} />
           <CvCta />
         </div>
       </div>

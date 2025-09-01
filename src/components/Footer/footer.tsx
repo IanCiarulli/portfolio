@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail } from 'lucide-react';
-import { CvCta } from '../CvCta/cvCta';
+import { CvCta, MailCta, LinkedInCta } from '../';
 
 export const Footer = () => {
   return (
@@ -46,15 +45,12 @@ export const Footer = () => {
               Get In Touch
             </h4>
             <div className="flex flex-col gap-3">
-              <motion.a
-                href="mailto:ian@example.com"
-                className="text-spring-wood hover:text-spring-wood/80 border-spring-wood/30 hover:border-spring-wood/50 flex items-center gap-2 rounded-lg border px-4 py-2.5 text-sm font-medium transition-colors duration-200"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <Mail className="h-4 w-4" />
-                Send Email
-              </motion.a>
+              <LinkedInCta
+                rounded={false}
+                text="LinkedIn Profile"
+                brownBackground={false}
+              />
+              <MailCta rounded={false} text="Send Email" />
               <CvCta brownBackground={false} />
             </div>
           </div>
