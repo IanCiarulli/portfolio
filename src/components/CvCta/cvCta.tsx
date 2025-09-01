@@ -1,13 +1,29 @@
+import { motion } from 'framer-motion';
+import { Download } from 'lucide-react';
 import './cvCta.css';
 
-export const CvCta = () => {
+interface CvCtaProps {
+  brownBackground?: boolean;
+}
+
+export const CvCta = ({ brownBackground = true }: CvCtaProps) => {
+  const baseClasses =
+    'arrow-container group inline-flex items-center gap-2 overflow-hidden rounded-md px-4 py-2.5 text-sm font-semibold shadow transition-all sm:text-base';
+
+  const colorClasses = brownBackground
+    ? 'bg-cta text-cta-text hover:bg-cta-hover'
+    : 'text-cta bg-spring-wood hover:bg-spring-wood/90';
+
   return (
-    <a
+    <motion.a
       href="/files/test.pdf"
       download="IanCiarulli_CV.pdf"
-      className="arrow-container group bg-cta text-cta-text hover:bg-cta-hover inline-flex items-center gap-2 overflow-hidden rounded-md px-4 py-2.5 text-sm font-semibold shadow transition-all sm:text-base"
+      className={`${baseClasses} ${colorClasses}`}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
     >
+      <Download className="h-4 w-4" />
       Download Resume
-    </a>
+    </motion.a>
   );
 };

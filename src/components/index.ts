@@ -11,3 +11,6 @@ export * from './TechTooltip/techTooltip';
 export * from './TechModal/techModal';
 export * from './TechIcon/techIcon';
 export * from './ExperienceCard/experienceCard';
+export * from './Footer/footer';
+export * from './MailCta/mailCta';
+export * from './LinkedInCta/linkedInCta';
