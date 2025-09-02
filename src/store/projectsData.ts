@@ -8,6 +8,7 @@ export const Projects: Project[] = [
     },
     title: 'La Brava CSR',
     role: 'Sole Engineer',
+    desc: 'A zero-maintenance app for the business to track customer feedback.',
     techs: [
       { tech: 'REACT', version: '18.3.1' },
       { tech: 'REACT_NATIVE', version: '0.76.9' },
@@ -23,6 +24,7 @@ export const Projects: Project[] = [
     },
     title: 'Zest Partner Program',
     role: 'React Native Team Lead',
+    desc: 'Partner program mobile app for business partnerships and collaboration.',
     techs: [
       { tech: 'REACT', version: '17.0.2' },
       { tech: 'REACT_NATIVE', version: '0.69.0' },
@@ -38,6 +40,7 @@ export const Projects: Project[] = [
     },
     title: 'Chanel Beauty Atelier',
     role: 'React Native Developer',
+    desc: 'App developed for Chanel Beauty Atelier store opening in Austin, TX.',
     techs: [
       { tech: 'REACT', version: '17.0.2' },
       { tech: 'REACT_NATIVE', version: '0.67.2' },
@@ -54,6 +57,7 @@ export const Projects: Project[] = [
     },
     title: 'Dolby XP - HUB',
     role: 'React Native Developer',
+    desc: "Dolby's multi-platform app for proprietary content and immersive audio.",
     techs: [
       { tech: 'REACT', version: '17.0.2' },
       { tech: 'REACT_NATIVE', version: '0.66.5' },
@@ -71,6 +75,7 @@ export const Projects: Project[] = [
     },
     title: 'Three43',
     role: 'React Native Developer',
+    desc: 'Art Marketplace with Blockchain for secure digital art and NFT transactions.',
     techs: [
       { tech: 'REACT', version: '16.9.0' },
       { tech: 'REACT_NATIVE', version: '0.61.2' },
@@ -87,6 +92,7 @@ export const Projects: Project[] = [
     },
     title: 'Motorculture',
     role: 'React Native Developer',
+    desc: 'Social network for motor lovers with community and vehicle showcases.',
     techs: [
       { tech: 'REACT', version: '16.8.6' },
       { tech: 'REACT_NATIVE', version: '0.59.9' },
@@ -104,6 +110,7 @@ export const Projects: Project[] = [
     },
     title: 'Vigit',
     role: 'React Native Developer',
+    desc: 'Social media analytics platform with performance insights for creators.',
     techs: [
       { tech: 'REACT', version: '16.8.4' },
       { tech: 'REACT_NATIVE', version: '0.59.5' },
@@ -121,6 +128,7 @@ export const Projects: Project[] = [
     },
     title: 'Cosmo',
     role: 'React Native Developer',
+    desc: 'MultiStore eCommerce App with seamless shopping across vendors.',
     techs: [
       { tech: 'REACT', version: '16.8.0' },
       { tech: 'REACT_NATIVE', version: '0.58.6' },
@@ -135,6 +143,7 @@ export const Projects: Project[] = [
     },
     title: 'Dare You',
     role: 'React Native Developer',
+    desc: 'Challenge friends and go viral! Social gaming platform for competitive challenges.',
     techs: [
       { tech: 'REACT', version: '16.7.0' },
       { tech: 'REACT_NATIVE', version: '0.58.4' },
@@ -150,6 +159,7 @@ export const Projects: Project[] = [
     },
     title: 'Saiprop',
     role: 'React Native Developer',
+    desc: 'Rental management system for property owners and tenants.',
     techs: [
       { tech: 'REACT', version: '16.8.1' },
       { tech: 'REACT_NATIVE', version: '0.58.5' },
@@ -165,6 +175,7 @@ export const Projects: Project[] = [
     },
     title: 'Dropdesk',
     role: 'React Native Developer',
+    desc: 'Rental platform for work and recreational spaces with flexible solutions.',
     techs: [
       { tech: 'REACT', version: '16.6.3' },
       { tech: 'REACT_NATIVE', version: '0.57.8' },
@@ -180,6 +191,7 @@ export const Projects: Project[] = [
     },
     title: 'Ingagedin',
     role: 'React Native Developer',
+    desc: 'Platform to give visibility to specific causes using Internet power.',
     techs: [
       { tech: 'REACT', version: '16.6.3' },
       { tech: 'REACT_NATIVE', version: '0.57.8' },
@@ -195,6 +207,7 @@ export const Projects: Project[] = [
     },
     title: 'Now Accomplish',
     role: 'React Native Developer',
+    desc: 'Productivity and goal tracking app with comprehensive task management.',
     techs: [
       { tech: 'REACT', version: '16.6.0' },
       { tech: 'REACT_NATIVE', version: '0.57.8' },
@@ -209,6 +222,7 @@ export const Projects: Project[] = [
     },
     title: 'Pollap',
     role: 'React Native Developer',
+    desc: 'Socialize, play, vote, win - Interactive social gaming platform.',
     techs: [
       { tech: 'REACT', version: '16.4.1' },
       { tech: 'REACT_NATIVE', version: '0.56.0' },
@@ -223,6 +237,7 @@ export const Projects: Project[] = [
     },
     title: 'Everwash',
     role: 'React Native Developer',
+    desc: 'Car maintenance and wash appointment app with convenient scheduling.',
     techs: [
       { tech: 'REACT', version: '16.4.1' },
       { tech: 'REACT_NATIVE', version: '0.56.0' },
@@ -237,6 +252,7 @@ export const Projects: Project[] = [
     },
     title: 'AplaCash',
     role: 'React Native Developer',
+    desc: 'A comprehensive financial application providing digital payment solutions, money transfers, and mobile banking services.',
     techs: [
       { tech: 'REACT', version: '16.3.0' },
       { tech: 'REACT_NATIVE', version: '0.55.4' },
@@ -252,6 +268,7 @@ export const Projects: Project[] = [
     },
     title: 'Holcim H&S',
     role: 'React Native Developer',
+    desc: 'An application developed for the employees of Holcim Argentina focusing on health and safety protocols in industrial environments.',
     techs: [
       { tech: 'REACT', version: '16.3.0' },
       { tech: 'REACT_NATIVE', version: '0.55.4' },

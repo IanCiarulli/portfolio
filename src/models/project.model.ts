@@ -10,6 +10,7 @@ export interface Project {
   projectThumbnail: Thumbnail;
   title: string;
   role: string;
+  desc: string;
   techs?: TechWithVersion[];
   techCount?: number;
 }

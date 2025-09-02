@@ -6,6 +6,7 @@ interface TechModalProps {
   isOpen: boolean;
   onClose: () => void;
   projectTitle: string;
+  projectDesc: string;
   techs: TechWithVersion[];
   selectedTech?: string | null;
 }
@@ -14,6 +15,7 @@ export const TechModal: FC<TechModalProps> = ({
   isOpen,
   onClose,
   projectTitle,
+  projectDesc,
   techs,
   selectedTech,
 }) => {
@@ -66,7 +68,7 @@ export const TechModal: FC<TechModalProps> = ({
       onClick={onClose}
     >
       <div
-        className="from-cta/90 via-cta to-cta-hover border-cta-hover relative mx-4 max-h-[85vh] w-full max-w-lg overflow-hidden rounded-2xl border bg-gradient-to-br shadow-2xl"
+        className="from-cta/90 via-cta to-cta-hover border-cta-hover relative mx-4 flex w-full max-w-lg flex-col overflow-hidden rounded-2xl border bg-gradient-to-br shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="border-cta-hover bg-cta-hover/30 border-b px-6 py-4">
@@ -79,8 +81,8 @@ export const TechModal: FC<TechModalProps> = ({
           </div>
         </div>
 
-        <div className="overflow-y-auto p-6">
-          <div className="bg-morocco-brown border-morocco-brown/20 rounded-xl border p-6 shadow-inner">
+        <div className="flex-1 overflow-y-auto p-6">
+          <div className="bg-morocco-brown border-morocco-brown/20 scrollbar-hide max-h-[65vh] overflow-y-scroll rounded-xl border p-4 shadow-inner sm:p-6">
             <div className="font-mono text-sm leading-relaxed">
               <div className="text-sazerac/90 mb-3">
                 <span className="text-highlight-rn font-semibold">"name"</span>
@@ -93,12 +95,23 @@ export const TechModal: FC<TechModalProps> = ({
 
               <div className="text-sazerac/90 mb-3">
                 <span className="text-highlight-rn font-semibold">
+                  "description"
+                </span>
+                <span className="text-sazerac/70">: </span>
+                <span className="text-spring-wood font-medium">
+                  "{projectDesc}"
+                </span>
+                <span className="text-sazerac/70">,</span>
+              </div>
+
+              <div className="text-sazerac/90 mb-3">
+                <span className="text-highlight-rn font-semibold">
                   "dependencies"
                 </span>
                 <span className="text-sazerac/70">: {'{'}</span>
               </div>
 
-              <div className="ml-4 space-y-2">
+              <div className="ml-2 space-y-2 sm:ml-4">
                 {techs.map((techWithVersion, index) => {
                   const tech = TECHS[techWithVersion.tech];
                   const isHighlighted =
@@ -107,7 +120,7 @@ export const TechModal: FC<TechModalProps> = ({
                   return (
                     <div
                       key={techWithVersion.tech}
-                      className={`flex items-center gap-2 rounded-lg px-3 py-2 transition-all duration-300 ${
+                      className={`flex items-center gap-2 rounded-lg px-2 py-2 transition-all duration-300 sm:px-3 ${
                         isHighlighted
                           ? 'from-highlight-rn/30 to-highlight-rn/20 ring-highlight-rn/40 animate-pulse bg-gradient-to-r shadow-md ring-2'
                           : 'hover:bg-morocco-brown/20'
@@ -158,14 +171,16 @@ export const TechModal: FC<TechModalProps> = ({
               _versions are being inferred by the date, some may be wrong_
             </span>
           </div>
-
           <div className="mt-4 text-center">
             <p className="text-cta-text/60 text-xs">
               Press{' '}
               <kbd className="bg-cta-hover/50 text-cta-text rounded px-1 py-0.5 font-mono text-xs">
                 ESC
               </kbd>{' '}
-              or click outside to close
+              or
+              <span className="hidden lg:inline"> click </span>
+              <span className="lg:hidden"> tap </span>
+              outside to close
             </p>
           </div>
         </div>
