@@ -11,6 +11,7 @@ interface SlidingCarouselProps {
 export const SlidingCarousel: FC<SlidingCarouselProps> = ({
   className = '',
 }) => {
+  const techEntries = Object.entries(TECHS);
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const scrollers = document.querySelectorAll('.scroller');
@@ -40,25 +41,25 @@ export const SlidingCarousel: FC<SlidingCarouselProps> = ({
     >
       <div className="scroller" data-speed="slow">
         <div className="scroller__inner">
-          {Object.entries(TECHS).map(([tech, config]) => (
+          {techEntries.map(([tech, config]) => (
             <div className="scrollerItem" key={tech}>
               <Thumbnail
                 thumbnailPath={config.thumbnailPath}
                 thumbnailAltText={config.thumbnailAltText}
-                className="h-6 w-6"
+                transform={[48, 48]}
               />
             </div>
           ))}
         </div>
       </div>
-      <div className="scroller" data-direction="right" data-speed="slow">
+      <div className="scroller" data-direction="right" data-speed="fast">
         <div className="scroller__inner">
-          {Object.entries(TECHS).map(([tech, config]) => (
+          {techEntries.map(([tech, config]) => (
             <div className="scrollerItem" key={tech}>
               <Thumbnail
                 thumbnailPath={config.thumbnailPath}
                 thumbnailAltText={config.thumbnailAltText}
-                className="h-6 w-6"
+                transform={[48, 48]}
               />
             </div>
           ))}
