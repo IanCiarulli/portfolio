@@ -4,8 +4,21 @@ import { TECHS } from '../../constants';
 import { Thumbnail } from '../Thumbnail/thumbnail';
 import { TechTooltip } from '../TechTooltip/techTooltip';
 
+type TechKey = keyof typeof TECHS;
+type TechConfig = (typeof TECHS)[TechKey];
+
 export const SlidingCarousel: FC = () => {
-  const techEntries = Object.entries(TECHS);
+  function splitTechs(techs: typeof TECHS) {
+    const featuredKeys = ['TYPESCRIPT', 'REACT_NATIVE', 'COPILOT'] as const;
+    const featured = featuredKeys.map(
+      (key) => [key, techs[key]] as [TechKey, TechConfig]
+    );
+    const slider = (Object.entries(techs) as [TechKey, TechConfig][]).filter(
+      ([key]) => !(featuredKeys as readonly string[]).includes(key)
+    );
+    return { featured, slider };
+  }
+  const { featured, slider } = splitTechs(TECHS);
 
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -29,36 +42,39 @@ export const SlidingCarousel: FC = () => {
     });
   }, []);
 
+  const carouselItem = (tech: TechKey, config: TechConfig) => {
+    return (
+      <div className="scrollerItem" key={tech}>
+        <TechTooltip tooltip={config.thumbnailAltText}>
+          <Thumbnail
+            thumbnailPath={config.thumbnailPath}
+            thumbnailAltText={config.thumbnailAltText}
+            transform={[48, 48]}
+          />
+        </TechTooltip>
+      </div>
+    );
+  };
+
   return (
-    <div className="mb-6">
+    <div className="pt-6">
+      <div className="mb-4 flex justify-center gap-4">
+        {featured.map(([tech, config]) =>
+          carouselItem((tech + '_featured') as TechKey, config)
+        )}
+      </div>
       <div className="scroller" data-speed="slow">
         <div className="scroller__inner">
-          {techEntries.map(([tech, config]) => (
-            <div className="scrollerItem" key={tech}>
-              <TechTooltip tooltip={config.thumbnailAltText}>
-                <Thumbnail
-                  thumbnailPath={config.thumbnailPath}
-                  thumbnailAltText={config.thumbnailAltText}
-                  transform={[48, 48]}
-                />
-              </TechTooltip>
-            </div>
-          ))}
+          {slider.map(([tech, config]) =>
+            carouselItem((tech + '_row1') as TechKey, config)
+          )}
         </div>
       </div>
       <div className="scroller" data-direction="right" data-speed="fast">
         <div className="scroller__inner">
-          {techEntries.map(([tech, config]) => (
-            <div className="scrollerItem" key={tech}>
-              <TechTooltip tooltip={config.thumbnailAltText}>
-                <Thumbnail
-                  thumbnailPath={config.thumbnailPath}
-                  thumbnailAltText={config.thumbnailAltText}
-                  transform={[48, 48]}
-                />
-              </TechTooltip>
-            </div>
-          ))}
+          {slider.map(([tech, config]) =>
+            carouselItem((tech + '_row2') as TechKey, config)
+          )}
         </div>
       </div>
     </div>

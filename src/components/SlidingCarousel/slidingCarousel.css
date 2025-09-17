@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem;
   background: var(--clr-primary-400, #fff);
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900, #0002);
@@ -13,10 +13,6 @@
   margin: 0;
   width: 64px;
   height: 64px;
-  min-width: 64px;
-  min-height: 64px;
-  max-width: 80px;
-  max-height: 80px;
 }
 
 .scroller {
@@ -26,7 +22,6 @@
 .scroller__inner {
   padding-block: 1rem;
   display: flex;
-  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -43,12 +38,10 @@
 }
 
 .scrollerItem .thumbnail {
-  max-width: 48px;
-  max-height: 48px;
-  width: 100%;
-  height: 100%;
   object-fit: contain;
   display: block;
+  width: 48px;
+  height: 48px;
 }
 
 .scroller[data-animated='true'] .scroller__inner {
@@ -82,17 +75,4 @@
   to {
     transform: translate(calc(-50% - 0.5rem));
   }
-}
-
-.tag-list {
-  margin: 0;
-  padding-inline: 0;
-  list-style: none;
-}
-
-.tag-list li {
-  padding: 1rem;
-  background: var(--clr-primary-400);
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
 }
