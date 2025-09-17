@@ -6,10 +6,9 @@ import {
   Hero,
   Menu,
   ProjectsSection,
-  TechStack,
+  SlidingCarousel,
 } from './components';
 import { IK_ENDPOINT } from './constants';
-import { techStackData } from './data/stackData';
 import { Projects } from './store';
 
 function App() {
@@ -45,7 +44,7 @@ function App() {
       >
         <Menu />
         <Hero />
-        <TechStack data={techStackData} />
+        <SlidingCarousel />
         <ProjectsSection items={Projects} />
         <ExperienceSection />
       </div>

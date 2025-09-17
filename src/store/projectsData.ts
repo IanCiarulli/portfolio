@@ -66,7 +66,6 @@ export const Projects: Project[] = [
       { tech: 'MOBX', version: '2.2.2' },
       { tech: 'JEST', version: '26.3.0' },
       { tech: 'STYLED_COMPONENTS', version: '5.3.0' },
-      { tech: 'OKTA', version: '2.6.0' },
     ],
   },
   {
@@ -118,7 +117,6 @@ export const Projects: Project[] = [
       { tech: 'REDUX', version: '4.0.1' },
       { tech: 'EXPO', version: '33.0.0' },
       { tech: 'JEST', version: '24.7.0' },
-      { tech: 'STRIPE', version: '7.9.0' },
       { tech: 'FIREBASE', version: '6.2.0' },
     ],
   },
