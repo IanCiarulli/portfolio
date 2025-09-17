@@ -6,10 +6,10 @@ import {
   Hero,
   Menu,
   ProjectsSection,
-  SlidingCarousel,
 } from './components';
 import { IK_ENDPOINT } from './constants';
 import { Projects } from './store';
+import { TechSection } from './sections';
 
 function App() {
   useEffect(() => {
@@ -44,7 +44,7 @@ function App() {
       >
         <Menu />
         <Hero />
-        <SlidingCarousel />
+        <TechSection />
         <ProjectsSection items={Projects} />
         <ExperienceSection />
       </div>

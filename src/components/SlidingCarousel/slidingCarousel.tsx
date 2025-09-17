@@ -2,16 +2,11 @@ import { FC, useEffect } from 'react';
 import './slidingCarousel.css';
 import { TECHS } from '../../constants';
 import { Thumbnail } from '../Thumbnail/thumbnail';
+import { TechTooltip } from '../TechTooltip/techTooltip';
 
-interface SlidingCarouselProps {
-  title?: string;
-  className?: string;
-}
-
-export const SlidingCarousel: FC<SlidingCarouselProps> = ({
-  className = '',
-}) => {
+export const SlidingCarousel: FC = () => {
   const techEntries = Object.entries(TECHS);
+
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const scrollers = document.querySelectorAll('.scroller');
@@ -20,7 +15,6 @@ export const SlidingCarousel: FC<SlidingCarouselProps> = ({
       const scrollerInner = scroller.querySelector('.scroller__inner');
       if (!scrollerInner) return;
       const scrollerContent = Array.from(scrollerInner.children);
-      // Evita duplicar si ya están duplicados
       if (
         [...scrollerInner.children].some(
           (el) => el.getAttribute('aria-hidden') === 'true'
@@ -36,18 +30,18 @@ export const SlidingCarousel: FC<SlidingCarouselProps> = ({
   }, []);
 
   return (
-    <section
-      className={`mx-auto flex w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-b pt-32 md:w-4/5 ${className}`}
-    >
+    <div className="mb-6">
       <div className="scroller" data-speed="slow">
         <div className="scroller__inner">
           {techEntries.map(([tech, config]) => (
             <div className="scrollerItem" key={tech}>
-              <Thumbnail
-                thumbnailPath={config.thumbnailPath}
-                thumbnailAltText={config.thumbnailAltText}
-                transform={[48, 48]}
-              />
+              <TechTooltip tooltip={config.thumbnailAltText}>
+                <Thumbnail
+                  thumbnailPath={config.thumbnailPath}
+                  thumbnailAltText={config.thumbnailAltText}
+                  transform={[48, 48]}
+                />
+              </TechTooltip>
             </div>
           ))}
         </div>
@@ -56,15 +50,17 @@ export const SlidingCarousel: FC<SlidingCarouselProps> = ({
         <div className="scroller__inner">
           {techEntries.map(([tech, config]) => (
             <div className="scrollerItem" key={tech}>
-              <Thumbnail
-                thumbnailPath={config.thumbnailPath}
-                thumbnailAltText={config.thumbnailAltText}
-                transform={[48, 48]}
-              />
+              <TechTooltip tooltip={config.thumbnailAltText}>
+                <Thumbnail
+                  thumbnailPath={config.thumbnailPath}
+                  thumbnailAltText={config.thumbnailAltText}
+                  transform={[48, 48]}
+                />
+              </TechTooltip>
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };

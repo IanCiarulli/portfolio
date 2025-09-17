@@ -7,8 +7,7 @@ export const TECHS = {
     thumbnailAltText: 'React',
   },
   REACT_NATIVE: {
-    thumbnailPath: `${THUMBNAILS_URL}react.png`,
-    altThumbnailPath: `${THUMBNAILS_URL}reactnative.png`,
+    thumbnailPath: `${THUMBNAILS_URL}reactnative.png`,
     thumbnailAltText: 'React Native',
   },
   REACT_NATIVE_NAV: {

@@ -58,6 +58,10 @@
     var(--_animation-direction, forwards) linear infinite;
 }
 
+.scroller:hover .scroller__inner {
+  animation-play-state: paused;
+}
+
 .scroller[data-direction='right'] {
   --_animation-direction: reverse;
 }
