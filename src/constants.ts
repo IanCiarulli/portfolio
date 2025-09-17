@@ -7,8 +7,7 @@ export const TECHS = {
     thumbnailAltText: 'React',
   },
   REACT_NATIVE: {
-    thumbnailPath: `${THUMBNAILS_URL}react.png`,
-    altThumbnailPath: `${THUMBNAILS_URL}reactnative.png`,
+    thumbnailPath: `${THUMBNAILS_URL}reactnative.png`,
     thumbnailAltText: 'React Native',
   },
   REACT_NATIVE_NAV: {
@@ -75,17 +74,9 @@ export const TECHS = {
     thumbnailPath: `${THUMBNAILS_URL}styledcomponents.png`,
     thumbnailAltText: 'Styled Components',
   },
-  OKTA: {
-    thumbnailPath: `${THUMBNAILS_URL}okta.png`,
-    thumbnailAltText: 'Okta Auth',
-  },
   LOTTIE: {
     thumbnailPath: `${THUMBNAILS_URL}lottie.png`,
     thumbnailAltText: 'Lottie',
-  },
-  STRIPE: {
-    thumbnailPath: `${THUMBNAILS_URL}stripe.png`,
-    thumbnailAltText: 'Stripe',
   },
 } as const;
 

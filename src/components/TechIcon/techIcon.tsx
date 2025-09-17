@@ -21,23 +21,11 @@ export const TechIcon = ({
   showDot = true,
   showTooltip = false,
   className = '',
-  context = 'projectCard',
 }: TechIconProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const techConfig = TECHS[tech];
 
   if (!techConfig) return null;
-
-  const getThumbnailPath = () => {
-    if (
-      context !== 'techStack' &&
-      'altThumbnailPath' in techConfig &&
-      techConfig.altThumbnailPath
-    ) {
-      return techConfig.altThumbnailPath;
-    }
-    return techConfig.thumbnailPath;
-  };
 
   const sizeClasses = {
     small: 'h-8 w-8 p-1.5',
@@ -67,7 +55,7 @@ export const TechIcon = ({
         <div className="to-morocco-brown/10 absolute inset-0 rounded-lg bg-gradient-to-br from-transparent via-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
         <div className="flex h-full w-full items-center justify-center">
           <Thumbnail
-            thumbnailPath={getThumbnailPath()}
+            thumbnailPath={techConfig.thumbnailPath}
             thumbnailAltText={techConfig.thumbnailAltText}
             className="transition-transform duration-300 group-hover:scale-110"
           />

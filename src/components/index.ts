@@ -14,3 +14,4 @@ export * from './ExperienceCard/experienceCard';
 export * from './Footer/footer';
 export * from './MailCta/mailCta';
 export * from './LinkedInCta/linkedInCta';
+export * from './SlidingCarousel/slidingCarousel';

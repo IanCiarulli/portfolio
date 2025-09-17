@@ -6,11 +6,10 @@ import {
   Hero,
   Menu,
   ProjectsSection,
-  TechStack,
 } from './components';
 import { IK_ENDPOINT } from './constants';
-import { techStackData } from './data/stackData';
 import { Projects } from './store';
+import { TechSection } from './sections';
 
 function App() {
   useEffect(() => {
@@ -45,7 +44,7 @@ function App() {
       >
         <Menu />
         <Hero />
-        <TechStack data={techStackData} />
+        <TechSection />
         <ProjectsSection items={Projects} />
         <ExperienceSection />
       </div>

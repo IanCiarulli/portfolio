@@ -110,3 +110,12 @@ body::-webkit-scrollbar {
 .thumbnail:hover {
   filter: drop-shadow(0 0 1.6em var(--hover-shadow-color));
 }
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

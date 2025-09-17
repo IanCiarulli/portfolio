@@ -8,7 +8,7 @@ export const Footer = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       viewport={{ once: true, margin: '-50px' }}
-      className="bg-morocco-brown relative mt-20 w-full"
+      className="bg-morocco-brown relative mt-32 w-full"
     >
       <div className="via-spring-wood/30 absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-transparent to-transparent"></div>
 

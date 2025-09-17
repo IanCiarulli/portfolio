@@ -7,6 +7,7 @@ export const ProjectCard = ({
   projectThumbnail: { thumbnailPath, thumbnailAltText },
   title,
   role,
+  desc,
   techs = [],
   techCount = 5,
 }: Project) => {
@@ -42,7 +43,7 @@ export const ProjectCard = ({
   return (
     <>
       <div
-        className="from-cta/95 via-cta to-cta-hover border-cta-hover hover:from-cta-hover/90 hover:via-cta-hover hover:to-cta-hover focus:from-cta-hover/90 focus:via-cta-hover focus:to-cta-hover active:from-cta-hover active:via-cta-hover active:to-cta-hover focus:ring-highlight-rn/50 w-[280px] flex-shrink-0 cursor-pointer rounded-xl border bg-gradient-to-br p-5 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.3),0_4px_16px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_4px_12px_-2px_rgba(0,0,0,0.4),0_8px_24px_-6px_rgba(0,0,0,0.15)] focus:scale-[1.02] focus:shadow-[0_4px_12px_-2px_rgba(0,0,0,0.4),0_8px_24px_-6px_rgba(0,0,0,0.15)] focus:ring-2 focus:outline-none active:scale-[1.01] lg:w-full"
+        className="from-cta/95 via-cta to-cta-hover border-cta-hover hover:from-cta-hover/90 hover:via-cta-hover hover:to-cta-hover focus:from-cta-hover/90 focus:via-cta-hover focus:to-cta-hover active:from-cta-hover active:via-cta-hover active:to-cta-hover focus:ring-highlight-rn/50 w-[280px] flex-shrink-0 cursor-pointer rounded-xl border bg-gradient-to-br p-5 transition-all duration-300 hover:scale-[1.02] focus:scale-[1.02] focus:ring-2 focus:outline-none active:scale-[1.01] lg:w-full lg:shadow-[0_2px_8px_-2px_rgba(0,0,0,0.3),0_4px_16px_-4px_rgba(0,0,0,0.1)] lg:hover:shadow-[0_4px_12px_-2px_rgba(0,0,0,0.4),0_8px_24px_-6px_rgba(0,0,0,0.15)] lg:focus:shadow-[0_4px_12px_-2px_rgba(0,0,0,0.4),0_8px_24px_-6px_rgba(0,0,0,0.15)]"
         onClick={handleCardClick}
         onKeyDown={handleKeyDown}
         tabIndex={0}
@@ -82,6 +83,7 @@ export const ProjectCard = ({
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         projectTitle={title}
+        projectDesc={desc}
         techs={techs}
         selectedTech={selectedTech}
       />
