@@ -36,7 +36,7 @@ export const SlidingCarousel: FC<SlidingCarouselProps> = ({
 
   return (
     <section
-      className={`mx-auto flex w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-b py-2 md:w-4/5 ${className}`}
+      className={`mx-auto flex w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-b pt-32 md:w-4/5 ${className}`}
     >
       <div className="scroller" data-speed="slow">
         <div className="scroller__inner">
