@@ -1,6 +1,6 @@
 export * from './Hero/hero';
 export * from './Link/link';
-export * from './ExperienceSection/experienceSection';
+export * from './ExperienceRows/experienceRows';
 export * from './TechStack/techStack';
 export * from './Menu/menu';
 export * from './Thumbnail/thumbnail';

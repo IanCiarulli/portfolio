@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { ImageKitProvider } from '@imagekit/react';
-import { ExperienceSection, Footer, Hero, Menu } from './components';
+import { Footer, Hero, Menu } from './components';
 import { IK_ENDPOINT } from './constants';
-import { TechSection, ProjectsSection } from './sections';
+import { TechSection, ProjectsSection, ExperienceSection } from './sections';
 
 function App() {
   useEffect(() => {
