@@ -4,7 +4,7 @@ export * from './ExperienceSection/experienceSection';
 export * from './TechStack/techStack';
 export * from './Menu/menu';
 export * from './Thumbnail/thumbnail';
-export * from './ProjectsSection/projectsSection';
+export * from './ProjectsGrid/projectsGrid';
 export * from './ProjectCard/projectCard';
 export * from './CvCta/cvCta';
 export * from './TechTooltip/techTooltip';

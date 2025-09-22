@@ -1,5 +1,5 @@
-import { type FC, useRef, useState, useEffect, useMemo } from 'react';
-import { type ProjectsSection as ProjectSectionProps } from '../../models';
+import { type FC, useState, useEffect, useMemo } from 'react';
+import { type ProjectGrid as ProjectGridProps } from '../../models';
 import { ProjectCard, TechIcon } from '..';
 import { useResponsiveTechCount } from '../../hooks/useResponsiveTechCount';
 import { motion } from 'framer-motion';
@@ -17,13 +17,14 @@ const FILTERABLE_TECHS = [
   'SENTRY',
 ];
 
-export const ProjectsSection: FC<ProjectSectionProps> = ({ items }) => {
+export const ProjectsGrid: FC<ProjectGridProps> = ({
+  items,
+  forwardRef: sectionRef,
+}) => {
   const techCount = useResponsiveTechCount();
   const [showAll, setShowAll] = useState(false);
   const [isInitialMount, setIsInitialMount] = useState(true);
   const [selectedTech, setSelectedTech] = useState<string | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
   const snapEnabled = useDelayedSnap(300);
 
   const availableTechs = useMemo(() => {
@@ -63,30 +64,17 @@ export const ProjectsSection: FC<ProjectSectionProps> = ({ items }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.2, rootMargin: '-50px' }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
   const handleToggleShowAll = () => {
     setShowAll((prev) => {
       const newShowAll = !prev;
 
       if (prev && !newShowAll) {
         setTimeout(() => {
-          if (sectionRef.current) {
+          if (
+            sectionRef &&
+            typeof sectionRef === 'object' &&
+            sectionRef.current
+          ) {
             sectionRef.current.scrollIntoView({
               behavior: 'smooth',
               block: 'start',
@@ -117,26 +105,7 @@ export const ProjectsSection: FC<ProjectSectionProps> = ({ items }) => {
   };
 
   return (
-    <motion.section
-      ref={sectionRef}
-      className="font-jetbrains flex w-full flex-col items-center justify-center px-8 pt-32 md:px-12 lg:px-0"
-      aria-label="Projects Section"
-      id="projects"
-      initial={{ opacity: 0, y: 40 }}
-      animate={{
-        opacity: isVisible ? 1 : 0,
-        y: isVisible ? 0 : 40,
-      }}
-      transition={{
-        duration: 0.8,
-        ease: 'easeOut',
-      }}
-    >
-      <h2 className="text-morocco-brown mb-2 text-center text-3xl font-bold tracking-tight">
-        Projects
-      </h2>
-      <div className="bg-element mb-6 h-1 w-16 rounded-full"></div>
-
+    <div className="flex w-full flex-col items-center justify-center">
       <div className="mb-6 hidden w-full max-w-5xl lg:block">
         <div className="mb-3 text-center">
           <span className="text-morocco-brown/80 text-xs tracking-wide uppercase">
@@ -188,8 +157,8 @@ export const ProjectsSection: FC<ProjectSectionProps> = ({ items }) => {
         </div>
       </div>
 
-      <div className="w-full max-w-5xl">
-        <div className="hidden lg:grid lg:grid-cols-3 lg:gap-6">
+      <div className="w-full">
+        <div className="hidden lg:grid lg:grid-cols-3 lg:gap-8">
           {visibleProjects.map((project, i) => (
             <motion.div
               key={project.title}
@@ -235,6 +204,9 @@ export const ProjectsSection: FC<ProjectSectionProps> = ({ items }) => {
               transition={{ delay: i * 0.05 }}
             >
               <ProjectCard {...project} techCount={techCount} />
+              <div className="flex justify-center sm:hidden">
+                {i + 1}/{filteredProjects.length}
+              </div>
             </motion.div>
           ))}
           <div
@@ -250,6 +222,6 @@ export const ProjectsSection: FC<ProjectSectionProps> = ({ items }) => {
       >
         {showAll ? 'Show Less' : 'Show More'}
       </button>
-    </motion.section>
+    </div>
   );
 };

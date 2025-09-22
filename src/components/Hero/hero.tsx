@@ -12,12 +12,12 @@ export function Hero() {
           alt="Hero Profile Image"
           fetchPriority="high"
           loading="eager"
-          className="aspect-[4/5] w-[200px] rounded-xl border border-[#e8dbca] object-cover shadow-[0_12px_30px_rgba(0,0,0,0.35)] sm:w-[240px] lg:w-[240px] xl:w-[260px]"
+          className="aspect-[4/5] w-[200px] rounded-xl object-cover shadow-[0_12px_30px_rgba(0,0,0,0.35)] sm:w-[240px] lg:w-[240px] xl:w-[260px]"
           transformation={[
             {
-              height: 480,
-              width: 384,
-              quality: 95,
+              height: 325,
+              width: 260,
+              quality: 90,
               format: 'webp',
               progressive: true,
             },
@@ -40,9 +40,6 @@ export function Hero() {
             <span className="whitespace-nowrap">
               <span className="group relative">
                 <span className="font-bold">5+ </span>
-                <div className="pointer-events-none absolute top-[-25px] left-1/2 z-10 -translate-x-1/2 scale-95 rounded-md bg-[#333] px-2 py-1 text-xs whitespace-nowrap text-white opacity-0 shadow-md transition-all duration-150 group-hover:scale-100 group-hover:opacity-100">
-                  Since 2018
-                </div>
                 Years of experience /
               </span>
               <span className="font-bold"> 15+</span> projects
