@@ -7,9 +7,9 @@ export const ExperienceItems: ExperienceItem[] = [
     role: 'Sole Engineer - Technical Consultant',
     period: [2024],
     description: [
-      "First time doing technical consulting for a project where I wouldn't actually be hands-on with development. Great opportunity to see things from the other side and broaden my perspective.",
-      'This year I worked with a client who knew exactly what they wanted but literally had nothing else, just an idea and a hard deadline. I owned everything from initial mockups to final delivery. Really drove home how critical good planning and communication are when a project succeeds or fails.',
-      "Having flexible time lets me dive into personal projects and experiment with tools that might work professionally. If something proves useful, I'll consider adding it to my toolkit. Currently building a non-profit community app, mixing what I know with what I want to learn.",
+      "First time doing technical consulting for a project where I wouldn't actually be hands-on with development. Valuable experience making technical recommendations, cutting the MVP scope to essentials, and helping the client better convey their vision to developers.",
+      'This year I worked for a client who had a clear idea but little else defined, other than a tight deadline. I managed everything from initial planning to final delivery. Taking time early to flesh out their vision, set expectations, and collect all necessary details before development started made it possible to deliver on time.',
+      "When I'm between client projects, I use the time for personal development, experimenting with new tools, libraries, and languages. My current project is a non-profit application combining automation, AI, and MCP to integrate with popular software. I plan to donate any proceeds to animal shelters in my area",
     ],
   },
   {
@@ -19,8 +19,8 @@ export const ExperienceItems: ExperienceItem[] = [
     period: [2021, 2022],
     description: [
       "Started at Southern Code continuing the same project I'd been working on at Puzzle Digital. Once the app launched and the high-demand phase settled, they kept just the essential maintenance crew. I got moved to another project that was nearing its final stage but still had significant work to complete.",
-      "Up until then, I'd worked on products that were already live and needed maintenance, or projects with flexible launch dates. This was different, the deadline was non-negotiable. We weren't severely behind, but there was a mix of technical debt and complex features to implement. The experience I'd gained on the Dolby platform became crucial for this challenge. The team was receptive to process suggestions, and thanks to their openness and our collective effort, we delivered on time while meeting the client's quality expectations.",
-      'First time being a mobile tech lead, and I had to figure out how to meet the client deadline or, worst case, minimize the impact when the project was struggling but also really close to its deadline. Worked with my team of 5 developers, made some necessary changes to how we worked and our culture, and we actually launched on time while keeping quality up.',
+      "Up until then, I'd worked on products that were already live or new projects with flexible launch dates. This time was different; the deadline was non-negotiable. We weren't severely behind, but there was a mix of technical debt and complex features to implement. The experience I'd gained on the Dolby platform became crucial for this challenge. The team was receptive to process suggestions, and thanks to their openness and our collective effort, we delivered on time while meeting the client's quality expectations.",
+      'First time being a mobile tech lead, and I had to figure out how to meet the client deadline or, worst case, minimize the impact because the project was behind schedule and close to its deadline. I led my team of 5 developers to restructure our processes and enhance our collaborative culture, successfully launching on time with no quality trade-offs.',
     ],
   },
   {
@@ -41,7 +41,7 @@ export const ExperienceItems: ExperienceItem[] = [
     period: [2018, 2020],
     description: [
       'My first job in the software industry. When I joined Next Dots, we were just 4 people total. It was an excellent opportunity to solidify my knowledge of the technologies, since everything I knew about React Native was self-taught and my programming foundation came from a game development degree I had been studying the year before.',
-      'I worked on many different projects, to the point where I could be working on up to 4 different codebases in a single day. A bit overwhelming for a junior at first, but it ended up showing me multiple examples of how to approach problems and navigate different architectures.',
+      'I worked on many different projects, to the point where I could be working on up to 4 different codebases in a single day. A bit overwhelming as a junior at first, but it ended up showing me multiple examples of how to approach problems and navigate different structures.',
       'At Next Dots, we formed a core team that stayed together for several years and eventually became the backbone of major projects like Dolby.',
     ],
   },
