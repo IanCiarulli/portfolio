@@ -5,7 +5,7 @@ import { CvCta, MailCta, LinkedInCta } from '..';
 
 export function Hero() {
   return (
-    <section className="mx-auto flex w-full max-w-6xl flex-col items-center gap-6 px-4 pt-4 lg:flex-row lg:items-start lg:gap-6 lg:px-6 xl:gap-10">
+    <section className="mx-auto flex w-full max-w-6xl flex-col items-center gap-6 pt-4 lg:flex-row lg:items-start lg:gap-6 xl:gap-10">
       <div className="flex flex-shrink-0 justify-center lg:justify-start">
         <Image
           src={`${THUMBNAILS_URL}portrait.webp`}

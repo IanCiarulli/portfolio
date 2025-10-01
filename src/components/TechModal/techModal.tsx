@@ -168,7 +168,7 @@ export const TechModal: FC<TechModalProps> = ({
             </div>
 
             <span className="flex justify-center text-center text-[10px] text-gray-400/80">
-              _versions are being inferred by the date, some may be wrong_
+              _versions are being inferred by the timeframe, mismatch may exist_
             </span>
           </div>
           <div className="mt-4 text-center">
