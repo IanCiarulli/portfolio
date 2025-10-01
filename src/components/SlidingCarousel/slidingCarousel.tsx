@@ -25,24 +25,14 @@ export const SlidingCarousel: FC = () => {
     const scrollers = document.querySelectorAll('.scroller');
     scrollers.forEach((scroller) => {
       scroller.setAttribute('data-animated', 'true');
-      const scrollerInner = scroller.querySelector('.scroller__inner');
-      if (!scrollerInner) return;
-      const scrollerContent = Array.from(scrollerInner.children);
-      if (
-        [...scrollerInner.children].some(
-          (el) => el.getAttribute('aria-hidden') === 'true'
-        )
-      )
-        return;
-      scrollerContent.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true) as HTMLElement;
-        duplicatedItem.setAttribute('aria-hidden', 'true');
-        scrollerInner.appendChild(duplicatedItem);
-      });
     });
   }, []);
 
-  const carouselItem = (tech: TechKey, config: TechConfig) => {
+  const carouselItem = (
+    tech: TechKey,
+    config: TechConfig,
+    loading: 'lazy' | 'eager' = 'lazy'
+  ) => {
     return (
       <div className="scrollerItem" key={tech}>
         <TechTooltip tooltip={config.thumbnailAltText}>
@@ -50,6 +40,7 @@ export const SlidingCarousel: FC = () => {
             thumbnailPath={config.thumbnailPath}
             thumbnailAltText={config.thumbnailAltText}
             transform={[48, 48]}
+            loading={loading}
           />
         </TechTooltip>
       </div>
@@ -72,14 +63,20 @@ export const SlidingCarousel: FC = () => {
       <div className="scroller" data-speed="slow">
         <div className="scroller__inner">
           {slider.map(([tech, config]) =>
-            carouselItem((tech + '_row1') as TechKey, config)
+            carouselItem((tech + '_row1_orig') as TechKey, config, 'eager')
+          )}
+          {slider.map(([tech, config]) =>
+            carouselItem((tech + '_row1_dup') as TechKey, config, 'eager')
           )}
         </div>
       </div>
       <div className="scroller" data-direction="right" data-speed="fast">
         <div className="scroller__inner">
           {slider.map(([tech, config]) =>
-            carouselItem((tech + '_row2') as TechKey, config)
+            carouselItem((tech + '_row2_orig') as TechKey, config, 'eager')
+          )}
+          {slider.map(([tech, config]) =>
+            carouselItem((tech + '_row2_dup') as TechKey, config, 'eager')
           )}
         </div>
       </div>

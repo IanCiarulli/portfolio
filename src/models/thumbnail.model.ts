@@ -6,4 +6,5 @@ export interface Thumbnail {
    * [width, height] para ImageKit, ej: [300, 300]
    */
   transform?: [number, number];
+  loading?: 'lazy' | 'eager';
 }

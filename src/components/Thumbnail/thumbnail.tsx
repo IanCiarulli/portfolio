@@ -6,6 +6,7 @@ export function Thumbnail({
   thumbnailAltText,
   className,
   transform,
+  loading = 'lazy',
 }: Thumbnail) {
   let src = thumbnailPath;
   if (transform) {
@@ -16,7 +17,7 @@ export function Thumbnail({
       src={src}
       alt={thumbnailAltText}
       className={'thumbnail ' + (className ?? '')}
-      loading="lazy"
+      loading={loading}
     />
   );
 }
