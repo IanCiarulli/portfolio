@@ -1,15 +1,8 @@
 import { useEffect } from 'react';
 import { ImageKitProvider } from '@imagekit/react';
-import {
-  ExperienceSection,
-  Footer,
-  Hero,
-  Menu,
-  ProjectsSection,
-} from './components';
+import { Footer, Hero, Menu } from './components';
 import { IK_ENDPOINT } from './constants';
-import { Projects } from './store';
-import { TechSection } from './sections';
+import { TechSection, ProjectsSection, ExperienceSection } from './sections';
 
 function App() {
   useEffect(() => {
@@ -45,7 +38,7 @@ function App() {
         <Menu />
         <Hero />
         <TechSection />
-        <ProjectsSection items={Projects} />
+        <ProjectsSection />
         <ExperienceSection />
       </div>
       <Footer />

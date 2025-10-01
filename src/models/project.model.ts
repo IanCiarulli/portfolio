@@ -14,6 +14,7 @@ export interface Project {
   techs?: TechWithVersion[];
   techCount?: number;
 }
-export interface ProjectsSection {
+export interface ProjectGrid {
   items: Project[];
+  forwardRef?: React.Ref<HTMLElement>;
 }
