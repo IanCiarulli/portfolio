@@ -58,10 +58,16 @@ export const SlidingCarousel: FC = () => {
 
   return (
     <div className="pt-6">
+      <div className="text-cta/80 text-md w-full pb-2 text-center italic">
+        <p>Core</p>
+      </div>
       <div className="mb-4 flex justify-center gap-4">
         {featured.map(([tech, config]) =>
           carouselItem((tech + '_featured') as TechKey, config)
         )}
+      </div>
+      <div className="text-cta/80 w-full pt-2 text-center text-sm italic">
+        <p>Techs that I have worked with</p>
       </div>
       <div className="scroller" data-speed="slow">
         <div className="scroller__inner">
