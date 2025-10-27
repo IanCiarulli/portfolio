@@ -83,7 +83,7 @@ export const TECHS = {
 export const PROJECT_THUMBNAILS = {
   LA_BRAVA: {
     thumbnailPath: `${THUMBNAILS_URL}lb.webp`,
-    thumbnailAltText: 'La Brava CSR',
+    thumbnailAltText: 'La Brava C.S.R',
   },
   ZEST: {
     thumbnailPath: `${THUMBNAILS_URL}zest.webp`,

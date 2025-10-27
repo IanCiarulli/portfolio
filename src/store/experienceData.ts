@@ -8,8 +8,7 @@ export const ExperienceItems: ExperienceItem[] = [
     period: [2024],
     description: [
       "First time doing technical consulting for a project where I wouldn't actually be hands-on with development. Valuable experience making technical recommendations, cutting the MVP scope to essentials, and helping the client better convey their vision to developers.",
-      'This year I worked for a client who had a clear idea but little else defined, other than a tight deadline. I managed everything from initial planning to final delivery. Taking time early to flesh out their vision, set expectations, and collect all necessary details before development started made it possible to deliver on time.',
-      "When I'm between client projects, I use the time for personal development, experimenting with new tools, libraries, and languages. My current project is a non-profit application combining automation, AI, and MCP to integrate with popular software. I plan to donate any proceeds to animal shelters in my area",
+      'Worked for a client who had a clear idea but little else defined, other than a tight deadline. I managed everything from initial planning to final delivery. Taking time early to flesh out their vision, set expectations, and collect all necessary details before development started made it possible to deliver on time.',
     ],
   },
   {
@@ -31,7 +30,7 @@ export const ExperienceItems: ExperienceItem[] = [
     description: [
       "Hands down the most ambitious project I've worked on has been Dolby's content platform. When I joined, there was just a small group of engineers and developers working on a POC. I was involved from that early POC stage all the way through MVP to the first release candidate. We maximized React Native's multiplatform capabilities, compiling for iOS, Android, Web, and tvOS. First time I'd been on such a large-scale project from day one. Taught me a lot about architecture, scalability, and planning, but also how important communication and clear team goals are.",
       'When I transferred from Next Dots (which eventually became Puzzle Digital), the company created Puzzle Academy to structure their developer training program. I got assigned a group of trainee developers to mentor and help them grow until they were ready to join one of the development teams.',
-      'I also helped improve our candidate selection process by creating exercises based on real projects the company had built. These included some of the recurring problems developers actually run into day-to-day. Helped us properly evaluate candidates and put them in the right groups based on their skill level.',
+      'I also helped improve our candidate selection process by suggesting exercises based on real projects the company had built. These included some of the recurring problems developers actually run into day-to-day. Helped us properly evaluate candidates and put them in the right groups based on their skill level.',
     ],
   },
   {
@@ -42,7 +41,7 @@ export const ExperienceItems: ExperienceItem[] = [
     description: [
       'My first job in the software industry. When I joined Next Dots, we were just 4 people total. It was an excellent opportunity to solidify my knowledge of the technologies, since everything I knew about React Native was self-taught and my programming foundation came from a game development degree I had been studying the year before.',
       'I worked on many different projects, to the point where I could be working on up to 4 different codebases in a single day. A bit overwhelming as a junior at first, but it ended up showing me multiple examples of how to approach problems and navigate different structures.',
-      'At Next Dots, we formed a core team that stayed together for several years and eventually became the backbone of major projects like Dolby.',
+      'At Next Dots, we formed a core team that stayed together for several years and eventually became the backbone of major projects like Dolby XP & Dolby HUB.',
     ],
   },
 ];

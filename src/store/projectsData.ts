@@ -6,9 +6,9 @@ export const Projects: Project[] = [
     projectThumbnail: {
       ...PROJECT_THUMBNAILS.LA_BRAVA,
     },
-    title: 'La Brava CSR',
+    title: 'La Brava C.S.R',
     role: 'Sole Engineer',
-    desc: 'A zero-maintenance app for the business to track customer feedback.',
+    desc: 'A low-maintenance app for the business to track customer service rating.',
     techs: [
       { tech: 'REACT', version: '18.3.1' },
       { tech: 'REACT_NATIVE', version: '0.76.9' },
