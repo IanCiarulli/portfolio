@@ -39,7 +39,7 @@ export const ExperienceItems: ExperienceItem[] = [
     role: 'React Native Developer',
     period: [2018, 2020],
     description: [
-      'My first job in the software industry. When I joined Next Dots, we were just 4 people total. It was an excellent opportunity to solidify my knowledge of the technologies, since everything I knew about React Native was self-taught and my programming foundation came from a game development degree I had been studying the year before.',
+      'My first job in the software industry. When I joined Next Dots, we were just a few people total. It was an excellent opportunity to solidify my knowledge of the technologies, since everything I knew about React Native was self-taught and my programming foundation came from a game development degree I had been studying the year before.',
       'I worked on many different projects, to the point where I could be working on up to 4 different codebases in a single day. A bit overwhelming as a junior at first, but it ended up showing me multiple examples of how to approach problems and navigate different structures.',
       'At Next Dots, we formed a core team that stayed together for several years and eventually became the backbone of major projects like Dolby XP & Dolby HUB.',
     ],
