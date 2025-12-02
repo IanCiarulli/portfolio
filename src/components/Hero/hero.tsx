@@ -15,8 +15,8 @@ export function Hero() {
           className="aspect-[4/5] w-[200px] rounded-xl object-cover shadow-[0_12px_30px_rgba(0,0,0,0.35)] sm:w-[240px] lg:w-[240px] xl:w-[260px]"
           transformation={[
             {
-              height: 325,
-              width: 260,
+              height: 365,
+              width: 240,
               quality: 90,
               format: 'webp',
               progressive: true,
