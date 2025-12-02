@@ -6,7 +6,7 @@ export * from './Menu/menu';
 export * from './Thumbnail/thumbnail';
 export * from './ProjectsGrid/projectsGrid';
 export * from './ProjectCard/projectCard';
-export * from './CvCta/cvCta';
+export * from './ResumeCta/ResumeCta';
 export * from './TechTooltip/techTooltip';
 export * from './TechModal/techModal';
 export * from './TechIcon/techIcon';

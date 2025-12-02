@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Download } from 'lucide-react';
-import './cvCta.css';
+import './ResumeCta.css';
 
 interface CvCtaProps {
   brownBackground?: boolean;
@@ -16,8 +16,8 @@ export const CvCta = ({ brownBackground = true }: CvCtaProps) => {
 
   return (
     <motion.a
-      href="/files/test.pdf"
-      download="IanCiarulli_CV.pdf"
+      href="/files/resume.pdf"
+      download="IanCiarulli_resume.pdf"
       className={`${baseClasses} ${colorClasses}`}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
