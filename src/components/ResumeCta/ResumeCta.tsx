@@ -16,8 +16,8 @@ export const CvCta = ({ brownBackground = true }: CvCtaProps) => {
 
   return (
     <motion.a
-      href="/files/resume.pdf"
-      download="IanCiarulli_resume.pdf"
+      href="/files/Ian-Ciarulli-Resume.pdf"
+      download="Ian-Ciarulli-Resume.pdf"
       className={`${baseClasses} ${colorClasses}`}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
