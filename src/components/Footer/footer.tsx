@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { CvCta, MailCta, LinkedInCta } from '../';
+import logoIcon from '/logo.svg';
 
 export const Footer = () => {
   return (
@@ -17,7 +18,7 @@ export const Footer = () => {
           <div className="hidden lg:col-span-1 lg:block">
             <div className="flex items-center">
               <img
-                src="/logo.svg"
+                src={logoIcon}
                 alt="Ian Ciarulli Logo"
                 className="h-12 w-auto max-w-full object-contain"
               />
@@ -61,7 +62,7 @@ export const Footer = () => {
           <div className="lg:col-span-1 lg:hidden">
             <div className="flex items-center justify-center">
               <img
-                src="/logo.svg"
+                src={logoIcon}
                 alt="Ian Ciarulli Logo"
                 className="h-12 w-auto max-w-full object-contain"
               />

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import linkedinIcon from '/linkedin.svg';
 
 interface LinkedInCtaProps {
   rounded: boolean;
@@ -30,7 +31,7 @@ export function LinkedInCta({
       whileTap={{ scale: 0.98 }}
     >
       <img
-        src="/linkedin.svg"
+        src={linkedinIcon}
         alt="LinkedIn"
         className={rounded ? 'h-4 w-4 xl:h-5 xl:w-5' : 'h-4 w-4'}
       />

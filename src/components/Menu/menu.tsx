@@ -1,5 +1,7 @@
 import { useCallback, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import hamburgerIcon from '/menu_b.svg';
+import closeIcon from '/x_w.svg';
 
 export function Menu() {
   const [open, setOpen] = useState(false);
@@ -32,7 +34,7 @@ export function Menu() {
           className="bg-sazerac fixed top-4 right-4 z-50 flex h-12 w-12 items-center justify-center rounded-full"
           aria-label={'Open menu'}
         >
-          <img src={'/menu_b.svg'} alt="Menu Icon" className="h-5 w-5" />
+          <img src={hamburgerIcon} alt="Menu Icon" className="h-5 w-5" />
         </button>
       ) : null}
 
@@ -55,7 +57,7 @@ export function Menu() {
               exit={{ rotate: 90, scale: 0.8 }}
               transition={{ duration: 0.15 }}
             >
-              <img src={'/x_w.svg'} alt="Menu Icon" className="h-5 w-5" />
+              <img src={closeIcon} alt="Menu Icon" className="h-5 w-5" />
             </motion.button>
             <motion.ul
               className="text-sazerac space-y-8 text-3xl font-semibold"
