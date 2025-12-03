@@ -5,6 +5,7 @@ import { useResponsiveTechCount } from '../../hooks/useResponsiveTechCount';
 import { motion } from 'framer-motion';
 import { useDelayedSnap } from '../../hooks';
 import { TECHS } from '../../constants';
+import closeIcon from '/x_b.svg';
 
 const FILTERABLE_TECHS = [
   'EXPO',
@@ -139,7 +140,7 @@ export const ProjectsGrid: FC<ProjectGridProps> = ({
             title="Clear filter"
           >
             <img
-              src="/x_b.svg"
+              src={closeIcon}
               alt="Clear filter"
               className="h-5 w-5 transition-transform duration-300 group-hover:scale-110"
             />
